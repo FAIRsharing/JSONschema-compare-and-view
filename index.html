@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" ng-app="generatorApp">
     <head>
         <meta charset="UTF-8">
         <title>MIACA VS DATS</title>
@@ -9,6 +10,8 @@
               href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
               integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
               crossorigin="anonymous">
+        <script type="text/javascript" src="lib/angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
     </head>
 
     <body class="JSONSchemaComp">
@@ -105,6 +108,43 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+
+        <div class="" ng-controller="viewerCtrl as main">
+            <div class="card text-white bg-primary border-secondary mb-3" style="width: 700px;">
+                <div class="card-header bg-special">
+                    Overlap between {{network1.name}} and {{network2.name}} checklists
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="">
+                            <th scope="col"> </th>
+                            <th scope="col"> {{network1.name}} </th>
+                            <th scope="col"> {{network2.name}} </th>
+                        </tr>
+                        </thead>
+                        <tbody ng-repeat="schema in overlaps">
+
+                            <tr class="new_schema">
+                                <th scope="row" class="label new_schema"> sdo:Person </th>
+                                <td class="new_schema"> {{network1.schemas[schema[0][0]].title}} </td>
+                                <td class="new_schema"> {{network2.schemas[schema[0][1]].title}} </td>
+                            </tr>
+
+                            <tr class="" ng-repeat="item in schema[1]['overlapping fields']">
+                                <th scope="row" class="sub_label"> {{network1.contexts[schema[0][0]][item[0]]}} </th>
+                                <td class=""> {{item[0]}} </td>
+                                <td class=""> {{item[1]}} </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                    {{overlaps}}
+                </div>
             </div>
         </div>
     </body>
