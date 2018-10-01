@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MIACA VS DATS</title>
+        <link rel="stylesheet" href="lib/lux.min.css">
+        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+              integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+              crossorigin="anonymous">
+    </head>
+
+    <body class="JSONSchemaComp">
+        <div class="card text-white bg-primary border-secondary mb-3" style="max-width: 60%;">
+            <div class="card-header bg-special">Overlap between DATS and MIACA checklists</div>
+            <div class="card-body">
+                <table class="table table-hover">
+
+                    <thead>
+                        <tr class="colm0">
+                            <th scope="col"> </th>
+                            <th scope="col"> MIACA </th>
+                            <th scope="col"> DATs </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- SCHEMA 1 -->
+                        <tr class="colm1 new_schema">
+                            <th scope="row" class="label new_schema">sdo:Person</th>
+                            <td class="new_schema"> MIACA Source - corresponding to a person and their organization </td>
+                            <td class="new_schema"> DATS person schema </td>
+                        </tr>
+                        <tr class="colm1">
+                            <th scope="row" class="sub_label"> sdo:identifier </th>
+                            <td class=""> ID </td>
+                            <td class=""> identifier </td>
+                        </tr>
+                        <tr class="colm2">
+                            <th scope="row" class="sub_label"> sdo:givenName </th>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                            <td class=""> firstName </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:familyName </th>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                            <td class=""> lastName </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:name </th>
+                            <td class=""> name </td>
+                            <td class=""> fullName </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:email </th>
+                            <td class=""> email </td>
+                            <td class=""> email </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:affiliation </th>
+                            <td class="empty colm3"> institution </td>
+                            <td class="empty colm3"> affiliations </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:roleName </th>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                            <td class=""> roles </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:address </th>
+                            <td class=""> address </td>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:department </th>
+                            <td class=""> department (@type: 'sdo:Text') <BR> city (@type: 'sdo:Organization') </td>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                        </tr>
+                        <tr class="colm3">
+                            <th scope="row" class="colm3 sub_label"> sdo:addressCountry </th>
+                            <td class=""> country </td>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                        </tr>
+
+
+
+
+
+                        <!-- SCHEMA 2 -->
+                        <tr class="colm1 new_schema">
+                            <th scope="row" class="label new_schema">sdo:Identifier</th>
+                            <td class="new_schema"> <span class="fas fa-times"></span> </td>
+                            <td class="new_schema"> <span class="fas fa-times"></span> </td>
+                        </tr>
+                        <tr class="colm1">
+                            <th scope="row" class="sub_label"> sdo:completeName </th>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                            <td class=""> <span class="fas fa-times"></span> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

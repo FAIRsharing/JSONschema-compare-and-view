@@ -1,0 +1,63 @@
+body.JSONSchemaComp{
+    padding:10px;
+    background-color: #222;
+}
+
+
+/* TABLE */
+body.JSONSchemaComp table{
+    border-collapse: initial;
+    table-layout: fixed;
+}
+
+body.JSONSchemaComp table th,
+body.JSONSchemaComp table td {
+    padding: 0.75rem;
+    border-top:1px dashed #ccc;
+    text-transform: initial;
+    text-align: center;
+}
+
+body.JSONSchemaComp table tr:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+
+body.JSONSchemaComp table .label{
+    font-size: 1rem;
+}
+
+body.JSONSchemaComp table .label,
+body.JSONSchemaComp table .sub_label{
+    text-align: left;
+}
+
+body.JSONSchemaComp table .sub_label{
+    padding-left: 30px;
+}
+
+body.JSONSchemaComp table .new_schema{
+    border-top:3px solid #98a2ac !important;
+}
+
+body.JSONSchemaComp table td{
+    font-size: 0.7rem;
+}
+
+body.JSONSchemaComp table td, body.JSONSchemaComp table th{
+    vertical-align: middle;
+}
+
+/* CARDS */
+body.JSONSchemaComp .bg-special {
+    background-color: #777777;
+}
+
+
+/* FONT AWESOME */
+body.JSONSchemaComp .fa-check {
+    color:forestgreen;
+}
+
+body.JSONSchemaComp .fa-times {
+    color: #bd2130;
+}
