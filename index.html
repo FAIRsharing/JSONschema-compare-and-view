@@ -15,6 +15,8 @@
     </head>
 
     <body class="JSONSchemaComp">
+
+        <!--
         <div class="card text-white bg-primary border-secondary mb-3" style="width: 700px;">
             <div class="card-header bg-special">Overlap between DATS and MIACA checklists</div>
             <div class="card-body">
@@ -29,7 +31,6 @@
                     </thead>
 
                     <tbody>
-                        <!-- SCHEMA 1 -->
                         <tr class="new_schema">
                             <th scope="row" class="label new_schema">sdo:Person</th>
                             <td class="new_schema"> MIACA Source - corresponding to a person and their organization </td>
@@ -85,12 +86,6 @@
                             <td class=""> country </td>
                             <td class=""> <span class="fas fa-times"></span> </td>
                         </tr>
-
-
-
-
-
-                        <!-- SCHEMA 2 -->
                         <tr class="new_schema">
                             <th scope="row" class="label new_schema">sdo:Thing</th>
                             <td class="new_schema"> <span class="fas fa-times"></span> </td>
@@ -110,8 +105,8 @@
                 </table>
             </div>
         </div>
-
-
+    -->
+        
         <div class="" ng-controller="viewerCtrl as main">
             <div class="card text-white bg-primary border-secondary mb-3" style="width: 700px;">
                 <div class="card-header bg-special">
@@ -140,10 +135,47 @@
                                 <td class=""> {{item[1]}} </td>
                             </tr>
 
+
+                            <tr ng-repeat="(itemName, itemValue) in network1.schemas[schema[0][0]]['properties']"
+                                ng-if="processed_fields[schema[0][0]].indexOf(itemName) == -1
+                                       && ignoredKeys.indexOf(itemName) == -1
+                                       && network1.contexts[schema[0][0]].hasOwnProperty(itemName)">
+
+                                <th scope="row" class="sub_label">
+                                    <span ng-if="(network1.contexts[schema[0][0]][itemName] | typeOf) == 'object'">
+                                        {{network1.contexts[schema[0][0]][itemName]["@id"]}}
+                                    </span>
+                                    <span ng-if="(network1.contexts[schema[0][0]][itemName] | typeOf) == 'string'">
+                                        {{network1.contexts[schema[0][0]][itemName]}}
+                                    </span>
+
+                                </th>
+                                <td>{{itemName}}</td>
+                                <td> <span class="fas fa-times"></span></td>
+                            </tr>
+
+
+                            <tr ng-repeat="(itemName, itemValue) in network2.schemas[schema[0][1]]['properties']"
+                                ng-if="processed_fields[schema[0][1]].indexOf(itemName) == -1
+                                       && ignoredKeys.indexOf(itemName) == -1
+                                       && network2.contexts[schema[0][1]].hasOwnProperty(itemName)">
+
+                                <th scope="row" class="sub_label">
+                                    <span ng-if="(network2.contexts[schema[0][1]][itemName] | typeOf) == 'object'">
+                                        {{network2.contexts[schema[0][1]][itemName]["@id"]}}
+                                    </span>
+                                    <span ng-if="(network2.contexts[schema[0][1]][itemName] | typeOf) == 'string'">
+                                        {{network2.contexts[schema[0][1]][itemName]}}
+                                    </span>
+                                </th>
+
+                                <td><span class="fas fa-times"></span></td>
+                                <td> {{itemName}}</td>
+                            </tr>
+
                         </tbody>
 
                     </table>
-                    {{overlaps}}
                 </div>
             </div>
         </div>

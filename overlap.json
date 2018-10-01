@@ -84,7 +84,7 @@
         },
         "additionalProperties": false
       },
-      "identifier_info_schema": {
+      "identifier_info_schema.json": {
         "id": "https://w3id.org/dats/schema/identifier_info_schema.json",
         "$schema": "http://json-schema.org/draft-04/schema",
         "title": "DATS identifier information schema",
@@ -271,6 +271,10 @@
         ],
         "ignored fields": ["middleInitial", "extraProperties", "relatedIdentifiers", "alternateIdentifiers"]
       }
+    ],
+    [
+      ["identifier_info_schema.json"],
+      {}
     ]
   ]
 }
