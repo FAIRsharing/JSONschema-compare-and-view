@@ -1,0 +1,67 @@
+body.JSONSchemaComp{
+    padding:10px;
+}
+
+body.JSONSchemaComp div.main{
+    margin-left: auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    width:700px;
+}
+
+
+/* CARDS */
+body.JSONSchemaComp div.card{
+    border:1px solid #ccc;
+    box-shadow: 4px 4px 3px #D6D6D6;
+}
+
+body.JSONSchemaComp div.card,
+body.JSONSchemaComp div.card-header {
+    border-radius: 0px;
+}
+
+body.JSONSchemaComp div.card-header {
+    background-color:#2980B9;
+    color:white;
+    font-size: 1.4rem;
+}
+
+body.JSONSchemaComp div.card-body {
+    background-color: #ECF0F1;
+}
+
+
+/* TABLE */
+body.JSONSchemaComp table tbody {
+    border-top: 2px solid #2980B9;
+}
+
+body.JSONSchemaComp table thead th {
+    border:0;
+}
+
+body.JSONSchemaComp table thead th,
+body.JSONSchemaComp table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+body.JSONSchemaComp table th{
+    vertical-align: middle;
+}
+
+body.JSONSchemaComp table .sub_label{
+    padding-left: 30px;
+}
+
+
+/* FONT AWESOME */
+body.JSONSchemaComp .fa-check {
+    color:forestgreen;
+}
+
+body.JSONSchemaComp .fa-times {
+    color: #bd2130;
+}

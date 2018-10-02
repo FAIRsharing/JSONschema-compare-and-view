@@ -49,8 +49,8 @@ body.JSONSchemaComp table td{
 }
 
 body.JSONSchemaComp table td, body.JSONSchemaComp table th{
-    vertical-align: middle;
-}
+     vertical-align: middle;
+ }
 
 /* CARDS */
 body.JSONSchemaComp .bg-special {

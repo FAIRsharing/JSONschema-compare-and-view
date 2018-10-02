@@ -138,7 +138,7 @@
       },
       "identifier_info_schema.json": {
         "sdo": "https://schema.org/",
-        "Identifier": "sdo:Thing",
+        "Identifier_info": "sdo:Thing",
         "identifier": "sdo:identifier",
         "identifierSource": {
           "@id": "sdo:Property",
@@ -257,7 +257,7 @@
   },
   "overlaps":[
     [
-      ["person_schema.json", "source_schema.json"],
+      ["Person", "Source"],
       {
         "overlapping fields": [
           ["email", "email"],
@@ -273,7 +273,7 @@
       }
     ],
     [
-      ["identifier_info_schema.json"],
+      ["Identifier_info", ""],
       {}
     ]
   ]
