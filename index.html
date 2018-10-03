@@ -31,20 +31,26 @@
                             <th scope="col"> {{network2.name}} </th>
                         </tr>
                         </thead>
+
+                        <!-- FOR EACH OVERLAP -->
                         <tbody ng-repeat="schema in overlaps">
 
+
+                            <!-- FIRST LINE : schema:type; schema1:name; schema2:name -->
                             <tr class="new_schema">
                                 <th scope="row" class="label new_schema"> {{network1.contexts[schema[0][0]][map[schema[0][0]]]}}</th>
                                 <td class="new_schema"> {{network1.schemas[schema[0][0]].title}} </td>
                                 <td class="new_schema"> {{network2.schemas[schema[0][1]].title}} </td>
                             </tr>
 
+                            <!-- FIELDS ARE IDENTICAL -->
                             <tr class="" ng-repeat="item in schema[1]['overlapping fields']">
                                 <th scope="row" class="sub_label"> {{network1.contexts[schema[0][0]][item[0]]}} </th>
                                 <td class=""> {{item[0]}} </td>
                                 <td class=""> {{item[1]}} </td>
                             </tr>
 
+                            <!-- FIELDS ARE DIFFERENT: start with schema1 -->
                             <tr ng-repeat="(itemName, itemValue) in network1.schemas[schema[0][0]]['properties']"
                                 ng-if="processed_fields[schema[0][0]].indexOf(itemName) == -1
                                        && ignoredKeys.indexOf(itemName) == -1
@@ -63,6 +69,7 @@
                                 <td> <span class="fas fa-times"></span></td>
                             </tr>
 
+                            <!-- FIELDS ARE DIFFERENT: now schema2 -->
                             <tr ng-repeat="(itemName, itemValue) in network2.schemas[schema[0][1]]['properties']"
                                 ng-if="processed_fields[schema[0][1]].indexOf(itemName) == -1
                                        && ignoredKeys.indexOf(itemName) == -1
@@ -83,9 +90,78 @@
 
                         </tbody>
 
+
+                        <tbody ng-repeat="(schemaName, schema) in network1.schemas" ng-if="processed_schemas.network1.indexOf(schemaName) === -1">
+                            <tr class="new_schema">
+                                <th scope="row" class="label new_schema"> {{schemaName}}</th>
+                            </tr>
+                        </tbody>
+
                     </table>
                 </div>
             </div>
+
+            <div class="card bg-light mb-3">
+
+                <div class="card-header">
+                    Overlap between {{network1.name}} and {{network2.name}} checklists
+                </div>
+
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="">
+                            <th scope="col" ng-repeat="title in output.header"> {{title}} </th>
+                        </tr>
+                        </thead>
+
+                        <tbody ng-repeat="schemaOverlap in output.content.overlapped_schemas">
+                            <tr class="new_schema">
+                                <th scope="row"> {{schemaOverlap.schemas[0]}}</th>
+                                <td>{{schemaOverlap.schemas[1]}}</td>
+                                <td>{{schemaOverlap.schemas[2]}}</td>
+                            </tr>
+                            <tr ng-repeat="fields in schemaOverlap.fields">
+                                <th class="sub_label">{{fields[0]}}</th>
+                                <td>
+                                    <span ng-if="fields[1] !== false">{{fields[1]}}</span>
+                                    <span ng-if="fields[1] === false" class="fas fa-times"></span></td>
+                                <td>
+                                    <span ng-if="fields[2] !== false">{{fields[2]}}</span>
+                                    <span ng-if="fields[2] === false" class="fas fa-times"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody ng-repeat="isolatedSchema in output.content.isolated_schemas">
+                            <tr class="new_schema">
+                                <th scope="row"> {{isolatedSchema.schemas[0]}}</th>
+                                <td>
+                                    <span ng-if="isolatedSchema.schemas[1]!==false">{{isolatedSchema.schemas[1]}}</span>
+                                    <span ng-if="isolatedSchema.schemas[1]===false" class="fas fa-times"></span>
+                                </td>
+                                <td>
+                                    <span ng-if="isolatedSchema.schemas[2]!==false">{{isolatedSchema.schemas[2]}}</span>
+                                    <span ng-if="isolatedSchema.schemas[2]===false" class="fas fa-times"></span>
+                                </td>
+                            </tr>
+                        <tr ng-repeat="field in isolatedSchema.fields">
+                            <th class="sub_label">{{field[0]}}</th>
+                            <td>
+                                <span ng-if="field[1] !== false">{{field[1]}}</span>
+                                <span ng-if="field[1] === false" class="fas fa-times"></span></td>
+                            <td>
+                                <span ng-if="field[2] !== false">{{field[2]}}</span>
+                                <span ng-if="field[2] === false" class="fas fa-times"></span>
+                            </td>
+                        </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+
         </div>
     </body>
 </html>
