@@ -1,0 +1,22 @@
+<tr class="new_schema">
+    <th scope="row"> {{isolatedSchema.schemas[0]}}</th>
+    <td>
+        <span ng-if="isolatedSchema.schemas[1]!==false">{{isolatedSchema.schemas[1]}}</span>
+        <span ng-if="isolatedSchema.schemas[1]===false" class="fas fa-times"></span>
+    </td>
+    <td>
+        <span ng-if="isolatedSchema.schemas[2]!==false">{{isolatedSchema.schemas[2]}}</span>
+        <span ng-if="isolatedSchema.schemas[2]===false" class="fas fa-times"></span>
+    </td>
+</tr>
+
+<tr ng-repeat="field in isolatedSchema.fields">
+    <th class="sub_label">{{field[0]}}</th>
+    <td>
+        <span ng-if="field[1] !== false">{{field[1]}}</span>
+        <span ng-if="field[1] === false" class="fas fa-times"></span></td>
+    <td>
+        <span ng-if="field[2] !== false">{{field[2]}}</span>
+        <span ng-if="field[2] === false" class="fas fa-times"></span>
+    </td>
+</tr>

@@ -1,0 +1,15 @@
+<tr class="new_schema">
+    <th scope="row"> {{schemaOverlap.schemas[0]}}</th>
+    <td>{{schemaOverlap.schemas[1]}}</td>
+    <td>{{schemaOverlap.schemas[2]}}</td>
+</tr>
+<tr ng-repeat="fields in schemaOverlap.fields">
+    <th class="sub_label">{{fields[0]}}</th>
+    <td>
+        <span ng-if="fields[1] !== false">{{fields[1]}}</span>
+        <span ng-if="fields[1] === false" class="fas fa-times"></span></td>
+    <td>
+        <span ng-if="fields[2] !== false">{{fields[2]}}</span>
+        <span ng-if="fields[2] === false" class="fas fa-times"></span>
+    </td>
+</tr>

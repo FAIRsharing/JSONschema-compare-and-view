@@ -8,61 +8,7 @@
             let viewer = this;
 
             $http.get("overlap.json").then(function(res){
-                let data = res.data;
-                $scope.output = viewer.process_data(data);
-                $scope.network1 = data.network1;
-                $scope.network2 = data.network2;
-                $scope.overlaps = data.overlaps;
-                $scope.ignoredKeys = [
-                    "@context",
-                    "@id",
-                    "@type",
-                    "$schema"
-                ];
-                $scope.processed_fields = {};
-                $scope.map = {};
-                $scope.processed_schemas = {
-                    'network1': [],
-                    'network2': []
-                };
-
-                /* For each overlap */
-                for (let schema in data.overlaps){
-                    if (data.overlaps.hasOwnProperty(schema)){
-
-                        /* for each schema in overlap[0] */
-                        let i = 0;
-                        for (let schemaName in data.overlaps[schema][0]) {
-                            if (data.overlaps[schema][0].hasOwnProperty(schemaName)){
-                                if (data.overlaps[schema][0][schemaName] !== false){
-                                    let schema_name = data.overlaps[schema][0][schemaName].toLowerCase() + '_schema.json';
-                                    if (i===0){
-                                        $scope.processed_schemas['network1'].push(schema_name)
-                                    }
-                                    else if (i===1){
-                                        $scope.processed_schemas['network2'].push(schema_name)
-                                    }
-                                    i++;
-                                    $scope.map[schema_name] = data.overlaps[schema[0]][0][schemaName];
-                                    data.overlaps[schema[0]][0][schemaName] = schema_name
-                                }
-                            }
-                        }
-
-                        $scope.processed_fields[data.overlaps[schema][0][0]] = [];
-                        $scope.processed_fields[data.overlaps[schema][0][1]] = [];
-
-                        for (let field in data.overlaps[schema][1]["overlapping fields"]){
-                            if (data.overlaps[schema][1]["overlapping fields"].hasOwnProperty(field)){
-                                $scope.processed_fields[data.overlaps[schema][0][0]].push(data.overlaps[schema][1]["overlapping fields"][field][0]);
-                                $scope.processed_fields[data.overlaps[schema][0][1]].push(data.overlaps[schema][1]["overlapping fields"][field][1]);
-                            }
-                        }
-
-
-                    }
-                }
-
+                $scope.output = viewer.process_data(res.data);
             });
 
             viewer.process_data = function(data){
@@ -84,11 +30,11 @@
                     "$schema"
                 ];
 
-                for (let i in data.overlaps){
-                    if (data.overlaps.hasOwnProperty(i)){
+                for (let i in data["overlaps"]){
+                    if (data["overlaps"].hasOwnProperty(i)){
 
                         /* INITIATE NEEDED VAR */
-                        let overlap = data.overlaps[i];
+                        let overlap = data["overlaps"][i];
                         let iterator = "overlap" + i.toString();
                         let schema_1_name = overlap[0][0].toLowerCase() + '_schema.json';
                         let schema_2_name = overlap[0][1].toLowerCase() + '_schema.json';
@@ -242,6 +188,38 @@
             }
         }]
     );
+
+    my_app.directive('schemaOverlap', function() {
+        return {
+            restrict: 'A',
+            templateUrl: 'include/schemaOverlap',
+            scope: {
+                schemaOverlap: '='
+            },
+            link: function($scope) {
+                $scope.$watch('schemaOverlap', function(schemaOverlap){
+                    if(schemaOverlap)
+                        $scope.json_source = $scope.schemaOverlap;
+                });
+            }
+        }
+    });
+
+    my_app.directive('isolatedSchema', function() {
+        return {
+            restrict: 'A',
+            templateUrl: 'include/isolated_schema.html',
+            scope: {
+                isolatedSchema: '='
+            },
+            link: function($scope) {
+                $scope.$watch('isolatedSchema', function(isolatedSchema){
+                    if(isolatedSchema)
+                        $scope.json_source = $scope.isolatedSchema;
+                });
+            }
+        }
+    });
 
     my_app.filter('typeOf', function() {
         return function (obj) {
