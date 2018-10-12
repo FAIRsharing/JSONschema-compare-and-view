@@ -192,7 +192,7 @@
     my_app.directive('schemaOverlap', function() {
         return {
             restrict: 'A',
-            templateUrl: 'include/schemaOverlap',
+            templateUrl: 'include/schemaOverlap.html',
             scope: {
                 schemaOverlap: '='
             },
