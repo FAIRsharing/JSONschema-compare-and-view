@@ -7,13 +7,17 @@
 
             let viewer = this;
 
-            $scope.available_comparison = [
-                "overlap.json",
-                "dats_vs_miaca.json"
-            ];
-
-            $scope.current_comparison = $scope.available_comparison[0];
-
+            $scope.available_comparison = [];
+            let comparison_urls = "https://api.github.com/repos/FAIRsharing/JSONschema-compare-and-view/git/trees/7fa4b35e204241135b9548f6dccc646377123d90";
+            $http.get(comparison_urls).then(function(res){
+                for (let path in res.data['tree']) {
+                    if (res.data['tree'].hasOwnProperty(path)) {
+                        $scope.available_comparison.push(res.data['tree'][path]['path'])
+                    }
+                }
+                $scope.current_comparison = $scope.available_comparison[1];
+                $scope.make_comparison();
+            });
 
             $scope.make_comparison = function(){
                 $http.get("inputs/" + $scope.current_comparison).then(function(res){
@@ -109,7 +113,10 @@
                                             false,
                                             field
                                         ];
-                                        output.content.overlapped_schemas[iterator]["fields"].push(local_output)
+                                        if (!output.content.overlapped_schemas[iterator]["fields"].includes(local_output)){
+                                            output.content.overlapped_schemas[iterator]["fields"].push(local_output)
+                                        }
+
                                     }
 
                                 }
@@ -198,7 +205,6 @@
                 }
             }
 
-            $scope.make_comparison();
         }]
     );
 
