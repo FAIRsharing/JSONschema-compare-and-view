@@ -1,0 +1,2448 @@
+{
+  "network1": {
+    "name": "DATS",
+    "schemas": {
+      "person_schema.json": {
+        "id": "https://w3id.org/dats/schema/person_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS person schema",
+        "description": "A human being",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Person"
+            ]
+          },
+          "identifier": {
+            "description": "Primary identifier for the person.",
+            "$ref": "identifier_info_schema.json#"
+          },
+          "alternateIdentifiers": {
+            "description": "Alternate identifiers for the person.",
+            "type": "array",
+            "items": {
+              "$ref": "alternate_identifier_info_schema.json#"
+            }
+          },
+          "relatedIdentifiers": {
+            "description": "Related identifiers for the person.",
+            "type": "array",
+            "items": {
+              "$ref": "related_identifier_info_schema.json#"
+            }
+          },
+          "fullName": {
+            "description": "The first name, any middle names, and surname of a person.",
+            "type": "string"
+          },
+          "firstName": {
+            "description": "The given name of the person.",
+            "type": "string"
+          },
+          "middleInitial": {
+            "description": "The first letter of the person's middle name.",
+            "type": "string"
+          },
+          "lastName": {
+            "description": "The person's family name.",
+            "type": "string"
+          },
+          "email": {
+            "description": "An electronic mail address for the person.",
+            "type": "string",
+            "format": "email"
+          },
+          "affiliations": {
+            "description": "The organizations to which the person is associated with.",
+            "type": "array",
+            "items": {
+              "$ref": "organization_schema.json#"
+            }
+          },
+          "roles": {
+            "description": "The roles assumed by a person, ideally from a controlled vocabulary/ontology.",
+            "type": "array",
+            "items": {
+              "$ref": "annotation_schema.json#"
+            }
+          },
+          "extraProperties": {
+            "description": "Extra properties that do not fit in the previous specified attributes. ",
+            "type": "array",
+            "items": {
+              "$ref": "category_values_pair_schema.json#"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "identifier_info_schema.json": {
+        "id": "https://w3id.org/dats/schema/identifier_info_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS identifier information schema",
+        "description": "Information about the primary identifier.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Identifier"
+            ]
+          },
+          "identifier": {
+            "description": "A code uniquely identifying an entity locally to a system or globally.",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "alternate_identifier_info_schema.json": {
+        "id": "https://w3id.org/dats/schema/alternate_identifier_info_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS alternate identifier information schema",
+        "description": "Information about an alternate identifier (other than the primary).",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "AlternateIdentifier"
+            ]
+          },
+          "identifier": {
+            "description": "An identifier or identifiers other than the primary Identifier applied to the resource being registered. (definition from DataCite)",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "related_identifier_info_schema.json": {
+        "id": "https://w3id.org/dats/schema/related_identifier_info_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS related identifier information schema",
+        "description": "Information about an idenfier of related resources.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "RelatedIdentifier"
+            ]
+          },
+          "identifier": {
+            "description": "An identifier of a related resource.",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+            "type": "string"
+          },
+          "relationType": {
+            "description": "The type of the relationship corresponding to this identifier.",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "annotation_schema.json#"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotation_schema.json": {
+        "id": "https://w3id.org/dats/schema/annotation_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS annotation schema",
+        "description": "A pair of value (string or numeric) with a corresponding ontology term (IRI), if applicable.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Annotation"
+            ]
+          },
+          "value": {
+            "description": "The value of the annotation - it can be a string or a number (for coded values).",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "valueIRI": {
+            "description": "The IRI of a concept or ontology term associated with the value. It can also be an empty string",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "string",
+                "maxLength": 0
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "organization_schema.json": {
+        "id": "https://w3id.org/dats/schema/organization_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS organization schema",
+        "description": "Legal or physical entity corresponding to a business or administration.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Organization"
+            ]
+          },
+          "identifier": {
+            "description": "The identifier of the organization.",
+            "$ref": "identifier_info_schema.json#"
+          },
+          "alternateIdentifiers": {
+            "description": "Alternate identifiers for the organization.",
+            "type": "array",
+            "items": {
+              "$ref": "alternate_identifier_info_schema.json#"
+            }
+          },
+          "relatedIdentifiers": {
+            "description": "Related identifiers for the organization.",
+            "type": "array",
+            "items": {
+              "$ref": "related_identifier_info_schema.json#"
+            }
+          },
+          "name": {
+            "description": "The name of the organization.",
+            "type": "string"
+          },
+          "abbreviation": {
+            "description": "The shortname, abbreviation associated to the organization.",
+            "type": "string"
+          },
+          "location": {
+            "description": "The place where the organization is located.",
+            "$ref": "place_schema.json#"
+          },
+          "roles": {
+            "description": "The roles of the organization (ideally from a controlled vocabulary/ontology).",
+            "type": "array",
+            "items": {
+              "$ref": "annotation_schema.json#"
+            }
+          },
+          "extraProperties": {
+            "description": "Extra properties that do not fit in the previous specified attributes. ",
+            "type": "array",
+            "items": {
+              "$ref": "category_values_pair_schema.json#"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ]
+      },
+      "place_schema.json": {
+        "id": "https://w3id.org/dats/schema/place_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS place schema",
+        "description": "A spatially bounded entity.",
+        "comment": "It corresponds to Feature in GeoJSON, https://tools.ietf.org/html/rfc7946, geoLocation in DataCite,http://schema.datacite.org/meta/kernel-4.0/ and Place in schema.org",
+        "type": "object",
+        "definitions": {
+          "position": {
+            "description": "A GeoJSON Position",
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Place"
+            ]
+          },
+          "identifier": {
+            "description": "Primary identifier for the place.",
+            "$ref": "identifier_info_schema.json#"
+          },
+          "alternateIdentifiers": {
+            "description": "Alternate identifiers for the place.",
+            "type": "array",
+            "items": {
+              "$ref": "alternate_identifier_info_schema.json#"
+            }
+          },
+          "relatedIdentifiers": {
+            "description": "Related identifiers for the place.",
+            "type": "array",
+            "items": {
+              "$ref": "related_identifier_info_schema.json#"
+            }
+          },
+          "name": {
+            "description": "The name of the place.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A textual narrative comprised of one or more statements describing the place.",
+            "type": "string"
+          },
+          "postalAddress": {
+            "description": "A physical street address.",
+            "type": "string"
+          },
+          "geometry": {
+            "description": "A region of a space.",
+            "type": "string",
+            "comment": "It follows GeoJSON specification https://tools.ietf.org/html/rfc7946",
+            "enum": [
+              "Point",
+              "MultiPoint",
+              "LineString",
+              "MultiLineString",
+              "Polygon",
+              "MultiPolygon",
+              "GeometryCollection"
+            ]
+          },
+          "coordinates": {
+            "description": "A non-empty list of GeoJSON positions.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/definitions/position"
+            }
+          }
+        }
+      },
+      "category_values_pair_schema.json": {
+        "id": "https://w3id.org/dats/schema/category_values_pair_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS extension mechanism",
+        "description": "Extension mechanism for DATS, which allows to add extra properties to the entities. It should be used only for cases where there are no specific properties to deal with the desired property.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "CategoryValuesPair"
+            ]
+          },
+          "category": {
+            "description": "A characteristic or property about the entity this object is associated with.",
+            "type": "string"
+          },
+          "categoryIRI": {
+            "description": "The IRI corresponding to the category, if associated with an ontology term.",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "string",
+                "maxLength": 0
+              }
+            ]
+          },
+          "values": {
+            "description": "A set of (annotated) values associated with the cateogory.",
+            "type": "array",
+            "items": {
+              "$ref": "annotation_schema.json#"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "contexts": {
+      "access_schema.json": {
+        "sdo": "https://schema.org/",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "landingPage": {
+          "@id": "sdo:url",
+          "@type": "sdo:URL"
+        },
+        "accessURL": {
+          "@id": "sdo:contentUrl",
+          "@type": "sdo:URL"
+        }
+      },
+      "activity_schema.json": {
+        "sdo": "https://schema.org/",
+        "Activity": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "startDate": {
+          "@id": "sdo:startTime",
+          "@type": "sdo:DateTime"
+        },
+        "endDate": {
+          "@id": "sdo:endTime",
+          "@type": "sdo:DateTime"
+        },
+        "location": "sdo:location",
+        "performedBy": "sdo:agent"
+      },
+      "alternate_identifier_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        }
+      },
+      "anatomical_part_schema.json": {
+        "sdo": "https://schema.org/",
+        "AnatomicalPart": "sdo:AnatomicalStructure",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "annotation_schema.json": {
+        "sdo": "https://schema.org/",
+        "Annotation": "sdo:Thing",
+        "value": {
+          "@id": "sdo:value",
+          "@type": "sdo:DataType"
+        },
+        "valueIRI": {
+          "@id": "sdo:url",
+          "@type": "sdo:URL"
+        }
+      },
+      "biological_entity_schema.json": {
+        "sdo": "https://schema.org/",
+        "BiologicalEntity": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "category_values_pair_schema.json": {
+        "sdo": "https://schema.org/",
+        "CategoryValuesPair": "sdo:PropertyValue",
+        "category": {
+          "@id": "sdo:value",
+          "@type": "sdo:Text"
+        },
+        "categoryIRI": {
+          "@id": "sdo:url",
+          "@type": "sdo:URL"
+        }
+      },
+      "data_acquisition_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataAcquisition": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version"
+      },
+      "data_analysis_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataAnalysis": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "startDate": {
+          "@id": "sdo:startTime",
+          "@type": "sdo:DateTime"
+        },
+        "endDate": {
+          "@id": "sdo:endTime",
+          "@type": "sdo:DateTime"
+        }
+      },
+      "data_repository_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataRepository": "sdo:DataCatalog",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version",
+        "publishers": "sdo:publisher"
+      },
+      "data_standard_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataStandard": "sdo:CreativeWork",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version"
+      },
+      "data_type_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataType": "sdo:Thing",
+        "information": {
+          "@id": "sdo:Property"
+        },
+        "method": {
+          "@id": "sdo:Property"
+        },
+        "platform": {
+          "@id": "sdo:Property"
+        },
+        "instrument": {
+          "@id": "sdo:instrument"
+        }
+      },
+      "dataset_distribution_schema.json": {
+        "sdo": "https://schema.org/",
+        "DatasetDistribution": "sdo:DataDownload",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "alternateIdentifiers": "sdo:identifier",
+        "relatedIdentifiers": "sdo:identifier",
+        "title": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "storedIn": {
+          "@id": "sdo:includedInDataCatalog",
+          "@type": "sdo:DataCatalog"
+        },
+        "version": "sdo:version",
+        "licenses": "sdo:license",
+        "access": {
+          "@id": "sdo:accessMode",
+          "@type": "Access"
+        },
+        "size": {
+          "@id": "sdo:contentSize",
+          "@type": "sdo:Text"
+        }
+      },
+      "dataset_schema.json": {
+        "sdo": "https://schema.org/",
+        "Dataset": "sdo:Dataset",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "alternateIdentifier": "sdo:alternateName",
+        "relatedIdentifier": "sdo:mentions",
+        "title": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "dates": "sdo:temporalCoverage",
+        "spatialCoverage": "sdo:spatialCoverage",
+        "storedIn": {
+          "@id": "sdo:includedInDataCatalog",
+          "@type": "DataRepository"
+        },
+        "distributions": {
+          "@id": "sdo:distribution",
+          "@type": "DatasetDistribution"
+        },
+        "primaryPublications": "sdo:citation",
+        "citations": "sdo:citation",
+        "producedBy": "sdo:producer",
+        "creators": {
+          "@id": "sdo:creator",
+          "@type": "sdo:Thing"
+        },
+        "licenses": "sdo:license",
+        "isAbout": "sdo:about",
+        "hasPart": {
+          "@id": "sdo:hasPart",
+          "@type": "Dataset"
+        },
+        "acknowledges": "sdo:funder",
+        "dimensions": "sdo:variableMeasured"
+      },
+      "date_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "Date": "sdo:DateTime",
+        "date": {
+          "@id": "sdo:Property"
+        },
+        "type": {
+          "@id": "sdo:Property"
+        }
+      },
+      "dimension_schema.json": {
+        "sdo": "https://schema.org/",
+        "Dimension": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "disease_schema.json": {
+        "sdo": "https://schema.org/",
+        "Disease": "sdo:MedicalCondition",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "grant_schema.json": {
+        "sdo": "https://schema.org/",
+        "wsdo": "https://webschemas.org/",
+        "Grant": "wsdo:Grant",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "identifier_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "Identifier": "sdo:Thing",
+        "identifier": "sdo:identifier",
+        "identifierSource": {
+          "@id": "sdo:Property",
+          "@type": "sdo:Text"
+        }
+      },
+      "instrument_schema.json": {
+        "sdo": "https://schema.org/",
+        "BiologicalEntity": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "license_schema.json": {
+        "sdo": "https://schema.org/",
+        "License": "sdo:CreativeWork",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "version": {
+          "@id": "sdo:version",
+          "@type": "sdo:Text"
+        }
+      },
+      "material_schema.json": {
+        "sdo": "https://schema.org/",
+        "Material": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "spatialCoverage": "sdo:spatialCoverage",
+        "roles": "sdo:roleName"
+      },
+      "molecular_schema.json": {
+        "sdo": "https://schema.org/",
+        "BiologicalEntity": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "organization_schema.json": {
+        "sdo": "https://schema.org/",
+        "Organization": "sdo:Organization",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "abbreviation": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "location": {
+          "@id": "sdo:address",
+          "@type": "sdo:Text"
+        },
+        "roles": {
+          "@id": "sdo:roleName",
+          "@type": "sdo:Text"
+        }
+      },
+      "person_schema.json": {
+        "sdo": "https://schema.org/",
+        "Person": "sdo:Person",
+        "identifier": "sdo:identifier",
+        "firstName": "sdo:givenName",
+        "lastName": "sdo:familyName",
+        "fullName": "sdo:name",
+        "email": "sdo:email",
+        "affiliations": "sdo:affiliation",
+        "roles": "sdo:roleName"
+      },
+      "place_schema.json": {
+        "sdo": "https://schema.org/",
+        "Place": "sdo:Place",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "postalAddress": {
+          "@id": "sdo:address",
+          "@type": "sdo:PostalAddress"
+        },
+        "geometry": {
+          "@id": "sdo:geospatiallyContains",
+          "@type": "sdo:GeospatialGeometry"
+        },
+        "coordinates": {
+          "@id": "sdo:geo",
+          "@type": "sdo:GeoCoordinates"
+        }
+      },
+      "provenance_schema.json": {
+        "sdo": "https://schema.org/",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "publication_schema.json": {
+        "sdo": "https://schema.org/",
+        "Publication": "sdo:ScholarlyArticle",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "title": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "type": "sdo:category",
+        "publicationVenue": "sdo:publication",
+        "authorList": "sdo:author",
+        "authors": "sdo:author",
+        "acknowledges": "sdo:funder"
+      },
+      "related_identifier_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "RelatedIdentifier": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "software_schema.json": {
+        "sdo": "https://schema.org/",
+        "Software": "sdo:SoftwareApplication",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version"
+      },
+      "study_group_schema.json": {
+        "sdo": "https://schema.org/",
+        "StudyGroup": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "study_schema.json": {
+        "sdo": "https://schema.org/",
+        "Study": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "taxonomic_schema.json": {
+        "sdo": "https://schema.org/",
+        "TaxonomicInformation": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "treatment_schema.json": {
+        "sdo": "https://schema.org/",
+        "Treatmet": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "startDate": {
+          "@id": "sdo:startTime",
+          "@type": "sdo:DateTime"
+        },
+        "endDate": {
+          "@id": "sdo:endTime",
+          "@type": "sdo:DateTime"
+        }
+      }
+    }
+  },
+  "network2": {
+    "name": "DATS",
+    "schemas": {
+      "person_schema.json": {
+        "id": "https://w3id.org/dats/schema/person_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS person schema",
+        "description": "A human being",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Person"
+            ]
+          },
+          "identifier": {
+            "description": "Primary identifier for the person.",
+            "$ref": "identifier_info_schema.json#"
+          },
+          "alternateIdentifiers": {
+            "description": "Alternate identifiers for the person.",
+            "type": "array",
+            "items": {
+              "$ref": "alternate_identifier_info_schema.json#"
+            }
+          },
+          "relatedIdentifiers": {
+            "description": "Related identifiers for the person.",
+            "type": "array",
+            "items": {
+              "$ref": "related_identifier_info_schema.json#"
+            }
+          },
+          "fullName": {
+            "description": "The first name, any middle names, and surname of a person.",
+            "type": "string"
+          },
+          "firstName": {
+            "description": "The given name of the person.",
+            "type": "string"
+          },
+          "middleInitial": {
+            "description": "The first letter of the person's middle name.",
+            "type": "string"
+          },
+          "lastName": {
+            "description": "The person's family name.",
+            "type": "string"
+          },
+          "email": {
+            "description": "An electronic mail address for the person.",
+            "type": "string",
+            "format": "email"
+          },
+          "affiliations": {
+            "description": "The organizations to which the person is associated with.",
+            "type": "array",
+            "items": {
+              "$ref": "organization_schema.json#"
+            }
+          },
+          "roles": {
+            "description": "The roles assumed by a person, ideally from a controlled vocabulary/ontology.",
+            "type": "array",
+            "items": {
+              "$ref": "annotation_schema.json#"
+            }
+          },
+          "extraProperties": {
+            "description": "Extra properties that do not fit in the previous specified attributes. ",
+            "type": "array",
+            "items": {
+              "$ref": "category_values_pair_schema.json#"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "identifier_info_schema.json": {
+        "id": "https://w3id.org/dats/schema/identifier_info_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS identifier information schema",
+        "description": "Information about the primary identifier.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Identifier"
+            ]
+          },
+          "identifier": {
+            "description": "A code uniquely identifying an entity locally to a system or globally.",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "alternate_identifier_info_schema.json": {
+        "id": "https://w3id.org/dats/schema/alternate_identifier_info_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS alternate identifier information schema",
+        "description": "Information about an alternate identifier (other than the primary).",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "AlternateIdentifier"
+            ]
+          },
+          "identifier": {
+            "description": "An identifier or identifiers other than the primary Identifier applied to the resource being registered. (definition from DataCite)",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "related_identifier_info_schema.json": {
+        "id": "https://w3id.org/dats/schema/related_identifier_info_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS related identifier information schema",
+        "description": "Information about an idenfier of related resources.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "RelatedIdentifier"
+            ]
+          },
+          "identifier": {
+            "description": "An identifier of a related resource.",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "The identifier source represents information about the organisation/namespace responsible for minting the identifiers. It must be provided if the identifier is provided.",
+            "type": "string"
+          },
+          "relationType": {
+            "description": "The type of the relationship corresponding to this identifier.",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "annotation_schema.json#"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotation_schema.json": {
+        "id": "https://w3id.org/dats/schema/annotation_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS annotation schema",
+        "description": "A pair of value (string or numeric) with a corresponding ontology term (IRI), if applicable.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Annotation"
+            ]
+          },
+          "value": {
+            "description": "The value of the annotation - it can be a string or a number (for coded values).",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "valueIRI": {
+            "description": "The IRI of a concept or ontology term associated with the value. It can also be an empty string",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "string",
+                "maxLength": 0
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "organization_schema.json": {
+        "id": "https://w3id.org/dats/schema/organization_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS organization schema",
+        "description": "Legal or physical entity corresponding to a business or administration.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Organization"
+            ]
+          },
+          "identifier": {
+            "description": "The identifier of the organization.",
+            "$ref": "identifier_info_schema.json#"
+          },
+          "alternateIdentifiers": {
+            "description": "Alternate identifiers for the organization.",
+            "type": "array",
+            "items": {
+              "$ref": "alternate_identifier_info_schema.json#"
+            }
+          },
+          "relatedIdentifiers": {
+            "description": "Related identifiers for the organization.",
+            "type": "array",
+            "items": {
+              "$ref": "related_identifier_info_schema.json#"
+            }
+          },
+          "name": {
+            "description": "The name of the organization.",
+            "type": "string"
+          },
+          "abbreviation": {
+            "description": "The shortname, abbreviation associated to the organization.",
+            "type": "string"
+          },
+          "location": {
+            "description": "The place where the organization is located.",
+            "$ref": "place_schema.json#"
+          },
+          "roles": {
+            "description": "The roles of the organization (ideally from a controlled vocabulary/ontology).",
+            "type": "array",
+            "items": {
+              "$ref": "annotation_schema.json#"
+            }
+          },
+          "extraProperties": {
+            "description": "Extra properties that do not fit in the previous specified attributes. ",
+            "type": "array",
+            "items": {
+              "$ref": "category_values_pair_schema.json#"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ]
+      },
+      "place_schema.json": {
+        "id": "https://w3id.org/dats/schema/place_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS place schema",
+        "description": "A spatially bounded entity.",
+        "comment": "It corresponds to Feature in GeoJSON, https://tools.ietf.org/html/rfc7946, geoLocation in DataCite,http://schema.datacite.org/meta/kernel-4.0/ and Place in schema.org",
+        "type": "object",
+        "definitions": {
+          "position": {
+            "description": "A GeoJSON Position",
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "Place"
+            ]
+          },
+          "identifier": {
+            "description": "Primary identifier for the place.",
+            "$ref": "identifier_info_schema.json#"
+          },
+          "alternateIdentifiers": {
+            "description": "Alternate identifiers for the place.",
+            "type": "array",
+            "items": {
+              "$ref": "alternate_identifier_info_schema.json#"
+            }
+          },
+          "relatedIdentifiers": {
+            "description": "Related identifiers for the place.",
+            "type": "array",
+            "items": {
+              "$ref": "related_identifier_info_schema.json#"
+            }
+          },
+          "name": {
+            "description": "The name of the place.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A textual narrative comprised of one or more statements describing the place.",
+            "type": "string"
+          },
+          "postalAddress": {
+            "description": "A physical street address.",
+            "type": "string"
+          },
+          "geometry": {
+            "description": "A region of a space.",
+            "type": "string",
+            "comment": "It follows GeoJSON specification https://tools.ietf.org/html/rfc7946",
+            "enum": [
+              "Point",
+              "MultiPoint",
+              "LineString",
+              "MultiLineString",
+              "Polygon",
+              "MultiPolygon",
+              "GeometryCollection"
+            ]
+          },
+          "coordinates": {
+            "description": "A non-empty list of GeoJSON positions.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/definitions/position"
+            }
+          }
+        }
+      },
+      "category_values_pair_schema.json": {
+        "id": "https://w3id.org/dats/schema/category_values_pair_schema.json",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "DATS extension mechanism",
+        "description": "Extension mechanism for DATS, which allows to add extra properties to the entities. It should be used only for cases where there are no specific properties to deal with the desired property.",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "description": "The JSON-LD context",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "@id": {
+            "description": "The JSON-LD identifier",
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "description": "The JSON-LD type",
+            "type": "string",
+            "enum": [
+              "CategoryValuesPair"
+            ]
+          },
+          "category": {
+            "description": "A characteristic or property about the entity this object is associated with.",
+            "type": "string"
+          },
+          "categoryIRI": {
+            "description": "The IRI corresponding to the category, if associated with an ontology term.",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "string",
+                "maxLength": 0
+              }
+            ]
+          },
+          "values": {
+            "description": "A set of (annotated) values associated with the cateogory.",
+            "type": "array",
+            "items": {
+              "$ref": "annotation_schema.json#"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "contexts": {
+      "access_schema.json": {
+        "sdo": "https://schema.org/",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "landingPage": {
+          "@id": "sdo:url",
+          "@type": "sdo:URL"
+        },
+        "accessURL": {
+          "@id": "sdo:contentUrl",
+          "@type": "sdo:URL"
+        }
+      },
+      "activity_schema.json": {
+        "sdo": "https://schema.org/",
+        "Activity": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "startDate": {
+          "@id": "sdo:startTime",
+          "@type": "sdo:DateTime"
+        },
+        "endDate": {
+          "@id": "sdo:endTime",
+          "@type": "sdo:DateTime"
+        },
+        "location": "sdo:location",
+        "performedBy": "sdo:agent"
+      },
+      "alternate_identifier_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        }
+      },
+      "anatomical_part_schema.json": {
+        "sdo": "https://schema.org/",
+        "AnatomicalPart": "sdo:AnatomicalStructure",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "annotation_schema.json": {
+        "sdo": "https://schema.org/",
+        "Annotation": "sdo:Thing",
+        "value": {
+          "@id": "sdo:value",
+          "@type": "sdo:DataType"
+        },
+        "valueIRI": {
+          "@id": "sdo:url",
+          "@type": "sdo:URL"
+        }
+      },
+      "biological_entity_schema.json": {
+        "sdo": "https://schema.org/",
+        "BiologicalEntity": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "category_values_pair_schema.json": {
+        "sdo": "https://schema.org/",
+        "CategoryValuesPair": "sdo:PropertyValue",
+        "category": {
+          "@id": "sdo:value",
+          "@type": "sdo:Text"
+        },
+        "categoryIRI": {
+          "@id": "sdo:url",
+          "@type": "sdo:URL"
+        }
+      },
+      "data_acquisition_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataAcquisition": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version"
+      },
+      "data_analysis_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataAnalysis": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "startDate": {
+          "@id": "sdo:startTime",
+          "@type": "sdo:DateTime"
+        },
+        "endDate": {
+          "@id": "sdo:endTime",
+          "@type": "sdo:DateTime"
+        }
+      },
+      "data_repository_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataRepository": "sdo:DataCatalog",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version",
+        "publishers": "sdo:publisher"
+      },
+      "data_standard_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataStandard": "sdo:CreativeWork",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version"
+      },
+      "data_type_schema.json": {
+        "sdo": "https://schema.org/",
+        "DataType": "sdo:Thing",
+        "information": {
+          "@id": "sdo:Property"
+        },
+        "method": {
+          "@id": "sdo:Property"
+        },
+        "platform": {
+          "@id": "sdo:Property"
+        },
+        "instrument": {
+          "@id": "sdo:instrument"
+        }
+      },
+      "dataset_distribution_schema.json": {
+        "sdo": "https://schema.org/",
+        "DatasetDistribution": "sdo:DataDownload",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "alternateIdentifiers": "sdo:identifier",
+        "relatedIdentifiers": "sdo:identifier",
+        "title": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "storedIn": {
+          "@id": "sdo:includedInDataCatalog",
+          "@type": "sdo:DataCatalog"
+        },
+        "version": "sdo:version",
+        "licenses": "sdo:license",
+        "access": {
+          "@id": "sdo:accessMode",
+          "@type": "Access"
+        },
+        "size": {
+          "@id": "sdo:contentSize",
+          "@type": "sdo:Text"
+        }
+      },
+      "dataset_schema.json": {
+        "sdo": "https://schema.org/",
+        "Dataset": "sdo:Dataset",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "alternateIdentifier": "sdo:alternateName",
+        "relatedIdentifier": "sdo:mentions",
+        "title": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "dates": "sdo:temporalCoverage",
+        "spatialCoverage": "sdo:spatialCoverage",
+        "storedIn": {
+          "@id": "sdo:includedInDataCatalog",
+          "@type": "DataRepository"
+        },
+        "distributions": {
+          "@id": "sdo:distribution",
+          "@type": "DatasetDistribution"
+        },
+        "primaryPublications": "sdo:citation",
+        "citations": "sdo:citation",
+        "producedBy": "sdo:producer",
+        "creators": {
+          "@id": "sdo:creator",
+          "@type": "sdo:Thing"
+        },
+        "licenses": "sdo:license",
+        "isAbout": "sdo:about",
+        "hasPart": {
+          "@id": "sdo:hasPart",
+          "@type": "Dataset"
+        },
+        "acknowledges": "sdo:funder",
+        "dimensions": "sdo:variableMeasured"
+      },
+      "date_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "Date": "sdo:DateTime",
+        "date": {
+          "@id": "sdo:Property"
+        },
+        "type": {
+          "@id": "sdo:Property"
+        }
+      },
+      "dimension_schema.json": {
+        "sdo": "https://schema.org/",
+        "Dimension": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "disease_schema.json": {
+        "sdo": "https://schema.org/",
+        "Disease": "sdo:MedicalCondition",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "grant_schema.json": {
+        "sdo": "https://schema.org/",
+        "wsdo": "https://webschemas.org/",
+        "Grant": "wsdo:Grant",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "identifier_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "Identifier": "sdo:Thing",
+        "identifier": "sdo:identifier",
+        "identifierSource": {
+          "@id": "sdo:Property",
+          "@type": "sdo:Text"
+        }
+      },
+      "instrument_schema.json": {
+        "sdo": "https://schema.org/",
+        "BiologicalEntity": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "license_schema.json": {
+        "sdo": "https://schema.org/",
+        "License": "sdo:CreativeWork",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "version": {
+          "@id": "sdo:version",
+          "@type": "sdo:Text"
+        }
+      },
+      "material_schema.json": {
+        "sdo": "https://schema.org/",
+        "Material": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "spatialCoverage": "sdo:spatialCoverage",
+        "roles": "sdo:roleName"
+      },
+      "molecular_schema.json": {
+        "sdo": "https://schema.org/",
+        "BiologicalEntity": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "organization_schema.json": {
+        "sdo": "https://schema.org/",
+        "Organization": "sdo:Organization",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "abbreviation": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "location": {
+          "@id": "sdo:address",
+          "@type": "sdo:Text"
+        },
+        "roles": {
+          "@id": "sdo:roleName",
+          "@type": "sdo:Text"
+        }
+      },
+      "person_schema.json": {
+        "sdo": "https://schema.org/",
+        "Person": "sdo:Person",
+        "identifier": "sdo:identifier",
+        "firstName": "sdo:givenName",
+        "lastName": "sdo:familyName",
+        "fullName": "sdo:name",
+        "email": "sdo:email",
+        "affiliations": "sdo:affiliation",
+        "roles": "sdo:roleName"
+      },
+      "place_schema.json": {
+        "sdo": "https://schema.org/",
+        "Place": "sdo:Place",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "postalAddress": {
+          "@id": "sdo:address",
+          "@type": "sdo:PostalAddress"
+        },
+        "geometry": {
+          "@id": "sdo:geospatiallyContains",
+          "@type": "sdo:GeospatialGeometry"
+        },
+        "coordinates": {
+          "@id": "sdo:geo",
+          "@type": "sdo:GeoCoordinates"
+        }
+      },
+      "provenance_schema.json": {
+        "sdo": "https://schema.org/",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "publication_schema.json": {
+        "sdo": "https://schema.org/",
+        "Publication": "sdo:ScholarlyArticle",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "title": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "type": "sdo:category",
+        "publicationVenue": "sdo:publication",
+        "authorList": "sdo:author",
+        "authors": "sdo:author",
+        "acknowledges": "sdo:funder"
+      },
+      "related_identifier_info_schema.json": {
+        "sdo": "https://schema.org/",
+        "RelatedIdentifier": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "software_schema.json": {
+        "sdo": "https://schema.org/",
+        "Software": "sdo:SoftwareApplication",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "licenses": "sdo:license",
+        "version": "sdo:version"
+      },
+      "study_group_schema.json": {
+        "sdo": "https://schema.org/",
+        "StudyGroup": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "study_schema.json": {
+        "sdo": "https://schema.org/",
+        "Study": "sdo:Action",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        }
+      },
+      "taxonomic_schema.json": {
+        "sdo": "https://schema.org/",
+        "TaxonomicInformation": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        }
+      },
+      "treatment_schema.json": {
+        "sdo": "https://schema.org/",
+        "Treatmet": "sdo:Thing",
+        "identifier": {
+          "@id": "sdo:identifier",
+          "@type": "sdo:Text"
+        },
+        "name": {
+          "@id": "sdo:name",
+          "@type": "sdo:Text"
+        },
+        "description": {
+          "@id": "sdo:description",
+          "@type": "sdo:Text"
+        },
+        "startDate": {
+          "@id": "sdo:startTime",
+          "@type": "sdo:DateTime"
+        },
+        "endDate": {
+          "@id": "sdo:endTime",
+          "@type": "sdo:DateTime"
+        }
+      }
+    }
+  },
+  "overlaps": [
+    [
+      [
+        "Annotation",
+        "Annotation"
+      ],
+      {
+        "coverage": [
+          "100.0",
+          [
+            "2",
+            "2"
+          ]
+        ],
+        "overlapping fields": [
+          [
+            "value",
+            "value"
+          ],
+          [
+            "valueIRI",
+            "valueIRI"
+          ]
+        ],
+        "ignored fields": []
+      }
+    ],
+    [
+      [
+        "Organization",
+        "Organization"
+      ],
+      {
+        "coverage": [
+          "125.0",
+          [
+            "5",
+            "4"
+          ]
+        ],
+        "overlapping fields": [
+          [
+            "identifier",
+            "identifier"
+          ],
+          [
+            "name",
+            "name"
+          ],
+          [
+            "name",
+            "abbreviation"
+          ],
+          [
+            "abbreviation",
+            "name"
+          ],
+          [
+            "abbreviation",
+            "abbreviation"
+          ],
+          [
+            "location",
+            "location"
+          ],
+          [
+            "roles",
+            "roles"
+          ]
+        ],
+        "ignored fields": [
+          "alternateIdentifiers",
+          "relatedIdentifiers",
+          "extraProperties"
+        ]
+      }
+    ],
+    [
+      [
+        "Person",
+        "Person"
+      ],
+      {
+        "coverage": [
+          "100.0",
+          [
+            "7",
+            "7"
+          ]
+        ],
+        "overlapping fields": [
+          [
+            "identifier",
+            "identifier"
+          ],
+          [
+            "fullName",
+            "fullName"
+          ],
+          [
+            "firstName",
+            "firstName"
+          ],
+          [
+            "lastName",
+            "lastName"
+          ],
+          [
+            "email",
+            "email"
+          ],
+          [
+            "affiliations",
+            "affiliations"
+          ],
+          [
+            "roles",
+            "roles"
+          ]
+        ],
+        "ignored fields": [
+          "alternateIdentifiers",
+          "relatedIdentifiers",
+          "middleInitial",
+          "extraProperties"
+        ]
+      }
+    ],
+    [
+      [
+        "Place",
+        "Place"
+      ],
+      {
+        "coverage": [
+          "100.0",
+          [
+            "6",
+            "6"
+          ]
+        ],
+        "overlapping fields": [
+          [
+            "identifier",
+            "identifier"
+          ],
+          [
+            "name",
+            "name"
+          ],
+          [
+            "description",
+            "description"
+          ],
+          [
+            "postalAddress",
+            "postalAddress"
+          ],
+          [
+            "geometry",
+            "geometry"
+          ],
+          [
+            "coordinates",
+            "coordinates"
+          ]
+        ],
+        "ignored fields": [
+          "alternateIdentifiers",
+          "relatedIdentifiers"
+        ]
+      }
+    ]
+  ]
+}
