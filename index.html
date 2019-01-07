@@ -11,6 +11,7 @@
               integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
               crossorigin="anonymous">
         <script type="text/javascript" src="lib/angular.js"></script>
+        <script type="text/javascript" src="lib/angular-material.js"></script>
         <script type="text/javascript" src="app.js"></script>
     </head>
 
@@ -21,6 +22,18 @@
 
                 <div class="card-header">
                     Overlap between {{output.header[1]}} and {{output.header[2]}} checklists
+
+                    <hr>
+
+                    <form name="myForm" id="compSelector">
+                        <label for="singleSelect"> Select another comparison: </label>
+                        <select name="singleSelect" ng-model="current_comparison" ng-change="make_comparison()">
+
+                            <option ng-repeat="comp in available_comparison" value="{{comp}}">
+                                {{comp | labels}}
+                            </option>
+                        </select>
+                    </form>
                 </div>
 
                 <div class="card-body">

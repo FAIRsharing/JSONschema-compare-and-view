@@ -65,3 +65,17 @@ body.JSONSchemaComp .fa-check {
 body.JSONSchemaComp .fa-times {
     color: #bd2130;
 }
+
+
+form label, form select, form option {
+    font-size: 1rem;
+}
+
+form label {
+    font-style: italic;
+}
+
+form select {
+    margin-left:10px;
+    border-left:0;
+}

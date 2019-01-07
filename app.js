@@ -7,9 +7,19 @@
 
             let viewer = this;
 
-            $http.get("overlap.json").then(function(res){
-                $scope.output = viewer.process_data(res.data);
-            });
+            $scope.available_comparison = [
+                "overlap.json",
+                "dats_vs_miaca.json"
+            ];
+
+            $scope.current_comparison = $scope.available_comparison[0];
+
+
+            $scope.make_comparison = function(){
+                $http.get("inputs/" + $scope.current_comparison).then(function(res){
+                    $scope.output = viewer.process_data(res.data);
+                });
+            };
 
             viewer.process_data = function(data){
                 let output = {
@@ -43,6 +53,7 @@
 
                         let base_type = data.network1["contexts"][schema_1_name][overlap[0][0]];
                         let title_1 = data.network1["schemas"][schema_1_name].title;
+                        console.log(schema_2_name);
                         let title_2 = data.network2["schemas"][schema_2_name].title;
                         let local_output = [base_type, title_1, title_2];
 
@@ -186,6 +197,8 @@
                     return false;
                 }
             }
+
+            $scope.make_comparison();
         }]
     );
 
@@ -226,5 +239,12 @@
             return typeof obj;
         };
     });
+
+    my_app.filter('labels', function() {
+        return function(obj) {
+            let test = obj.replace('.json', '').replace(/_/g, ' ');
+            return test
+        }
+    })
 
 })();

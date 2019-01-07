@@ -1,0 +1,572 @@
+{
+  "network2": {
+    "name": "dats",
+    "contexts": {
+      "dats_schema.json": {
+        "Dats": "sdo:CreativeWork",
+        "sdo": "https://schema.org/"
+      },
+      "person_schema.json": {
+        "address": "sdo:address",
+        "email": "sdo:email",
+        "lastName": "sdo:lastName",
+        "phone": "sdo:telephone",
+        "Person": "sdo:Person",
+        "affiliation": "sdo:affiliation",
+        "sdo": "https://schema.org/",
+        "firstName": "sdo:givenName",
+        "fax": "sdo:faxNumber",
+        "identifier": "sdo:identifier"
+      },
+      "investigation_schema.json": {
+        "contacts": "sdo:contactPoint",
+        "title": "sdo:name",
+        "Investigation": "sdo:Project",
+        "sdo": "https://schema.org/",
+        "description": "sdo:description",
+        "identifier": "sdo:identifier"
+      }
+    },
+    "schemas": {
+      "dats_schema.json": {
+        "id": "https://w3id.org/mircat/miacme/schema/miacme_schema.json",
+        "properties": {
+          "investigation": {
+            "$ref": "investigation_schema.json#"
+          },
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "enum": "Miacme",
+            "type": "string"
+          },
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "MIACME (Minimum Information about a Cell Migration Experiments) schema",
+        "version": "0.3",
+        "description": "JSON-schema representing MIACME reporting guideline."
+      },
+      "person_schema.json": {
+        "id": "https://w3id.org/mircat/miacme/schema/person_schema.json",
+        "properties": {
+          "roles": {
+            "description": "The roles assumed by the person. Ideally from a controlled vocabulary or ontology.",
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "@type": {
+            "enum": "Person",
+            "type": "string"
+          },
+          "lastName": {
+            "description": "The family name.",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "Information about the organisation or namespace responsible for creating and maintaining the identifier.",
+            "type": "string"
+          },
+          "affiliation": {
+            "items": {
+              "$ref": "organization_schema.json#"
+            },
+            "description": "The organizations to which the person is associated with.",
+            "type": "array"
+          },
+          "fax": {
+            "type": "string"
+          },
+          "midInitials": {
+            "type": "string"
+          },
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "format": "email",
+            "description": "The email address.",
+            "type": "string"
+          },
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "firstName": {
+            "description": "The given name.",
+            "type": "string"
+          },
+          "identifier": {
+            "description": "A persistent identifier of the person, it should be an ORCID.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "MIACME person schema. A human being.",
+        "version": "0.3",
+        "description": "JSON-schema representing a person in MIACME"
+      },
+      "investigation_schema.json": {
+        "id": "https://w3id.org/mircat/miacme/schema/investigation_schema.json",
+        "properties": {
+          "MIACMEcompliance": {
+            "description": "The result of the validation for MIACME compliance.",
+            "type": "string"
+          },
+          "publications": {
+            "items": {
+              "$ref": "publication_schema.json#"
+            },
+            "description": "Scholarly articles associated with the investigation, usually describing the methods applied and conclusions reached by the investigation.",
+            "type": "array"
+          },
+          "conclusions": {
+            "items": {
+              "type": "string"
+            },
+            "description": "A set of statements summarizing the findings of the investigation. It could be a URI referring to a nanopublication.",
+            "type": "array"
+          },
+          "@type": {
+            "enum": "Investigation",
+            "type": "string"
+          },
+          "identifierSource": {
+            "description": "Information about the organisation or namespace responsible for creating and maintaining the identifier.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A textual narrative comprised of one or more statements about the investigation.",
+            "type": "string"
+          },
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "contacts": {
+            "items": {
+              "$ref": "person_schema.json#"
+            },
+            "description": "The person(s) who contributed to the investigation, such as the Principal Investigator, corresponding author in related publications or other researchers involved.",
+            "type": "array"
+          },
+          "studies": {
+            "items": {
+              "$ref": "study_schema.json#"
+            },
+            "description": "The studies associated with the Investigation.",
+            "type": "array"
+          },
+          "MIACMEversion": {
+            "description": "The version of MIACME this dataset description should be compliant with.",
+            "type": "string"
+          },
+          "acknowledges": {
+            "items": {
+              "$ref": "grant_schema.json#"
+            },
+            "description": "The grant(s) which funded and supported the investigation.",
+            "type": "array"
+          },
+          "title": {
+            "description": "The title of the investigation.",
+            "type": "string"
+          },
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+          "identifier": {
+            "description": "Primary identifier for the investigation. Ideally, a persistent identifier but an internal user identifier at a minimum.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "MIACME investigation schema",
+        "version": "0.3",
+        "description": "JSON-schema representing an investigation in MIACME. A planned activity that involves one or more studies."
+      }
+    }
+  },
+  "network1": {
+    "name": "MIACA",
+    "contexts": {
+      "miaca_schema.json": {
+        "sdo": "https://schema.org/",
+        "Miaca": "sdo:CreativeWork"
+      },
+      "source_schema.json": {
+        "country": "sdo:addressCountry",
+        "Source": "sdo:Person",
+        "address": "sdo:address",
+        "ID": "sdo:identifier",
+        "email": "sdo:email",
+        "name": "sdo:name",
+        "sdo": "https://schema.org/",
+        "institution": "sdo:affiliation"
+      },
+      "project_schema.json": {
+        "Project": "sdo:Project",
+        "projectDescription": "sdo:description",
+        "ID": "sdo:identifier",
+        "instrument": "sdo:instrument",
+        "sdo": "https://schema.org/",
+        "source": "sdo:member"
+      }
+    },
+    "schemas": {
+      "miaca_schema.json": {
+        "id": "https://w3id.org/mircat/miaca/schema/miaca_schema.json",
+        "properties": {
+          "project": {
+            "description": "Conditions that have been established to measure effects which are induced in cells in response to a perturbation, together with data that have been acquired in these measurements in order to address the biological question this project was designed for.",
+            "$ref": "project_schema.json#"
+          },
+          "@id": {
+            "format": "uri",
+            "description": "The JSON-LD identifier",
+            "type": "string"
+          },
+          "@type": {
+            "enum": "Miaca",
+            "description": "The JSON-LD type",
+            "type": "string"
+          },
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ],
+            "description": "The JSON-LD context"
+          }
+        },
+        "type": "object",
+        "_provenance": {
+          "url": "http://w3id.org/mircat/miaca/provenance.json"
+        },
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "MIACA (Minimum Information about a Cellular Assay) schema",
+        "description": "JSON-schema representing MIACA reporting guideline."
+      },
+      "source_schema.json": {
+        "id": "https://w3id.org/mircat/miaca/schema/source_schema.json",
+        "properties": {
+          "country": {
+            "minLength": 1,
+            "description": "country the city is placed",
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "description": "email of the researcher",
+            "type": "string"
+          },
+          "ID": {
+            "description": "The source identifier",
+            "type": "string"
+          },
+          "@type": {
+            "enum": [
+              "Source"
+            ],
+            "description": "The JSON-LD type",
+            "type": "string"
+          },
+          "department": {
+            "minLength": 1,
+            "description": "department in the institution",
+            "type": "string"
+          },
+          "name": {
+            "minLength": 1,
+            "description": "name of the researcher working on the project.",
+            "type": "string"
+          },
+          "address": {
+            "minLength": 1,
+            "description": "address of the institution",
+            "type": "string"
+          },
+          "city": {
+            "minLength": 1,
+            "description": "city the institution is placed",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "description": "The JSON-LD identifier",
+            "type": "string"
+          },
+          "institution": {
+            "minLength": 1,
+            "description": "name of the institution/affiliation the researcher is working at",
+            "type": "string"
+          },
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ],
+            "description": "The JSON-LD context"
+          }
+        },
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "required": [
+          "ID",
+          "name",
+          "institution",
+          "department",
+          "address",
+          "city",
+          "country",
+          "email"
+        ],
+        "title": "MIACA Source - corresponding to a person and their organization",
+        "description": "Contact details of researcher/person/laboratory/institution in charge of the project -Used to describe the contact details of the scientist - corresponds to MIACA XSD sourceType"
+      },
+      "project_schema.json": {
+        "id": "https://w3id.org/mircat/miaca/schema/project_schema.json",
+        "properties": {
+          "ID": {
+            "description": "The project identifier",
+            "type": "string"
+          },
+          "@type": {
+            "format": "uri",
+            "description": "The JSON-LD type",
+            "type": "string"
+          },
+          "materialList": {
+            "description": "Description of the materials that are utilized in the project.",
+            "$ref": "material_list_schema.json#"
+          },
+          "@id": {
+            "format": "uri",
+            "description": "The JSON-LD identifier",
+            "type": "string"
+          },
+          "processLine": {
+            "properties": {
+              "ID": {
+                "description": "The identifier of the processLine",
+                "type": "string"
+              },
+              "process": {
+                "items": {
+                  "processName": {
+                    "description": "e.g. cell propagation, siRNA transfection",
+                    "type": "string"
+                  },
+                  "currentID": {
+                    "description": "ID of the referenced step",
+                    "type": "string"
+                  },
+                  "successID": {
+                    "description": "ID of a successor element of the process step",
+                    "type": "string"
+                  }
+                },
+                "description": "a Treatment, Post-Treatment or DataAcquisition Step",
+                "type": "array"
+              }
+            },
+            "description": "The experiment workflow",
+            "type": "object"
+          },
+          "cellAssay": {
+            "description": "The actual experimental part decribing the performed steps, like  treatments, perturbation(s) and data acquisition in necessary detail.",
+            "$ref": "cell_assay_schema.json#"
+          },
+          "projectDescription": {
+            "description": "Description of biological process that is addressed and description of measured effect.",
+            "$ref": "project_description_schema.json#"
+          },
+          "source": {
+            "description": "Contact details of researcher/person/laboratory/institution in charge of the project",
+            "$ref": "source_schema.json#"
+          },
+          "instrument": {
+            "description": "Description of the instruments required for the assay, e.g. data acquisition station. Detailed descriptions of such instruments and their settings could be part of spezialized documents or be given in Treatment, Post-Treatment, or Data Acquisition.",
+            "$ref": "instrument_schema.json#"
+          },
+          "dataProcessing": {
+            "description": "Description of the processes applied to analyze the raw-data in order to generate a hit list. Data analysis is usually carried out sequentially, applying a number of algorithms and analysis tools",
+            "$ref": "da_schema.json#"
+          },
+          "arraySupport": {
+            "description": "Array supports (reaction vessels where perturbations are carried out) that are used during the project",
+            "$ref": "array_support_schema.json#"
+          },
+          "application": {
+            "description": "Description of the specific application of this project within a larger context, if applicable.",
+            "$ref": "application_schema.json#"
+          },
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "array"
+              }
+            ],
+            "description": "The JSON-LD context"
+          }
+        },
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "title": "MIACA (Minimum Information about a Cellular Assay) project schema",
+        "description": "Conditions that have been established to measure effects which are induced in cells in response to a perturbation, together with data that have been acquired in these measurements in order to address the biological question this project was designed for."
+      }
+    }
+  },
+  "overlaps": [
+    [
+      [
+        "Miaca",
+        "dats"
+      ],
+      {
+        "ignored fields": [
+          "project"
+        ],
+        "overlapping fields": [],
+        "coverage": [
+          "0",
+          0
+        ]
+      }
+    ],
+    [
+      [
+        "Source",
+        "Person"
+      ],
+      {
+        "ignored fields": [
+          "department",
+          "city"
+        ],
+        "overlapping fields": [
+          [
+            "ID",
+            "identifier"
+          ],
+          [
+            "institution",
+            "affiliation"
+          ],
+          [
+            "address",
+            "address"
+          ],
+          [
+            "email",
+            "email"
+          ]
+        ],
+        "coverage": [
+          "66.67",
+          [
+            "4",
+            "6"
+          ]
+        ]
+      }
+    ],
+    [
+      [
+        "Project",
+        "Investigation"
+      ],
+      {
+        "ignored fields": [
+          "materialList",
+          "processLine",
+          "cellAssay",
+          "dataProcessing",
+          "arraySupport",
+          "application"
+        ],
+        "overlapping fields": [
+          [
+            "ID",
+            "identifier"
+          ],
+          [
+            "projectDescription",
+            "description"
+          ]
+        ],
+        "coverage": [
+          "50.0",
+          [
+            "2",
+            "4"
+          ]
+        ]
+      }
+    ]
+  ]
+}
