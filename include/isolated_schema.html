@@ -1,5 +1,5 @@
 <tr class="new_schema">
-    <th scope="row"> {{isolatedSchema.schemas[0]}}</th>
+    <th scope="row"> <a href="{{isolatedSchema.schemas[3]}}"> {{isolatedSchema.schemas[0]}}</a></th>
     <td>
         <span ng-if="isolatedSchema.schemas[1]!==false">{{isolatedSchema.schemas[1]}}</span>
         <span ng-if="isolatedSchema.schemas[1]===false" class="fas fa-times"></span>
@@ -11,7 +11,7 @@
 </tr>
 
 <tr ng-repeat="field in isolatedSchema.fields">
-    <th class="sub_label">{{field[0]}}</th>
+    <th class="sub_label"><a href="{{field[0]}}">{{field[0]}}</a></th>
     <td>
         <span ng-if="field[1] !== false">{{field[1]}}</span>
         <span ng-if="field[1] === false" class="fas fa-times"></span></td>

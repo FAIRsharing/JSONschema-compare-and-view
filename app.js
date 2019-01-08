@@ -54,16 +54,16 @@
                         let schema_2_name = overlap[0][1].toLowerCase() + '_schema.json';
                         let schema_1 = data.network1["schemas"][schema_1_name];
                         let schema_2 = data.network2["schemas"][schema_2_name];
-
                         let base_type = data.network1["contexts"][schema_1_name][overlap[0][0]];
                         let title_1 = data.network1["schemas"][schema_1_name].title;
-                        console.log(schema_2_name);
                         let title_2 = data.network2["schemas"][schema_2_name].title;
-                        let local_output = [base_type, title_1, title_2];
+
+                        let local_link = viewer.get_link(overlap[0][0], data.network1['contexts'][schema_1_name]);
+                        console.log(local_link);
+                        let local_output = [base_type, title_1, title_2, local_link];
 
                         processed_schemas["network1"].push(schema_1_name);
                         processed_schemas["network2"].push(schema_2_name);
-
                         output.content.overlapped_schemas[iterator] = {};
                         output.content.overlapped_schemas[iterator]["schemas"] = local_output;
                         output.content.overlapped_schemas[iterator]["fields"] = [];
@@ -80,21 +80,27 @@
 
                         for (let field in schema_1["properties"]){
                             if (schema_1["properties"].hasOwnProperty(field)){
+
                                 if (Object.keys(overlapped_fields).indexOf(field) !==-1){
+                                    let link = viewer.get_link(field, data['network1']['contexts'][schema_1_name]);
                                     let local_output = [
                                         viewer.process_name(data.network1['contexts'][schema_1_name][field]),
                                         field,
-                                        overlapped_fields[field]
+                                        overlapped_fields[field],
+                                        link
 
                                     ];
                                     output.content.overlapped_schemas[iterator]["fields"].push(local_output)
                                 }
+
                                 else if (ignoredKeys.indexOf(field) === -1){
                                     if (data.network1['contexts'][schema_1_name].hasOwnProperty(field)){
+                                        let link = viewer.get_link(field, data['network1']['contexts'][schema_1_name]);
                                         let local_output = [
                                             viewer.process_name(data.network1['contexts'][schema_1_name][field]),
                                             field,
-                                            false
+                                            false,
+                                            link
                                         ];
                                         output.content.overlapped_schemas[iterator]["fields"].push(local_output)
                                     }
@@ -106,12 +112,14 @@
 
                         for (let field in schema_2["properties"]){
                             if (schema_2["properties"].hasOwnProperty(field)){
-                                if (ignoredKeys.indexOf(field) === -1 && Object.keys(overlapped_fields).indexOf(field) ===-1){
+                                if (ignoredKeys.indexOf(field) === -1 && Object.keys(overlapped_fields).indexOf(field) === -1){
                                     if (data.network2['contexts'][schema_2_name].hasOwnProperty(field)){
+                                        let link = viewer.get_link(field, data['network2']['contexts'][schema_2_name]);
                                         let local_output = [
                                             viewer.process_name(data.network2['contexts'][schema_2_name][field]),
                                             false,
-                                            field
+                                            field,
+                                            link
                                         ];
                                         if (!output.content.overlapped_schemas[iterator]["fields"].includes(local_output)){
                                             output.content.overlapped_schemas[iterator]["fields"].push(local_output)
@@ -145,10 +153,12 @@
                                 && data.network1["contexts"][schemaName].hasOwnProperty(field)){
                                 let field_base_type = viewer.process_name(data.network1["contexts"][schemaName][field]);
                                 if (field_base_type !== false){
+                                    let link = viewer.get_link(field, data['network1']['contexts'][schemaName]);
                                     output.content.isolated_schemas[iterator]["fields"].push([
                                         field_base_type,
                                         field,
-                                        false
+                                        false,
+                                        link
                                     ])
                                 }
 
@@ -175,10 +185,12 @@
                                 && data.network2["contexts"][schemaName].hasOwnProperty(field)){
                                 let field_base_type = viewer.process_name(data.network2["contexts"][schemaName][field]);
                                 if (field_base_type !== false){
+                                    let link = viewer.get_link(field, data['network2']['contexts'][schemaName]);
                                     output.content.isolated_schemas[iterator]["fields"].push([
                                         field_base_type,
                                         false,
-                                        field
+                                        field,
+                                        link
                                     ])
                                 }
 
@@ -202,6 +214,16 @@
                 }
                 else {
                     return false;
+                }
+            };
+            viewer.get_link = function(field, context){
+                let parser = document.createElement('a');
+                parser.href = context[field];
+                if (parser.protocol === 'https:' || parser.protocol === 'http:'){
+                    return context[field]
+                }
+                else{
+                    return context[parser.protocol.replace(":", '')] + context[field].replace(parser.protocol, '');
                 }
             }
 
