@@ -216,13 +216,10 @@
                     return false;
                 }
             };
-
             viewer.get_link = function(field, context){
                 let parser = document.createElement('a');
                 parser.href = context[field];
                 if (parser.protocol === 'https:' || parser.protocol === 'http:'){
-                    console.log(context);
-                    context.log(field);
                     return context[field]
                 }
                 else{
