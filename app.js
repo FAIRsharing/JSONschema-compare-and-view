@@ -15,6 +15,7 @@
                         $scope.available_comparison.push(res.data['tree'][path]['path'])
                     }
                 }
+                $scope.available_comparison = ["", "MIACA_VS_MIACA.json"];
                 $scope.current_comparison = $scope.available_comparison[1];
                 $scope.make_comparison();
             });
@@ -22,6 +23,9 @@
             $scope.make_comparison = function(){
                 $http.get("inputs/" + $scope.current_comparison).then(function(res){
                     $scope.output = viewer.process_data(res.data);
+                    if (res.data.hasOwnProperty("labels")){
+                        $scope.labels = res.data["labels"];
+                    }
                 });
             };
 
@@ -59,7 +63,6 @@
                         let title_2 = data.network2["schemas"][schema_2_name].title;
 
                         let local_link = viewer.get_link(overlap[0][0], data.network1['contexts'][schema_1_name]);
-                        console.log(local_link);
                         let local_output = [base_type, title_1, title_2, local_link];
 
                         processed_schemas["network1"].push(schema_1_name);
@@ -142,30 +145,31 @@
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network1.schemas[schemaName];
                         let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
-                        let schema_base_type = data.network1["contexts"][schemaName][attribute];
-                        output.content.isolated_schemas[iterator] = {};
-                        output.content.isolated_schemas[iterator]["schemas"] = [schema_base_type, schemaValue.title, false];
-                        output.content.isolated_schemas[iterator]["fields"] = [];
 
-                        for (let field in schemaValue['properties']){
-                            if (schemaValue['properties'].hasOwnProperty(field)
-                                && ignoredKeys.indexOf(field) === -1
-                                && data.network1["contexts"][schemaName].hasOwnProperty(field)){
-                                let field_base_type = viewer.process_name(data.network1["contexts"][schemaName][field]);
-                                if (field_base_type !== false){
-                                    let link = viewer.get_link(field, data['network1']['contexts'][schemaName]);
-                                    output.content.isolated_schemas[iterator]["fields"].push([
-                                        field_base_type,
-                                        field,
-                                        false,
-                                        link
-                                    ])
+                        if (data.network1["contexts"].hasOwnProperty(schemaName)){
+                            let schema_base_type = data.network1["contexts"][schemaName][attribute];
+                            output.content.isolated_schemas[iterator] = {};
+                            output.content.isolated_schemas[iterator]["schemas"] = [schema_base_type, schemaValue.title, false];
+                            output.content.isolated_schemas[iterator]["fields"] = [];
+
+                            for (let field in schemaValue['properties']){
+                                if (schemaValue['properties'].hasOwnProperty(field)
+                                    && ignoredKeys.indexOf(field) === -1
+                                    && data.network1["contexts"][schemaName].hasOwnProperty(field)){
+                                    let field_base_type = viewer.process_name(data.network1["contexts"][schemaName][field]);
+                                    if (field_base_type !== false){
+                                        let link = viewer.get_link(field, data['network1']['contexts'][schemaName]);
+                                        output.content.isolated_schemas[iterator]["fields"].push([
+                                            field_base_type,
+                                            field,
+                                            false,
+                                            link
+                                        ])
+                                    }
+
                                 }
-
                             }
                         }
-
-
                     }
                     it++;
                 }
@@ -174,30 +178,31 @@
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network2.schemas[schemaName];
                         let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
-                        let schema_base_type = data.network2["contexts"][schemaName][attribute];
-                        output.content.isolated_schemas[iterator] = {};
-                        output.content.isolated_schemas[iterator]["schemas"] = [schema_base_type, false, schemaValue.title];
-                        output.content.isolated_schemas[iterator]["fields"] = [];
 
-                        for (let field in schemaValue['properties']){
-                            if (schemaValue['properties'].hasOwnProperty(field)
-                                && ignoredKeys.indexOf(field) === -1
-                                && data.network2["contexts"][schemaName].hasOwnProperty(field)){
-                                let field_base_type = viewer.process_name(data.network2["contexts"][schemaName][field]);
-                                if (field_base_type !== false){
-                                    let link = viewer.get_link(field, data['network2']['contexts'][schemaName]);
-                                    output.content.isolated_schemas[iterator]["fields"].push([
-                                        field_base_type,
-                                        false,
-                                        field,
-                                        link
-                                    ])
+                        if (data.network2["contexts"].hasOwnProperty(schemaName)){
+                            let schema_base_type = data.network2["contexts"][schemaName][attribute];
+                            output.content.isolated_schemas[iterator] = {};
+                            output.content.isolated_schemas[iterator]["schemas"] = [schema_base_type, false, schemaValue.title];
+                            output.content.isolated_schemas[iterator]["fields"] = [];
+
+                            for (let field in schemaValue['properties']){
+                                if (schemaValue['properties'].hasOwnProperty(field)
+                                    && ignoredKeys.indexOf(field) === -1
+                                    && data.network2["contexts"][schemaName].hasOwnProperty(field)){
+                                    let field_base_type = viewer.process_name(data.network2["contexts"][schemaName][field]);
+                                    if (field_base_type !== false){
+                                        let link = viewer.get_link(field, data['network2']['contexts'][schemaName]);
+                                        output.content.isolated_schemas[iterator]["fields"].push([
+                                            field_base_type,
+                                            false,
+                                            field,
+                                            link
+                                        ])
+                                    }
+
                                 }
-
                             }
                         }
-
-
                     }
                     it++;
                 }
@@ -235,12 +240,15 @@
             restrict: 'A',
             templateUrl: 'include/schemaOverlap.html',
             scope: {
-                schemaOverlap: '='
+                schemaOverlap: '=',
+                labels: "="
             },
             link: function($scope) {
                 $scope.$watch('schemaOverlap', function(schemaOverlap){
-                    if(schemaOverlap)
+                    if(schemaOverlap){
                         $scope.json_source = $scope.schemaOverlap;
+                        $scope.term_labels = $scope.labels
+                    }
                 });
             }
         }

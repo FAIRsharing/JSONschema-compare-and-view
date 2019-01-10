@@ -67,15 +67,19 @@ body.JSONSchemaComp .fa-times {
 }
 
 
-form label, form select, form option {
+body.JSONSchemaComp form label, body.JSONSchemaComp form select, body.JSONSchemaComp form option {
     font-size: 1rem;
 }
 
-form label {
+body.JSONSchemaComp form label {
     font-style: italic;
 }
 
-form select {
+body.JSONSchemaComp form select {
     margin-left:10px;
     border-left:0;
+}
+
+body.JSONSchemaComp table{
+    table-layout: fixed;
 }
