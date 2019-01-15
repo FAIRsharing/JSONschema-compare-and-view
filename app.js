@@ -259,12 +259,14 @@
             restrict: 'A',
             templateUrl: 'include/isolated_schema.html',
             scope: {
-                isolatedSchema: '='
+                isolatedSchema: '=',
+                labels: '='
             },
             link: function($scope) {
                 $scope.$watch('isolatedSchema', function(isolatedSchema){
                     if(isolatedSchema)
                         $scope.json_source = $scope.isolatedSchema;
+                        $scope.term_labels = $scope.labels
                 });
             }
         }

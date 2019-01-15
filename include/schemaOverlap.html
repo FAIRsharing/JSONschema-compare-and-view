@@ -1,7 +1,12 @@
 <tr class="new_schema">
     <th scope="row">
         <a href="{{schemaOverlap.schemas[3]}}" target="_blank">
-            {{schemaOverlap.schemas[0]}}
+            <span ng-if="term_labels.indexOf(schemaOverlap.schemas[0]) !== -1 && term_labels[schemaOverlap.schemas[0]] !== null">
+                {{term_labels[schemaOverlap.schemas[0]]}} ({{schemaOverlap.schemas[0]}})
+            </span>
+            <span ng-if="term_labels.indexOf(schemaOverlap.schemas[0]) === -1 || term_labels[schemaOverlap.schemas[0]] === null">
+                {{schemaOverlap.schemas[0]}}
+            </span>
         </a>
     </th>
     <td>{{schemaOverlap.schemas[1]}}</td>
