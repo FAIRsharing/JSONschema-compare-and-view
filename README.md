@@ -5,3 +5,10 @@ output from the [jsonldschema](https://github.com/FAIRsharing/jsonldschema) pyth
 allows to visualise them in the browser.
 
 See the output generated for comparing MIACME and MIACA here: https://fairsharing.github.io/JSONschema-compare-and-view/
+
+
+## Contact
+
+- [Dominique Batista](http://github.com/terazus)
+- [Alejandra Gonzalez-Beltran](http://github.com/agbeltran)
+
