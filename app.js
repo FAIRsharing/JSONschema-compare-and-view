@@ -15,7 +15,7 @@
                         $scope.available_comparison.push(res.data['tree'][path]['path'])
                     }
                 }
-                $scope.available_comparison = ["", "MIACA_VS_MIACA.json"];
+                $scope.available_comparison = ["", "Myflow_VS_Myflow.json"];
                 $scope.current_comparison = $scope.available_comparison[1];
                 $scope.make_comparison();
             });
@@ -54,8 +54,10 @@
                         /* INITIATE NEEDED VAR */
                         let overlap = data["overlaps"][i];
                         let iterator = "overlap" + i.toString();
+
                         let schema_1_name = overlap[0][0].toLowerCase() + '_schema.json';
                         let schema_2_name = overlap[0][1].toLowerCase() + '_schema.json';
+
                         let schema_1 = data.network1["schemas"][schema_1_name];
                         let schema_2 = data.network2["schemas"][schema_2_name];
                         let base_type = data.network1["contexts"][schema_1_name][overlap[0][0]];
@@ -142,6 +144,7 @@
                 let it = 0;
                 for (let schemaName in data.network1.schemas){
                     if (data.network1.schemas.hasOwnProperty(schemaName) && processed_schemas.network1.indexOf(schemaName) === -1){
+                        console.log('Isolated schema:', schemaName);
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network1.schemas[schemaName];
                         let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
