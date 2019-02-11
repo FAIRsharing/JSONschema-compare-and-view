@@ -1,13 +1,6 @@
 <tr class="new_schema">
     <th scope="row">
-        <a href="{{schemaOverlap.schemas[3]}}" target="_blank">
-            <span ng-if="term_labels.indexOf(schemaOverlap.schemas[0]) !== -1 && term_labels[schemaOverlap.schemas[0]] !== null">
-                {{term_labels[schemaOverlap.schemas[0]]}} ({{schemaOverlap.schemas[0]}})
-            </span>
-            <span ng-if="term_labels.indexOf(schemaOverlap.schemas[0]) === -1 || term_labels[schemaOverlap.schemas[0]] === null">
-                {{schemaOverlap.schemas[0]}}
-            </span>
-        </a>
+        <div field-label="schemaOverlap.schemas" labels="term_labels"></div>
     </th>
     <td>{{schemaOverlap.schemas[1]}}</td>
     <td>{{schemaOverlap.schemas[2]}}</td>
@@ -15,16 +8,7 @@
 
 <tr ng-repeat="fields in schemaOverlap.fields">
     <th class="sub_label overlap">
-        <a href="{{fields[3]}}" target="_blank">
-
-            <span ng-if="term_labels.indexOf(fields[0]) !== -1 && term_labels[fields[0]] !== null">
-                {{term_labels[fields[0]]}} ({{fields[0]}})
-            </span>
-
-            <span ng-if="term_labels.indexOf(fields[0]) === -1 || term_labels[fields[0]] === null">
-                {{fields[0]}}
-            </span>
-        </a>
+        <div field-label="fields" labels="term_labels"></div>
     </th>
     <td>
         <span ng-if="fields[1] !== false">{{fields[1]}}</span>

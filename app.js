@@ -24,7 +24,6 @@
             });
 
             $scope.make_comparison = function(){
-                console.log($scope.available_comparison);
                 $http.get($scope.current_comparison).then(function(res){
                     $scope.output = viewer.process_data(res.data);
                     if (res.data.hasOwnProperty("labels")){
@@ -148,7 +147,6 @@
                 let it = 0;
                 for (let schemaName in data.network1.schemas){
                     if (data.network1.schemas.hasOwnProperty(schemaName) && processed_schemas.network1.indexOf(schemaName) === -1){
-                        console.log('Isolated schema:', schemaName);
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network1.schemas[schemaName];
                         let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
@@ -273,6 +271,25 @@
                     if(isolatedSchema)
                         $scope.json_source = $scope.isolatedSchema;
                         $scope.term_labels = $scope.labels
+                });
+            }
+        }
+    });
+
+    my_app.directive('fieldLabel', function() {
+        return {
+            restrict: 'A',
+            templateUrl: 'include/label.html',
+            scope: {
+                fieldLabel: '=',
+                labels: "="
+            },
+            link: function($scope) {
+                $scope.$watch('fieldLabel', function(fieldLabel){
+                    if(fieldLabel){
+                        $scope.json_source = $scope.fieldLabel;
+                        $scope.term_labels = $scope.labels;
+                    }
                 });
             }
         }

@@ -1,16 +1,6 @@
 <tr class="new_schema">
     <th scope="row">
-        <a href="{{isolatedSchema.schemas[3]}}">
-
-            <span ng-if="term_labels.indexOf(isolatedSchema.schemas[0]) !== -1 && term_labels[isolatedSchema.schemas[0]] !== null">
-                {{term_labels[isolatedSchema.schemas[0]]}} ({{isolatedSchema.schemas[0]}})
-            </span>
-
-            <span ng-if="term_labels.indexOf(isolatedSchema.schemas[0]) === -1 || term_labels[isolatedSchema.schemas[0]] === null">
-                {{isolatedSchema.schemas[0]}}
-            </span>
-
-        </a>
+        <div field-label="isolatedSchema.schemas" labels="term_labels"></div>
     </th>
     <td>
         <span ng-if="isolatedSchema.schemas[1]!==false">{{isolatedSchema.schemas[1]}}</span>
@@ -25,17 +15,7 @@
 <tr ng-repeat="field in isolatedSchema.fields">
     <th class="sub_label">
 
-        <a href="{{field[0]}}">
-
-            <span ng-if="term_labels.indexOf(field[0]) !== -1 && term_labels[field[0]] !== null">
-                {{term_labels[field[0]]}} ({{field[0]}})
-            </span>
-
-            <span ng-if="term_labels.indexOf(field[0]) === -1 || term_labels[field[0]] === null">
-                {{field[0]}}
-            </span>
-
-        </a>
+        <div field-label="field" labels="term_labels"></div>
     </th>
     <td>
         <span ng-if="field[1] !== false">{{field[1]}}</span>
