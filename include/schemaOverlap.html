@@ -1,11 +1,14 @@
 <tr class="new_schema">
-    <th scope="row"> <a href="{{schemaOverlap.schemas[3]}}" target="_blank">{{schemaOverlap.schemas[0]}}</a></th>
+    <th scope="row">
+        <div field-label="schemaOverlap.schemas" labels="term_labels"></div>
+    </th>
     <td>{{schemaOverlap.schemas[1]}}</td>
     <td>{{schemaOverlap.schemas[2]}}</td>
 </tr>
+
 <tr ng-repeat="fields in schemaOverlap.fields">
-    <th class="sub_label">
-        <a href="{{fields[3]}}" target="_blank">{{fields[0]}}</a>
+    <th class="sub_label overlap">
+        <div field-label="fields" labels="term_labels"></div>
     </th>
     <td>
         <span ng-if="fields[1] !== false">{{fields[1]}}</span>

@@ -1,0 +1,18 @@
+<div ng-if="json_source[0] == null">
+    <span class="linkStyle">No semantic value</span>
+</div>
+
+<div ng-if="json_source[0] != null">
+    <a href="{{json_source[3]}}">
+
+        <span ng-if="term_labels.indexOf(json_source[0]) != -1 && term_labels[json_source[0]] != null">
+            {{term_labels[json_source[0]]}} ({{json_source[0]}})
+        </span>
+
+        <span ng-if="term_labels.indexOf(json_source[0]) == -1 || term_labels[json_source[0]] == null">
+            {{json_source[0]}}
+        </span>
+
+    </a>
+</div>
+
