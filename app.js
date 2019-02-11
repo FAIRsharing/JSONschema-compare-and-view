@@ -7,21 +7,25 @@
 
             let viewer = this;
 
-            $scope.available_comparison = [];
-            let comparison_urls = "https://api.github.com/repos/FAIRsharing/JSONschema-compare-and-view/git/trees/7fa4b35e204241135b9548f6dccc646377123d90";
-            $http.get(comparison_urls).then(function(res){
-                for (let path in res.data['tree']) {
-                    if (res.data['tree'].hasOwnProperty(path)) {
-                        $scope.available_comparison.push(res.data['tree'][path]['path'])
+            let inputs_URL = "https://api.github.com/repos/FAIRsharing/JSONschema-compare-and-view/contents/inputs";
+            $http.get(inputs_URL).then(function(response){
+                $scope.available_comparison = [];
+                for (let file_iterator in response.data){
+                    if (response.data.hasOwnProperty(file_iterator)){
+                        let inputFile = response.data[file_iterator];
+                        if (inputFile.hasOwnProperty('path')){
+                            let file_URL = "https://raw.githubusercontent.com/FAIRsharing/JSONschema-compare-and-view/master/" + inputFile['path'];
+                            $scope.available_comparison.push(file_URL);
+                        }
                     }
                 }
-                $scope.available_comparison = ["", "Myflow_VS_Myflow.json"];
-                $scope.current_comparison = $scope.available_comparison[1];
+                $scope.current_comparison = $scope.available_comparison[0];
                 $scope.make_comparison();
             });
 
             $scope.make_comparison = function(){
-                $http.get("inputs/" + $scope.current_comparison).then(function(res){
+                console.log($scope.available_comparison);
+                $http.get($scope.current_comparison).then(function(res){
                     $scope.output = viewer.process_data(res.data);
                     if (res.data.hasOwnProperty("labels")){
                         $scope.labels = res.data["labels"];
@@ -212,7 +216,6 @@
 
                 return output;
             };
-
             viewer.process_name = function(field){
                 if (typeof field === 'string') {
                     return field
@@ -283,8 +286,7 @@
 
     my_app.filter('labels', function() {
         return function(obj) {
-            let test = obj.replace('.json', '').replace(/_/g, ' ');
-            return test
+            return obj.replace('.json', '').replace(/_/g, ' ').replace("https://raw.githubusercontent.com/FAIRsharing/JSONschema-compare-and-view/master/inputs/", "");
         }
     })
 
