@@ -76,19 +76,12 @@
                             }
                         }
 
-                        let local_link = "";
-                        let base_type = "";
-                        if (name != null){
-                            local_link = viewer.get_link(name, data.network1['contexts'][schema_1_name]);
-                            base_type = data.network1["contexts"][schema_1_name][name];
+                        if (name == null){
+                            name = overlap[0][0]
                         }
-                        else{
-                            local_link = viewer.get_link(overlap[0][0], data.network1['contexts'][schema_1_name]);
-                            base_type = data.network1["contexts"][schema_1_name][overlap[0][0]];
-                        }
+                        let local_link = viewer.get_link(name, data.network1['contexts'][schema_1_name]);
+                        let base_type = data.network1["contexts"][schema_1_name][name];
 
-                        console.log(overlap[0][0]);
-                        console.log(local_link);
 
                         let local_output = [base_type, title_1, title_2, local_link];
 
