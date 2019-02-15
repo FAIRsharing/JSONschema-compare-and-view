@@ -1,6 +1,6 @@
 {
   "network1": {
-    "name": "MyFlowCyt",
+    "name": "MIFlowCyt",
     "schemas": {
       "miflowcyt_schema.json": {
         "id": "https://w3id.org/mircat/miflowcyt/schema/miflowcyt_schema.json",
@@ -101,14 +101,27 @@
             "type": "string"
           },
           "organization": {
-            "$ref": "organization_schema.json"
+            "description": "The organizations performing the experiment.",
+            "type": "array",
+            "items": {
+              "$ref": "organization_schema.json"
+            }
           },
           "primaryContact": {
+            "description": "The individual who is the primary contact for this experiment.",
             "$ref": "primary_contact_schema.json"
           },
           "date": {
             "description": "The date or time period during which the investigation was performed (i.e., from collecting and treating samples to performing data analysis) shall be stated.",
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "start-date": {
+                "type": "string"
+              },
+              "end-date": {
+                "type": "string"
+              }
+            }
           },
           "conclusions": {
             "description": "A brief summary of the interpretation of the results or outcome of the experiment shall be provided if available.",
@@ -120,7 +133,41 @@
           },
           "other": {
             "description": "Additional information about the experiment should be provided if relevant. This may include funding announcements, related publications (which should be referenced by PMID), URIs, databases, etc.",
-            "type": "string"
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "related-publications": {
+                    "type": "array",
+                    "items": {
+                      "pubmed-id": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "pmc-id": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": null
+              }
+            ]
           }
         }
       },
@@ -161,7 +208,31 @@
           },
           "address": {
             "description": "Address of the organization.",
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "street": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "city": {
+                "type": "string"
+              },
+              "zip": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ]
+              },
+              "state": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -683,24 +754,24 @@
         "obo": "http://purl.obolibrary.org/obo/",
         "Miflowcyt": "obo:MS_1000900",
         "@language": "en",
-        "instrumentDetails": "obo:",
-        "experimentOverview": "obo:",
-        "dataAnalysis": "obo:",
-        "flowSampleDetails": "obo:"
+        "instrumentDetails": "obo:OBI_0000968",
+        "experimentOverview": "obo:OBI_0000066",
+        "dataAnalysis": "obo:ERO_0001309",
+        "flowSampleDetails": "obo:OBI_0000747"
       },
       "experiment_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
-        "Experiment": "obo:",
+        "Experiment": "obo:OBI_0000066",
         "@language": "en",
-        "date": "obo:",
-        "conclusions": "obo:",
-        "primaryContact": "obo:",
+        "date": "obo:STATO_0000093",
+        "conclusions": "obo:IAO_0000144",
+        "primaryContact": "obo:OBI_0000202",
         "other": "obo:NCIT_C17649",
-        "purpose": "obo:",
-        "qualityControlMeasures": "obo:",
-        "organization": "obo:",
-        "experimentVariables": "obo:",
-        "keywords": "obo:"
+        "purpose": "obo:NCIT_C25634",
+        "qualityControlMeasures": "obo:MSIO_0000085",
+        "organization": "obo:OBI_0000245",
+        "experimentVariables": "obo:STATO_0000258",
+        "keywords": "obo:NCIT_C43513"
       },
       "organization_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
@@ -718,12 +789,13 @@
       },
       "sample_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
+        "efo": "http://www.ebi.ac.uk/efo/",
         "Sample": "obo:OBI_0000747",
         "@language": "en",
         "fluorescentReagentsDescription": "obo:ERO_0000006",
-        "sampleTreatmentsDescription": "obo:",
-        "sampleCharacteristics": "obo:",
-        "materialDescription": "obo:"
+        "sampleTreatmentsDescription": "efo:EFO_0003809",
+        "sampleCharacteristics": "obo:BFO_0000005",
+        "materialDescription": "obo:NCIT_C93859"
       },
       "biological_sample_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
@@ -756,25 +828,25 @@
       },
       "fluorescence_reagent_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
-        "FluorescenceReagent": "obo:",
+        "FluorescenceReagent": "obo:OBI_0001879",
         "@language": "en",
-        "analyte": "obo:",
-        "cloneNameOrNumber": "obo:",
+        "analyte": "obo:OBI_0000275",
+        "cloneNameOrNumber": "obo:SO_0000151",
         "other": "obo:NCIT_C17649",
-        "analyteDetector": "obo:",
-        "reagentCatalogueNumber": "obo:",
+        "analyteDetector": "obo:CHMO_0002244",
+        "reagentCatalogueNumber": "obo:NCIT_C112406",
         "reagentManufacturerName": "obo:IAO_0000590",
-        "characteristicsBeingMeasured": "obo:",
-        "analyteReporter": "obo:"
+        "characteristicsBeingMeasured": "obo:BFO_0000005",
+        "analyteReporter": "obo:CHEBI_35209"
       },
       "instrument_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
         "Instrument": "obo:OBI_0000968",
         "@language": "en",
         "other": "obo:NCIT_C17649",
-        "configurationAndSettings": "obo:",
-        "model": "obo:",
-        "manufacturer": "obo:"
+        "configurationAndSettings": "obo:MS_1000740",
+        "model": "obo:MS_1000031",
+        "manufacturer": "obo:OBI_0000835"
       },
       "flow_cell_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
@@ -804,7 +876,7 @@
     }
   },
   "network2": {
-    "name": "MyFlowCyt",
+    "name": "MIFlowCyt",
     "schemas": {
       "miflowcyt_schema.json": {
         "id": "https://w3id.org/mircat/miflowcyt/schema/miflowcyt_schema.json",
@@ -905,14 +977,27 @@
             "type": "string"
           },
           "organization": {
-            "$ref": "organization_schema.json"
+            "description": "The organizations performing the experiment.",
+            "type": "array",
+            "items": {
+              "$ref": "organization_schema.json"
+            }
           },
           "primaryContact": {
+            "description": "The individual who is the primary contact for this experiment.",
             "$ref": "primary_contact_schema.json"
           },
           "date": {
             "description": "The date or time period during which the investigation was performed (i.e., from collecting and treating samples to performing data analysis) shall be stated.",
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "start-date": {
+                "type": "string"
+              },
+              "end-date": {
+                "type": "string"
+              }
+            }
           },
           "conclusions": {
             "description": "A brief summary of the interpretation of the results or outcome of the experiment shall be provided if available.",
@@ -924,7 +1009,41 @@
           },
           "other": {
             "description": "Additional information about the experiment should be provided if relevant. This may include funding announcements, related publications (which should be referenced by PMID), URIs, databases, etc.",
-            "type": "string"
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "related-publications": {
+                    "type": "array",
+                    "items": {
+                      "pubmed-id": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "pmc-id": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": null
+              }
+            ]
           }
         }
       },
@@ -965,7 +1084,31 @@
           },
           "address": {
             "description": "Address of the organization.",
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "street": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "city": {
+                "type": "string"
+              },
+              "zip": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ]
+              },
+              "state": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1487,24 +1630,24 @@
         "obo": "http://purl.obolibrary.org/obo/",
         "Miflowcyt": "obo:MS_1000900",
         "@language": "en",
-        "instrumentDetails": "obo:",
-        "experimentOverview": "obo:",
-        "dataAnalysis": "obo:",
-        "flowSampleDetails": "obo:"
+        "instrumentDetails": "obo:OBI_0000968",
+        "experimentOverview": "obo:OBI_0000066",
+        "dataAnalysis": "obo:ERO_0001309",
+        "flowSampleDetails": "obo:OBI_0000747"
       },
       "experiment_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
-        "Experiment": "obo:",
+        "Experiment": "obo:OBI_0000066",
         "@language": "en",
-        "date": "obo:",
-        "conclusions": "obo:",
-        "primaryContact": "obo:",
+        "date": "obo:STATO_0000093",
+        "conclusions": "obo:IAO_0000144",
+        "primaryContact": "obo:OBI_0000202",
         "other": "obo:NCIT_C17649",
-        "purpose": "obo:",
-        "qualityControlMeasures": "obo:",
-        "organization": "obo:",
-        "experimentVariables": "obo:",
-        "keywords": "obo:"
+        "purpose": "obo:NCIT_C25634",
+        "qualityControlMeasures": "obo:MSIO_0000085",
+        "organization": "obo:OBI_0000245",
+        "experimentVariables": "obo:STATO_0000258",
+        "keywords": "obo:NCIT_C43513"
       },
       "organization_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
@@ -1522,12 +1665,13 @@
       },
       "sample_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
+        "efo": "http://www.ebi.ac.uk/efo/",
         "Sample": "obo:OBI_0000747",
         "@language": "en",
         "fluorescentReagentsDescription": "obo:ERO_0000006",
-        "sampleTreatmentsDescription": "obo:",
-        "sampleCharacteristics": "obo:",
-        "materialDescription": "obo:"
+        "sampleTreatmentsDescription": "efo:EFO_0003809",
+        "sampleCharacteristics": "obo:BFO_0000005",
+        "materialDescription": "obo:NCIT_C93859"
       },
       "biological_sample_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
@@ -1560,25 +1704,25 @@
       },
       "fluorescence_reagent_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
-        "FluorescenceReagent": "obo:",
+        "FluorescenceReagent": "obo:OBI_0001879",
         "@language": "en",
-        "analyte": "obo:",
-        "cloneNameOrNumber": "obo:",
+        "analyte": "obo:OBI_0000275",
+        "cloneNameOrNumber": "obo:SO_0000151",
         "other": "obo:NCIT_C17649",
-        "analyteDetector": "obo:",
-        "reagentCatalogueNumber": "obo:",
+        "analyteDetector": "obo:CHMO_0002244",
+        "reagentCatalogueNumber": "obo:NCIT_C112406",
         "reagentManufacturerName": "obo:IAO_0000590",
-        "characteristicsBeingMeasured": "obo:",
-        "analyteReporter": "obo:"
+        "characteristicsBeingMeasured": "obo:BFO_0000005",
+        "analyteReporter": "obo:CHEBI_35209"
       },
       "instrument_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
         "Instrument": "obo:OBI_0000968",
         "@language": "en",
         "other": "obo:NCIT_C17649",
-        "configurationAndSettings": "obo:",
-        "model": "obo:",
-        "manufacturer": "obo:"
+        "configurationAndSettings": "obo:MS_1000740",
+        "model": "obo:MS_1000031",
+        "manufacturer": "obo:OBI_0000835"
       },
       "flow_cell_schema.json": {
         "obo": "http://purl.obolibrary.org/obo/",
@@ -1615,10 +1759,84 @@
       ],
       {
         "coverage": [
-          0,
-          0
+          "100.0",
+          [
+            "4",
+            "4"
+          ]
         ],
-        "overlapping fields": [],
+        "overlapping fields": [
+          [
+            "experimentOverview",
+            "experimentOverview"
+          ],
+          [
+            "flowSampleDetails",
+            "flowSampleDetails"
+          ],
+          [
+            "instrumentDetails",
+            "instrumentDetails"
+          ],
+          [
+            "dataAnalysis",
+            "dataAnalysis"
+          ]
+        ],
+        "ignored fields": []
+      }
+    ],
+    [
+      [
+        "Experiment",
+        "Experiment"
+      ],
+      {
+        "coverage": [
+          "100.0",
+          [
+            "9",
+            "9"
+          ]
+        ],
+        "overlapping fields": [
+          [
+            "purpose",
+            "purpose"
+          ],
+          [
+            "keywords",
+            "keywords"
+          ],
+          [
+            "experimentVariables",
+            "experimentVariables"
+          ],
+          [
+            "organization",
+            "organization"
+          ],
+          [
+            "primaryContact",
+            "primaryContact"
+          ],
+          [
+            "date",
+            "date"
+          ],
+          [
+            "conclusions",
+            "conclusions"
+          ],
+          [
+            "qualityControlMeasures",
+            "qualityControlMeasures"
+          ],
+          [
+            "other",
+            "other"
+          ]
+        ],
         "ignored fields": []
       }
     ],
@@ -1683,11 +1901,23 @@
         "coverage": [
           "100.0",
           [
-            "1",
-            "1"
+            "4",
+            "4"
           ]
         ],
         "overlapping fields": [
+          [
+            "materialDescription",
+            "materialDescription"
+          ],
+          [
+            "sampleCharacteristics",
+            "sampleCharacteristics"
+          ],
+          [
+            "sampleTreatmentsDescription",
+            "sampleTreatmentsDescription"
+          ],
           [
             "fluorescentReagentsDescription",
             "fluorescentReagentsDescription"
@@ -1804,6 +2034,56 @@
     ],
     [
       [
+        "Fluorescence_reagent",
+        "Fluorescence_reagent"
+      ],
+      {
+        "coverage": [
+          "100.0",
+          [
+            "8",
+            "8"
+          ]
+        ],
+        "overlapping fields": [
+          [
+            "characteristicsBeingMeasured",
+            "characteristicsBeingMeasured"
+          ],
+          [
+            "analyte",
+            "analyte"
+          ],
+          [
+            "analyteDetector",
+            "analyteDetector"
+          ],
+          [
+            "analyteReporter",
+            "analyteReporter"
+          ],
+          [
+            "cloneNameOrNumber",
+            "cloneNameOrNumber"
+          ],
+          [
+            "reagentManufacturerName",
+            "reagentManufacturerName"
+          ],
+          [
+            "reagentCatalogueNumber",
+            "reagentCatalogueNumber"
+          ],
+          [
+            "other",
+            "other"
+          ]
+        ],
+        "ignored fields": []
+      }
+    ],
+    [
+      [
         "Instrument",
         "Instrument"
       ],
@@ -1811,11 +2091,23 @@
         "coverage": [
           "100.0",
           [
-            "1",
-            "1"
+            "4",
+            "4"
           ]
         ],
         "overlapping fields": [
+          [
+            "manufacturer",
+            "manufacturer"
+          ],
+          [
+            "model",
+            "model"
+          ],
+          [
+            "configurationAndSettings",
+            "configurationAndSettings"
+          ],
           [
             "other",
             "other"
@@ -1926,20 +2218,31 @@
   "labels": {
     "http://purl.obolibrary.org/obo/": null,
     "obo:MS_1000900": "minimum information standard",
-    "obo:": null,
+    "obo:OBI_0000968": "device",
+    "obo:OBI_0000066": "investigation",
+    "obo:ERO_0001309": "data analysis",
+    "obo:OBI_0000747": "material sample",
+    "obo:STATO_0000093": "date",
+    "obo:IAO_0000144": "conclusion textual entity",
+    "obo:OBI_0000202": "investigation agent role",
     "obo:NCIT_C17649": "Other",
+    "obo:NCIT_C25634": "Purpose",
+    "obo:MSIO_0000085": "quality control",
     "obo:OBI_0000245": "organization",
+    "obo:STATO_0000258": "variable",
+    "obo:NCIT_C43513": "Keyword",
     "obo:IAO_0000422": "postal address",
     "obo:IAO_0000590": "written name",
     "obo:NCBITaxon_9606": "Homo sapiens",
     "obo:IAO_0000429": "email address",
-    "obo:OBI_0000747": "material sample",
+    "http://www.ebi.ac.uk/efo/": null,
     "obo:ERO_0000006": "reagent",
-    "obo:OBI_0000671": "sample from organism",
+    "efo:EFO_0003809": "sample treatment protocol",
+    "obo:BFO_0000005": null,
     "obo:NCIT_C93859": "Material Description",
+    "obo:OBI_0000671": "sample from organism",
     "obo:sep_00196": "sample description",
     "obo:OBI_0100026": "organism",
-    "http://www.ebi.ac.uk/efo/": null,
     "efo:EFO_0000727": "treatment",
     "obo:NCIT_C17469": "Taxonomy",
     "obo:SO_0001027": "genotype",
@@ -1948,7 +2251,15 @@
     "obo:NCIT_C16977": "Phenotype",
     "obo:NCBITaxon_1617257": "environmental samples <Chiroptera>",
     "obo:NCIT_C25341": "Location",
-    "obo:OBI_0000968": "device",
+    "obo:OBI_0001879": "reagent",
+    "obo:OBI_0000275": "analyte role",
+    "obo:SO_0000151": "clone",
+    "obo:CHMO_0002244": "detector",
+    "obo:NCIT_C112406": "Reagent Lot Number",
+    "obo:CHEBI_35209": "label",
+    "obo:MS_1000740": "parameter file",
+    "obo:MS_1000031": "instrument model",
+    "obo:OBI_0000835": "manufacturer",
     "obo:OBI_0400043": "flow cell",
     "obo:CL_0000000": "cell",
     "http://www.bioassayontology.org/bao#": null,
@@ -1957,7 +2268,6 @@
     "obo:OMIT_0009913": "Microscopy, Polarization",
     "obo:PRIDE_0000163": "Instrument type",
     "obo:NCIT_C70569": "Beam",
-    "obo:ERO_0001309": "data analysis",
     "obo:OBI:0000021": null
   }
 }
