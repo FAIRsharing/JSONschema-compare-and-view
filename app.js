@@ -63,11 +63,20 @@
 
                         let schema_1 = data.network1["schemas"][schema_1_name];
                         let schema_2 = data.network2["schemas"][schema_2_name];
-                        let base_type = data.network1["contexts"][schema_1_name][overlap[0][0]];
                         let title_1 = data.network1["schemas"][schema_1_name].title;
                         let title_2 = data.network2["schemas"][schema_2_name].title;
 
-                        let local_link = viewer.get_link(overlap[0][0], data.network1['contexts'][schema_1_name]);
+                        let name = overlap[0][0];
+                        if (overlap[0][0].indexOf("_") > -1){
+                            name = "";
+                            let schema_local_name_array = overlap[0][0].split("_");
+                            for (let sch_name in schema_local_name_array){
+                                let schemaRawName = schema_local_name_array[sch_name];
+                                name += schemaRawName.charAt(0).toUpperCase() + schemaRawName.slice(1);;
+                            }
+                        }
+                        let local_link = viewer.get_link(name, data.network1['contexts'][schema_1_name]);
+                        let base_type = data.network1["contexts"][schema_1_name][name];
                         let local_output = [base_type, title_1, title_2, local_link];
 
                         processed_schemas["network1"].push(schema_1_name);
@@ -150,6 +159,7 @@
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network1.schemas[schemaName];
                         let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
+                        console.log(attribute);
 
                         if (data.network1["contexts"].hasOwnProperty(schemaName)){
                             let schema_base_type = data.network1["contexts"][schemaName][attribute];
