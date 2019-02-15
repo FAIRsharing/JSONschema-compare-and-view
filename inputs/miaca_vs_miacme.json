@@ -3037,7 +3037,7 @@
                 "@language": "en",
                 "identifier": "obo:IAO_0000577",
                 "identifierSource": "obo:OBI_0000245",
-                "name": "obo:IAO_0000590 "
+                "name": "obo:IAO_0000590"
             },
             "study_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
@@ -3289,7 +3289,6 @@
         "sio:SIO_001324": "work phone number",
         "obo:IAO_0020016": null,
         "sio:SIO_001321": "fax number",
-        "obo:IAO_0000590 ": null,
         "obo:IAO_0000027": "data item",
         "obo:XCO_0000000": "experimental condition",
         "obo:PRIDE_0000457": "Experiment Type",
