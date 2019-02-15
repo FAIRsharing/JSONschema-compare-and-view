@@ -66,7 +66,7 @@
                         let title_1 = data.network1["schemas"][schema_1_name].title;
                         let title_2 = data.network2["schemas"][schema_2_name].title;
 
-                        let name = null;
+                        let name = overlap[0][0];
                         if (overlap[0][0].indexOf("_") > -1){
                             name = "";
                             let schema_local_name_array = overlap[0][0].split("_");
@@ -75,14 +75,8 @@
                                 name += schemaRawName.charAt(0).toUpperCase() + schemaRawName.slice(1);;
                             }
                         }
-
-                        if (name == null){
-                            name = overlap[0][0]
-                        }
                         let local_link = viewer.get_link(name, data.network1['contexts'][schema_1_name]);
                         let base_type = data.network1["contexts"][schema_1_name][name];
-
-
                         let local_output = [base_type, title_1, title_2, local_link];
 
                         processed_schemas["network1"].push(schema_1_name);
