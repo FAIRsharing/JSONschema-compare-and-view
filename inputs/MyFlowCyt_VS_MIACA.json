@@ -1,0 +1,3318 @@
+{
+    "network2": {
+        "contexts": {
+            "data_processing_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "@language": "en",
+                "ID": "obo:IAO_0000578",
+                "phenoDesc": "obo:NCIT_C16977",
+                "rawData": "obo:NCIT_C142663",
+                "DataProcessing": "obo:NCIT_C43582"
+            },
+            "xref_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "primaryRef": "obo:NCIT_C25251",
+                "sio": "http://semanticscience.org/resource/",
+                "@language": "en",
+                "secondaryRef": "obo:NCIT_C25667",
+                "Xref": "sio:SIO_001171"
+            },
+            "open_cv_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "name": "obo:IAO_0000590",
+                "sio": "http://semanticscience.org/resource/",
+                "@language": "en",
+                "OpenCv": "obo:NCIT_C44272",
+                "xref": "sio:SIO_001171"
+            },
+            "source_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "institution": "obo:ERO_0000066",
+                "address": "obo:IAO_0000422",
+                "country": "sio:SIO_000664",
+                "email": "obo:IAO_0000429",
+                "city": "sio:SIO_000665",
+                "ID": "obo:IAO_0000578",
+                "department": "sio:SIO_000686",
+                "Source": "obo:NCBITaxon_9606",
+                "@language": "en",
+                "sio": "http://semanticscience.org/resource/",
+                "name": "obo:IAO_0000590"
+            },
+            "dbreference_schema.json": {
+                "refTypeAc": "obo:NCIT_C25396",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "version": "obo:NCIT_C25714",
+                "ID": "obo:IAO_0000578",
+                "db": "obo:NCIT_C15426",
+                "Dbreference": "obo:NCIT_C15426",
+                "secondary": "obo:NCIT_C25667",
+                "dbAc": "obo:NCIT_C25402",
+                "@language": "en",
+                "refType": "obo:NCIT_C25284"
+            },
+            "material_list_schema.json": {
+                "reagent": "obo:CHEBI_33893",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "ID": "obo:IAO_0000578",
+                "compositeReagent": "obo:REX_0000057",
+                "@language": "en",
+                "cellLine": "obo:CLO_0000031",
+                "MaterialList": "obo:NCIT_C43432"
+            },
+            "array_support_size_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "@language": "en",
+                "surfaceArea": "obo:GENEPIO_0001885",
+                "ArraySupportSize": "obo:NCIT_C25681",
+                "dimension": "obo:NCIT_C25483"
+            },
+            "project_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "cellAssay": "obo:NCIT_C15959",
+                "dataProcessing": "obo:OBI_0200000",
+                "arraySupport": "obo:OBI_0001865",
+                "materialList": "obo:OBI_0000747",
+                "processLine": "obo:BFO_0000015",
+                "instrument": "obo:OBI_0000968",
+                "projectDescription": "obo:OBI_0001615",
+                "ID": "obo:IAO_0000578",
+                "source": "obo:NCBITaxon_9606",
+                "application": "obo:IAO_0000311",
+                "Project": "obo:OBI_0000011",
+                "@language": "en"
+            },
+            "treatment_schema.json": {
+                "array": "obo:EFO_0002698",
+                "co2ContentUnit": "obo:UO_0000052",
+                "Treatment": "efo:EFO_0000727",
+                "temperatureUnit": "obo:UO_0000005",
+                "comment": "obo:NCIT_C25393",
+                "compReagentName": "obo:IAO_0000590",
+                "duration": "obo:PATO_0001309",
+                "efo": "http://www.ebi.ac.uk/efo/",
+                "ID": "obo:IAO_0000578",
+                "durationUnit": "obo:UO_0000003",
+                "cellLine": "obo:CLO_0000031",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "passageNo": "obo:MSIO_0000071",
+                "temperature": "obo:PATO_0000146",
+                "humidity": "obo:PATO_0015009",
+                "reagentName": "obo:IAO_0000590",
+                "co2Content": "obo:OBA_1000957",
+                "seedingDensity": "obo:MSIO_0000062",
+                "cellDensity": "obo:NCIT_C120538",
+                "humidityUnit": "obo:UO_0000052",
+                "@language": "en",
+                "conditionName": "obo:IAO_0000590"
+            },
+            "ontology_value_source_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "ontologyValue": "obo:NCIT_C25712",
+                "OntologyValueSource": "obo:NCIT_C21270 ",
+                "ontologySource": "obo:NCIT_C25683",
+                "comment": "obo:NCIT_C25393",
+                "@language": "en"
+            },
+            "da_schema.json": {
+                "instrument": "obo:OBI_0000968",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "settings": "obo:NCIT_C44175",
+                "ID": "obo:IAO_0000578",
+                "Da": "obo:ERO_0001309",
+                "@language": "en",
+                "reference": "obo:NCIT_C25641"
+            },
+            "application_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "abstract": "obo:IAO_0000315",
+                "ID": "obo:IAO_0000578",
+                "Application": "obo:IAO_0000311",
+                "@language": "en",
+                "pubref": "obo:NCIT_C40976",
+                "bibref": "obo:NCIT_C25474"
+            },
+            "cell_assay_schema.json": {
+                "treatment": "efo:EFO_0000727",
+                "CellAssay": "obo:NCIT_C15959",
+                "ID": "obo:IAO_0000578",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "dataAcquisition": "obo:NCIT_C142469",
+                "@language": "en",
+                "postTreatment": "efo:EFO_0000727"
+            },
+            "reagent_list_schema.json": {
+                "reagents": "obo:CHEBI_33893",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "@language": "en",
+                "ID": "obo:IAO_0000578",
+                "ReagentList": "obo:CHEBI_33893"
+            },
+            "reagent_schema.json": {
+                "array": "obo:OBI_0001865",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "reagentName": "obo:IAO_0000590",
+                "stockConc": "obo:CHMO_0002820",
+                "ID": "obo:IAO_0000578",
+                "Reagent": "obo:CHEBI_33893",
+                "comment": "obo:NCIT_C25393",
+                "compoundRef": "obo:MSIO_0000023",
+                "efficiency": "obo:PATO_0001029",
+                "vendor": "obo:NCIT_C68608",
+                "type": "obo:NCIT_C25284",
+                "struct": "obo:NCIT_C103240",
+                "stockConcUnit": "obo:UO_0000051",
+                "solvent": "obo:CHEBI_46787",
+                "targetID": "obo:IAO_0000578",
+                "libraryRef": "obo:ERO_0001194",
+                "targetSpecies": "obo:OBI_0100026",
+                "virusRef": "obo:NCIT_C14283",
+                "@language": "en"
+            },
+            "array_support_schema.json": {
+                "ArraySupport": "obo:OBI_0001865",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "nameType": "obo:OBI_0000967",
+                "ID": "obo:IAO_0000578",
+                "@language": "en",
+                "vendor": "obo:NCIT_C68608",
+                "size": "obo:PATO_0000117"
+            },
+            "library_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "format": "obo:NCIT_C42761",
+                "vendor": "obo:NCIT_C68608",
+                "libraryElementCharacteristics": "obo:NCIT_C25447",
+                "preparationMethod": "bao:BAO_0002014",
+                "featurePosition": "obo:",
+                "features": "obo:NCIT_C73619",
+                "Library": "obo:ERO_0001194",
+                "type": "obo:NCIT_C25284",
+                "ID": "obo:IAO_0000578",
+                "@language": "en",
+                "definitions": "obo:NCIT_C43680",
+                "bao": "http://www.bioassayontology.org/bao#",
+                "name": "obo:IAO_0000590"
+            },
+            "cell_source_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "tissue": "obo:UBERON_0000479",
+                "@language": "en",
+                "cellType": "obo:CL_0000000",
+                "cellLineID": "obo:IAO_0000578",
+                "CellSource": "obo:CL_0000000",
+                "strain": "obo:PATO_0001034",
+                "species": "obo:OBI_0100026",
+                "provider": "obo:NCIT_C37900",
+                "source": "obo:NCIT_C25683",
+                "organ": "obo:UBERON_0000062",
+                "reference": "obo:PRIDE_0000400"
+            },
+            "vendor_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "Vendor": "obo:NCIT_C68608",
+                "orderNo": "obo:IAO_0000028 ",
+                "name": "obo:IAO_0000590",
+                "lotNo": "obo:IAO_0000132",
+                "serialNo": "obo:IAO_0000131",
+                "@language": "en"
+            },
+            "CL_ontology_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "ClOntology": "obo:NCIT_C44272",
+                "ontologyName": "obo:IAO_0000590",
+                "@language": "en",
+                "is_a": "rdf:type",
+                "ontologyID": "obo:IAO_0000578"
+            },
+            "composite_reagent_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "comment": "obo:NCIT_C25393",
+                "compReagentName": "obo:IAO_0000590",
+                "@language": "en",
+                "reagentList": "obo:CHEBI_33893",
+                "CompositeReagent": "obo:"
+            },
+            "instrument_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "instrumentModel": "obo:MS_1000031",
+                "instrumentType": "obo:PRIDE_0000163",
+                "ID": "obo:IAO_0000578",
+                "Instrument": "obo:OBI_0000968",
+                "instrumentSpec": "obo:NCIT_C44175",
+                "instrumentName": "obo:IAO_0000590",
+                "@language": "en",
+                "vendor": "obo:NCIT_C68608"
+            },
+            "cell_line_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "validation": "obo:ERO_0002025",
+                "passageNo": "obo:EFO_0007061",
+                "CellLine": "obo:CLO_0000031",
+                "ID": "obo:IAO_0000578",
+                "lineQC": "obo:ERO_0001219",
+                "@language": "en",
+                "cellLineName": "obo:IAO_0000590",
+                "modifications": "obo:CLO_0000004",
+                "cellSource": "obo:CL_0000000"
+            },
+            "project_description_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "@language": "en",
+                "title": "obo:IAO_0000590",
+                "controls": "obo:NCIT_C61299",
+                "process": "obo:BFO_0000015",
+                "effect": "obo:NCIT_C25492",
+                "sio": "http://semanticscience.org/resource/",
+                "ProjectDescription": "obo:OBI_0001615",
+                "xref": "sio:SIO_001171",
+                "ID": "obo:IAO_0000578"
+            },
+            "miaca_schema.json": {
+                "project": "obo:OBI_0000011",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "Miaca": "obo:MS_1000900",
+                "@language": "en"
+            },
+            "process_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "currentID": "obo:NCIT_C25471",
+                "ID": "obo:IAO_0000578",
+                "successorID": "obo:NCIT_C53286",
+                "@language": "en",
+                "Process": "obo:BFO_0000015",
+                "processName": "obo:IAO_0000590"
+            }
+        },
+        "schemas": {
+            "data_processing_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA (Minimum Information about a Cellular Assay) data processing schema",
+                "id": "https://w3id.org/mircat/miaca/schema/data_processing_schema.json",
+                "description": "Description of the processes applied to analyze the raw-data in order to generate a hit list. Data analysis is usually carried out sequentially, applying a number of algorithms and analysis tools",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "The identifier"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "type": "string",
+                        "description": "The JSON-LD type",
+                        "enum": [
+                            "DataProcessing"
+                        ]
+                    },
+                    "phenoDesc": {
+                        "type": "array",
+                        "description": "A phenotypic description is usually obtained by manual observation of images and/or interpretation of processed data.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "protocol": {
+                                    "type": "string",
+                                    "description": "for the characterization and classification of phenotypic observation"
+                                },
+                                "format": {
+                                    "type": "string",
+                                    "description": "ASCII, TIFF, WMA,\u2026"
+                                },
+                                "ID": {
+                                    "type": "string",
+                                    "description": "The identifier"
+                                },
+                                "link": {
+                                    "type": "string",
+                                    "description": "link to raw data"
+                                },
+                                "processName": {
+                                    "type": "string",
+                                    "description": "The name of the process"
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "description": "description of the phenotype"
+                                },
+                                "timeSpace": {
+                                    "type": "string",
+                                    "description": "Time and space parameters"
+                                },
+                                "type": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "rawData": {
+                        "type": "array",
+                        "description": "Description of raw data.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "format": {
+                                    "type": "string",
+                                    "description": "ASCII, TIFF, WMA,\u2026"
+                                },
+                                "ID": {
+                                    "type": "string",
+                                    "description": "The identifier"
+                                },
+                                "link": {
+                                    "type": "string",
+                                    "description": "link to raw data"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "description": "number, image, movie,\u2026"
+                                }
+                            }
+                        },
+                        "processedData": {
+                            "type": "array",
+                            "description": "The raw data can be processed either manually or through automated computational methods. Processing commonly generates numbers and/or phenotypic descriptions.",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "algorithm": {
+                                        "type": "string",
+                                        "description": "algorithm"
+                                    },
+                                    "software": {
+                                        "type": "string",
+                                        "description": "the name of the software used to generate the file"
+                                    },
+                                    "format": {
+                                        "type": "string",
+                                        "description": "ASCII, TIFF, WMA,\u2026"
+                                    },
+                                    "version": {
+                                        "type": "string",
+                                        "description": "the version of the softwareused to generate the file"
+                                    },
+                                    "ID": {
+                                        "type": "string",
+                                        "description": "The identifier"
+                                    },
+                                    "link": {
+                                        "type": "string",
+                                        "description": "link to raw data"
+                                    },
+                                    "parameters": {
+                                        "type": "array",
+                                        "description": "the list of parameter settings used to run the software used to generate the file"
+                                    },
+                                    "processName": {
+                                        "type": "string",
+                                        "description": "The name of the process"
+                                    },
+                                    "reference": {
+                                        "type": "string",
+                                        "description": "reference to a publication"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "description": "type"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "xref_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA xref schema",
+                "id": "https://w3id.org/mircat/miaca/schema/xref_schema.json",
+                "description": "Crossreference to an external database. Crossreferences to literature databases, e.g. PubMed, should not be put into this structure, but into the bibRef element where possible",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "primaryRef": {
+                        "$ref": "dbreference_schema.json#",
+                        "description": "Primary reference to an external database."
+                    },
+                    "secondaryRef": {
+                        "$ref": "dbreference_schema.json#",
+                        "description": "Further external objects describing the object."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "open_cv_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA open_cv_schema",
+                "id": "https://w3id.org/mircat/miaca/schema/open_cv_schema.json",
+                "description": "Allows to reference an external controlled vocabulary, or to directly include a value if no suitable external definition is available.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "This contains the controlled vocabulary term"
+                    },
+                    "xref": {
+                        "$ref": "xref_schema.json#",
+                        "description": "Refers to the term of the controlled vocabulary in an external database"
+                    }
+                },
+                "type": "object"
+            },
+            "source_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "required": [
+                    "ID",
+                    "name",
+                    "institution",
+                    "department",
+                    "address",
+                    "city",
+                    "country",
+                    "email"
+                ],
+                "title": "MIACA Source - corresponding to a person and their organization",
+                "id": "https://w3id.org/mircat/miaca/schema/source_schema.json",
+                "description": "Contact details of researcher/person/laboratory/institution in charge of the project -Used to describe the contact details of the scientist - corresponds to MIACA XSD sourceType",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "city": {
+                        "type": "string",
+                        "description": "city the institution is placed",
+                        "minLength": 1
+                    },
+                    "institution": {
+                        "type": "string",
+                        "description": "name of the institution/affiliation the researcher is working at",
+                        "minLength": 1
+                    },
+                    "@type": {
+                        "type": "string",
+                        "description": "The JSON-LD type",
+                        "enum": [
+                            "Source"
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "department": {
+                        "type": "string",
+                        "description": "department in the institution",
+                        "minLength": 1
+                    },
+                    "country": {
+                        "type": "string",
+                        "description": "country the city is placed",
+                        "minLength": 1
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "The source identifier"
+                    },
+                    "email": {
+                        "type": "string",
+                        "description": "email of the researcher",
+                        "minLength": 1
+                    },
+                    "address": {
+                        "type": "string",
+                        "description": "address of the institution",
+                        "minLength": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "name of the researcher working on the project.",
+                        "minLength": 1
+                    }
+                },
+                "type": "object"
+            },
+            "dbreference_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "required": [
+                    "db",
+                    "ID"
+                ],
+                "title": "MIACA dbreference schema",
+                "id": "https://w3id.org/mircat/miaca/schema/dbreference_schema.json",
+                "description": "",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string",
+                        "description": "The version number of the object in the external database.",
+                        "minLength": 1
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "Primary Identifier of the object in the external database, e.g. UniProt accession number."
+                    },
+                    "db": {
+                        "type": "string",
+                        "description": "Name of the external database. Taken from the controlled vocabulary of databases."
+                    },
+                    "dbAc": {
+                        "type": "string",
+                        "description": "Accession number of the database in the database CV. This element is controlled by the PSI-MI controlled vocabulary 'database citation', root term ID MI:0444.",
+                        "minLength": 1
+                    },
+                    "secondary": {
+                        "type": "string",
+                        "description": "Primary Identifier of the object in the external database, e.g. UniProt accession number.",
+                        "minLength": 1
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "refTypeAc": {
+                        "type": "string",
+                        "description": "Reference type accession number from the CV of reference types. This element is controlled by the PSI-MI controlled vocabulary 'xref type', root term ID MI:0353. ",
+                        "minLength": 1
+                    },
+                    "refType": {
+                        "type": "string",
+                        "description": "Reference type, e.g. 'Identity' if this reference refers to an Identical object in the external database, or 'see-also' for additional information. Controlled by CV.",
+                        "minLength": 1
+                    }
+                },
+                "type": "object"
+            },
+            "material_list_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA material list chema",
+                "id": "https://w3id.org/mircat/miaca/schema/material_list_schema.json",
+                "description": "JSON-schema representing MIACA material list.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "reagent": {
+                        "$ref": "reagent_schema.json#"
+                    },
+                    "ID": {
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "compositeReagent": {
+                        "$ref": "composite_reagent_schema.json#"
+                    },
+                    "cellLine": {
+                        "$ref": "cell_line_schema.json#"
+                    }
+                },
+                "type": "object"
+            },
+            "array_support_size_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA array support size type schema",
+                "id": "https://w3id.org/mircat/miaca/schema/array_support_size_schema.json",
+                "description": "Size of reaction vessel, e.g. volume or surface area.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "surfaceArea": {
+                        "type": "string",
+                        "description": "surface area in mm\u00b2"
+                    },
+                    "dimension": {
+                        "type": "number",
+                        "description": "number of wells"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "project_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA (Minimum Information about a Cellular Assay) project schema",
+                "id": "https://w3id.org/mircat/miaca/schema/project_schema.json",
+                "description": "Conditions that have been established to measure effects which are induced in cells in response to a perturbation, together with data that have been acquired in these measurements in order to address the biological question this project was designed for.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "arraySupport": {
+                        "$ref": "array_support_schema.json#",
+                        "description": "Array supports (reaction vessels where perturbations are carried out) that are used during the project"
+                    },
+                    "cellAssay": {
+                        "$ref": "cell_assay_schema.json#",
+                        "description": "The actual experimental part decribing the performed steps, like  treatments, perturbation(s) and data acquisition in necessary detail."
+                    },
+                    "dataProcessing": {
+                        "$ref": "data_processing_schema.json#",
+                        "description": "Description of the processes applied to analyze the raw-data in order to generate a hit list. Data analysis is usually carried out sequentially, applying a number of algorithms and analysis tools"
+                    },
+                    "materialList": {
+                        "$ref": "material_list_schema.json#",
+                        "description": "Description of the materials that are utilized in the project."
+                    },
+                    "@type": {
+                        "type": "string",
+                        "description": "The JSON-LD type",
+                        "enum": [
+                            "Project"
+                        ]
+                    },
+                    "processLine": {
+                        "$ref": "process_schema.json#",
+                        "description": "The experiment workflow"
+                    },
+                    "instrument": {
+                        "$ref": "instrument_schema.json#",
+                        "description": "Description of the instruments required for the assay, e.g. data acquisition station. Detailed descriptions of such instruments and their settings could be part of spezialized documents or be given in Treatment, Post-Treatment, or Data Acquisition."
+                    },
+                    "projectDescription": {
+                        "$ref": "project_description_schema.json#",
+                        "description": "Description of biological process that is addressed and description of measured effect."
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "The project identifier"
+                    },
+                    "source": {
+                        "$ref": "source_schema.json#",
+                        "description": "Contact details of researcher/person/laboratory/institution in charge of the project"
+                    },
+                    "application": {
+                        "$ref": "application_schema.json#",
+                        "description": "Description of the specific application of this project within a larger context, if applicable."
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "treatment_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA treatment schema",
+                "type": "object",
+                "id": "https://w3id.org/mircat/miaca/schema/treatment_schema.json",
+                "definitions": {
+                    "concentrationUnit": {
+                        "type": "string",
+                        "description": "e.g. mol/L",
+                        "enum": [
+                            "pmol/L",
+                            "nmol/L",
+                            "umol/L",
+                            "mmol/L"
+                        ]
+                    },
+                    "volume": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "concentration": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "volumeUnit": {
+                        "type": "string",
+                        "description": "e.g. mL",
+                        "enum": [
+                            "pL",
+                            "nL",
+                            "uL",
+                            "ml"
+                        ]
+                    }
+                },
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "array": {
+                        "@type": {
+                            "type": "string",
+                            "enum": [
+                                "ArraySupportType"
+                            ]
+                        },
+                        "type": "string",
+                        "description": "description of array type and vessel"
+                    },
+                    "passageNo": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "temperature": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "temperatureUnit": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "comment": {
+                        "type": "string",
+                        "description": "an attribute to report observations"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "compReagentName": {
+                        "type": "object",
+                        "description": "the name and characteristics of the chemical used as reagent",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "the name of the reagent"
+                            },
+                            "anyOf": [
+                                {
+                                    "$ref": "#/definitions/volume"
+                                },
+                                {
+                                    "$ref": "#/definitions/volumeUnit"
+                                },
+                                {
+                                    "$ref": "#/definitions/concentration"
+                                },
+                                {
+                                    "$ref": "#/definitions/concentrationUnit"
+                                }
+                            ]
+                        }
+                    },
+                    "reagentName": {
+                        "type": "object",
+                        "description": "the name and characteristics of the chemical used as reagent",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "the name of the reagent"
+                            },
+                            "anyOf": [
+                                {
+                                    "$ref": "#/definitions/volume"
+                                },
+                                {
+                                    "$ref": "#/definitions/volumeUnit"
+                                },
+                                {
+                                    "$ref": "#/definitions/concentration"
+                                },
+                                {
+                                    "$ref": "#/definitions/concentrationUnit"
+                                }
+                            ]
+                        }
+                    },
+                    "co2Content": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "seedingDensity": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "a UUID for the instance of treatment process"
+                    },
+                    "cellDensity": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "durationUnit": {
+                        "type": "string",
+                        "description": "e.g. %"
+                    },
+                    "humidityUnit": {
+                        "type": "string",
+                        "description": "e.g. %"
+                    },
+                    "humidity": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "cellLine": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "duration": {
+                        "type": "string",
+                        "description": "e.g. %"
+                    },
+                    "conditionName": {
+                        "type": "string",
+                        "description": "a reference to an instrument used during the data acquisition"
+                    },
+                    "co2ContentUnit": {
+                        "type": "string",
+                        "description": ""
+                    }
+                },
+                "description": "Description of the conditions that are applied to CellLine during culturing of cells. \u2018Treatment* also covers the perturbation. More than one perturbator can be applied in the same \u2018Treatment\u2019. "
+            },
+            "ontology_value_source_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA ontology value source schema",
+                "id": "https://w3id.org/mircat/miaca/schema/ontology_value_source_schema.json",
+                "description": "name type",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "ontologyValue": {
+                        "type": "string"
+                    },
+                    "ontologySource": {
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "comment": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "da_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA data acquisition schema",
+                "provenance": {
+                    "prov:wasAttributedTo": {
+                        "_comment": "an ORCID for now, need to check foaf:Person",
+                        "prov:agent": "http://orcid.org/0000-0001-9853-5668"
+                    }
+                },
+                "id": "https://w3id.org/mircat/miaca/schema/da_schema.json",
+                "description": "Detection of the effect(s) induced by the perturbation",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "instrument": {
+                        "type": "string",
+                        "description": "a reference to an instrument used during the data acquisition"
+                    },
+                    "settings": {
+                        "type": "object",
+                        "description": "Reference to the instrument-settings",
+                        "properties": {
+                            "excitation": {
+                                "type": "string",
+                                "description": "excitation"
+                            },
+                            "plateType": {
+                                "type": "string",
+                                "desciption": "plateType"
+                            },
+                            "excitationFilter": {
+                                "type": "string",
+                                "description": "excitationFilter"
+                            },
+                            "measurement": {
+                                "type": "string",
+                                "description": "measurement"
+                            },
+                            "emissionFilter": {
+                                "type": "string",
+                                "description": "emissionFilter"
+                            },
+                            "lampEnergy": {
+                                "type": "string",
+                                "description": "lampEnergy"
+                            },
+                            "timeUnit": {
+                                "type": "string",
+                                "description": "time unit, e.g. seconds"
+                            },
+                            "time": {
+                                "type": "string",
+                                "description": "time"
+                            },
+                            "emission": {
+                                "type": "string",
+                                "description": "emission"
+                            },
+                            "operationMode": {
+                                "type": "string",
+                                "description": "operationMode"
+                            }
+                        }
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "a UUID for an instance of data acquisition process"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "reference": {
+                        "@type": {
+                            "type": "string",
+                            "enum": [
+                                "publicationIdentifier"
+                            ]
+                        },
+                        "type": "string",
+                        "description": "a reference to an publication about the data acquisition"
+                    }
+                },
+                "type": "object"
+            },
+            "application_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA application JSON schema",
+                "additionalProperties": false,
+                "id": "https://w3id.org/mircat/miaca/schema/application_schema.json",
+                "description": "Description of the specific application of this project within a larger context, if applicable. Controls are relevant in data analysis to determine the robustness and the dynamic range of the assay, and to produce the list of significant hits.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "ID": {
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "abstract": {
+                        "type": "string",
+                        "description": "Application abstract, e. g. as taken from a publication"
+                    },
+                    "pubref": {
+                        "type": "string",
+                        "description": "reference to publication"
+                    },
+                    "bibref": {
+                        "$ref": "open_cv_schema.json#",
+                        "description": "Bibliographic reference for the data generated during the project. Cross reference for the data source. Example: Entry in a database of databases."
+                    }
+                },
+                "type": "object"
+            },
+            "cell_assay_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA cell assay schema",
+                "id": "https://w3id.org/mircat/miaca/schema/cell_assay_schema.json",
+                "description": "The actual experimental part describing the performed steps, like  treatments, perturbation(s) and data acquisition in necessary detail.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "treatment": {
+                        "type": "array",
+                        "description": "Description of the conditions that are applied to CellLine during culturing of cells. \u2018Treatment\u2019 also covers the perturbation. More than one perturbator can be applied in the same \u2018Treatment\u2019.",
+                        "items": {
+                            "$ref": "treatment_schema.json#"
+                        }
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "The cell assay identifier"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "dataAcquisition": {
+                        "type": "array",
+                        "description": "Detection of the effect(s) induced by the perturbation",
+                        "items": {
+                            "$ref": "da_schema.json#"
+                        }
+                    },
+                    "postTreatment": {
+                        "type": "array",
+                        "description": "Description of the conditions, i.e. lysis, fixation, staining, antibody incubation, etc., that may be applied after \u2018Treatment\u2019, and prior to data acquisition",
+                        "items": {
+                            "$ref": "treatment_schema.json#"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "reagent_list_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA reagent schema",
+                "type": "object",
+                "_comment": "TODO: these definitions are the same as in treatment_schema, resolve duplication",
+                "id": "https://w3id.org/mircat/miaca/schema/reagent_list_schema.json",
+                "definitions": {
+                    "concentrationUnit": {
+                        "type": "string",
+                        "description": "e.g. mol/L",
+                        "enum": [
+                            "pmol/L",
+                            "nmol/L",
+                            "umol/L",
+                            "mmol/L"
+                        ]
+                    },
+                    "volume": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "concentration": {
+                        "type": "string",
+                        "description": ""
+                    },
+                    "volumeUnit": {
+                        "type": "string",
+                        "description": "e.g. mL",
+                        "enum": [
+                            "pL",
+                            "nL",
+                            "uL",
+                            "ml"
+                        ]
+                    }
+                },
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "identifier of the reagent list"
+                    },
+                    "reagents": {
+                        "type": "array",
+                        "items": {
+                            "ID": {
+                                "type": "string",
+                                "description": "identifier of the reagenet"
+                            },
+                            "anyOf": [
+                                {
+                                    "$ref": "#/definitions/volume"
+                                },
+                                {
+                                    "$ref": "#/definitions/volumeUnit"
+                                },
+                                {
+                                    "$ref": "#/definitions/concentration"
+                                },
+                                {
+                                    "$ref": "#/definitions/concentrationUnit"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "description": "A reagent as defined by MIACA, Reagents are media, media supplements, kits, buffers and solutions, water and so on. "
+            },
+            "reagent_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "required": [
+                    "ReagentName",
+                    "ReagentID",
+                    "vendor"
+                ],
+                "title": "MIACA reagent schema",
+                "id": "https://w3id.org/mircat/miaca/schema/reagent_schema.json",
+                "description": "A reagent as defined by MIACA, Reagents are media, media supplements, kits, buffers and solutions, water and so on. ",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "array": {
+                        "type": "string",
+                        "description": "description of array type and array support type/vessel"
+                    },
+                    "efficiency": {
+                        "type": "string",
+                        "description": "e.g., transfection/transduction efficiency of 'cell type' (average, cv) with \u2018Perturbator\u2019 (library)"
+                    },
+                    "stockConc": {
+                        "type": "number",
+                        "description": "The value of the reagent stock concentration"
+                    },
+                    "comment": {
+                        "type": "string",
+                        "description": "Comment"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "compoundRef": {
+                        "type": "object",
+                        "description": "details if perturbator is chemincal compound",
+                        "properties": {
+                            "weight": {
+                                "type": "string",
+                                "description": "Average molecular weight"
+                            },
+                            "purity": {
+                                "type": "string",
+                                "description": "% of compounds with >80% purity"
+                            },
+                            "lipinski": {
+                                "type": "string",
+                                "description": "% of compound comply with Lipinski rule-of-5"
+                            }
+                        }
+                    },
+                    "reagentName": {
+                        "type": "string",
+                        "description": "the name of the chemical used as reagent"
+                    },
+                    "vendor": {
+                        "$ref": "vendor_schema.json",
+                        "description": "Details to the vendor or manufacturer"
+                    },
+                    "type": {
+                        "@type": {
+                            "type": "string",
+                            "enum": [
+                                "MoleculeType"
+                            ]
+                        },
+                        "type": "string",
+                        "description": "reagent type, e. g. cDNA, small molecule, siRNA. If available, reference to a controlled vocabulary."
+                    },
+                    "struct": {
+                        "type": "string",
+                        "description": "e.g. sequence of siRNA; structure/ChEBI for compound"
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "the identifier of the chemical used as reagent"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "solvent": {
+                        "type": "string",
+                        "description": "Solvent"
+                    },
+                    "targetID": {
+                        "type": "string",
+                        "description": "e.g. geneID of target gene in case of siRNA"
+                    },
+                    "libraryRef": {
+                        "$ref": "library_schema.json",
+                        "description": "details on the library the perturbator is part of"
+                    },
+                    "targetSpecies": {
+                        "type": "string",
+                        "description": "Target Species e.g. if siRNA"
+                    },
+                    "virusRef": {
+                        "type": "object",
+                        "description": "details if perturbator is virus",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "description": "the type of virus"
+                            },
+                            "titer": {
+                                "type": "string",
+                                "description": "a numerical expression of the quantity of virus in a given volume"
+                            }
+                        }
+                    },
+                    "stockConcUnit": {
+                        "type": "string",
+                        "description": "The unit of the stock concentration of the reagent",
+                        "enum": [
+                            "mol/L",
+                            "mmol/L",
+                            "nmol/L"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "array_support_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA array support type schema",
+                "id": "https://w3id.org/mircat/miaca/schema/array_support_schema.json",
+                "description": "Description of array support types (reaction vessels) that are used during the project: i.e. single eppendorf tube, 96-well plazes, or [glass] slides, with details such as manufacturer, order number; size.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "nameType": {
+                        "$ref": "ontology_value_source_schema.json#",
+                        "description": "Type of vessel used,: i.e. single eppendorf tube, 96-well plate, etc."
+                    },
+                    "ID": {
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "vendor": {
+                        "$ref": "vendor_schema.json",
+                        "description": "Contact details of the source of the reaction vessels, e.g. company"
+                    },
+                    "size": {
+                        "$ref": "array_support_size_schema.json#",
+                        "description": "Size of reaction vessel, e.g. volume or surface area."
+                    }
+                },
+                "type": "object"
+            },
+            "library_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA library type schema",
+                "provenance": {
+                    "prov:wasAttributedTo": {
+                        "_comment": "an ORCID for now, need to check foaf:Person",
+                        "prov:agent": "http://orcid.org/0000-0001-9853-5668"
+                    }
+                },
+                "id": "https://w3id.org/mircat/miaca/schema/library_schema.json",
+                "description": "if perturbator is part of a library, a description of the library",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "format": {
+                        "type": "string",
+                        "description": "single/pooled - e.g. shRNA pool",
+                        "enum": [
+                            "individual",
+                            "pool"
+                        ]
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "libraryElementCharacteristics": {
+                        "type": "string",
+                        "description": "LibraryFeatures of perturbators (length of siRNA/shRNA, type of hairpin, other)."
+                    },
+                    "vendor": {
+                        "$ref": "vendor_schema.json",
+                        "description": "Details of the vendor or manufacturer"
+                    },
+                    "preparationMethod": {
+                        "type": "string",
+                        "description": "Preparation methodology"
+                    },
+                    "features": {
+                        "type": "string",
+                        "description": "number of unique features (e.g. genes, compounds) represented in library, reference to where a list of these features can be found"
+                    },
+                    "type": {
+                        "type": "string",
+                        "description": "Type of library: (gain-of-function/overexpression (cDNA, ORF, other); loss of function (siRNA, shRNA, miRNA, viral, other); compound; other reference on library (if available)"
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "library ID as a reference"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "featurePosition": {
+                        "type": "object",
+                        "description": "PlateNumber and well position; mapping of individual perturbators in library format.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/PlateNumber"
+                            },
+                            {
+                                "$ref": "#/definitions/WellPosition"
+                            }
+                        ]
+                    },
+                    "definitions": {
+                        "PlateNumber": {
+                            "type": "string",
+                            "description": "ArrayType number"
+                        },
+                        "WellPosition": {
+                            "type": "string",
+                            "description": "surface area in mm\u00b2"
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "name of the library"
+                    }
+                },
+                "type": "object"
+            },
+            "cell_source_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA cell source schema",
+                "additionalProperties": false,
+                "id": "https://w3id.org/mircat/miaca/schema/cell_source_schema.json",
+                "description": "Cell source schema",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "tissue": {
+                        "$ref": "ontology_value_source_schema.json#",
+                        "description": "is a collection of interconnected cells that perform a similar function within an organism"
+                    },
+                    "cellType": {
+                        "$ref": "CL_ontology_schema.json#",
+                        "description": "e.g. totipotent stem cell (CL:0000723)"
+                    },
+                    "source": {
+                        "$ref": "source_schema.json",
+                        "description": "contact details refering to the CellLine"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "species": {
+                        "$ref": "ontology_value_source_schema.json#",
+                        "description": "e.g. human"
+                    },
+                    "provider": {
+                        "type": "string",
+                        "description": "e.g. ATCC"
+                    },
+                    "cellLineID": {
+                        "type": "string",
+                        "description": "Controlled vocabulary ID. Description of the cell line used. (e.g. HeLa ATTC CCL2)"
+                    },
+                    "strain": {
+                        "$ref": "ontology_value_source_schema.json#",
+                        "description": "a variant of a cellType"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "organ": {
+                        "$ref": "ontology_value_source_schema.json#",
+                        "description": "e.g. kidney"
+                    },
+                    "reference": {
+                        "type": "string",
+                        "description": "reference to publication"
+                    }
+                },
+                "type": "object"
+            },
+            "vendor_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA vendor type schema",
+                "id": "https://w3id.org/mircat/miaca/schema/vendor_schema.json",
+                "description": "Details to the vendor or manufacturer",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "orderNo": {
+                        "type": "string",
+                        "description": "OrderNr"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "name of the company"
+                    },
+                    "lotNo": {
+                        "type": "string",
+                        "description": "LotNo "
+                    },
+                    "serialNo": {
+                        "type": "string",
+                        "description": "serialNo "
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "CL_ontology_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA CL ontology schema",
+                "additionalProperties": false,
+                "id": "https://w3id.org/mircat/miaca/schema/CL_ontology_schema.json",
+                "description": "Controlled vocabulary for celltypes",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "ontologyName": {
+                        "type": "string",
+                        "description": "name"
+                    },
+                    "is_a": {
+                        "type": "array",
+                        "description": "derived from other ontologyID",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "ontologyID": {
+                        "type": "string",
+                        "description": "ID of cell.obo"
+                    }
+                },
+                "type": "object"
+            },
+            "composite_reagent_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA composite reagenet schema",
+                "id": "https://w3id.org/mircat/miaca/schema/composite_reagent_schema.json",
+                "description": "Composite Reagent. An element to describe the cell line used during the project.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "comment": {
+                        "type": "string",
+                        "description": "comment"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "compReagentName": {
+                        "type": "string",
+                        "description": "name of cell culture medium"
+                    },
+                    "reagentList": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "reagent_list_schema.json"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "instrument_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA instrument schema",
+                "provenance": {
+                    "prov:wasAttributedTo": {
+                        "_comment": "an ORCID for now, need to check foaf:Person",
+                        "prov:agent": "http://orcid.org/0000-0001-9853-5668"
+                    }
+                },
+                "id": "https://w3id.org/mircat/miaca/schema/instrument_schema.json",
+                "description": "Description of the instruments required for the assay, e.g. data acquisition station. Detailed descriptions of such instruments and their settings could be part of spezialized documents or be given in Treatment, Post-Treatment, or Data Acquisition.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "instrumentSpec": {
+                        "type": "array",
+                        "description": "e.g. objective lenses, numerical aperture, filters"
+                    },
+                    "instrumentModel": {
+                        "type": "string",
+                        "description": "Instrument name"
+                    },
+                    "instrumentType": {
+                        "@type": {
+                            "type": "string",
+                            "enum": [
+                                "OpenCV"
+                            ]
+                        },
+                        "type": "array",
+                        "description": "Instrument type, e.g. liquid handling robot, centrifuge, FACS, Plate Reader, etc. ",
+                        "items": {
+                            "$ref": "open_cv_schema.json#"
+                        }
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "Instrument identifier as stored by the database"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "instrumentName": {
+                        "@type": {
+                            "type": "string",
+                            "enum": [
+                                "instrumentName"
+                            ]
+                        },
+                        "type": "string",
+                        "description": "Instrument name"
+                    },
+                    "vendor": {
+                        "@type": {
+                            "type": "string",
+                            "enum": [
+                                "Organization",
+                                "Person"
+                            ]
+                        },
+                        "description": "Details to the vendor or manufacturer, Contact details of the source of the reaction vessels, e.g. company",
+                        "items": {
+                            "$ref": "vendor_schema.json#"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "cell_line_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "required": [
+                    "cellLineIdentifier",
+                    "cellLineName",
+                    "species",
+                    "tissue",
+                    "reference",
+                    "provider"
+                ],
+                "additionalProperties": false,
+                "title": "MIACA cell line schema",
+                "id": "https://w3id.org/mircat/miaca/schema/cell_line_schema.json",
+                "description": "Cell line used during the project. An element to describe the cell line used during the project.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "passageNo": {
+                        "type": "string",
+                        "description": "is the number of generation of a CellLine due to passaging and growing"
+                    },
+                    "ID": {
+                        "type": "string"
+                    },
+                    "lineQC": {
+                        "type": "string",
+                        "description": "Mycoplasma test (Y/N) and other measures for quality control, e.g. virus testing"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "modifications": {
+                        "type": "string",
+                        "description": "transgene/genetic manipulations, e.g. stably transfected, induced resistance"
+                    },
+                    "cellLineName": {
+                        "type": "string",
+                        "description": "Description of the cell line used. (e.g. HeLa ATTC CCL2)"
+                    },
+                    "validation": {
+                        "type": "string",
+                        "description": "measures undertaken to validate cell line, e.g. DNA fingerprinting, genotyping, morphology testing"
+                    },
+                    "cellSource": {
+                        "$ref": "cell_source_schema.json#",
+                        "description": "Information about the cellLine if not ATCC"
+                    }
+                },
+                "type": "object"
+            },
+            "project_description_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "required": [
+                    "ID",
+                    "process",
+                    "effect",
+                    "controls"
+                ],
+                "title": "MIACA project description schema",
+                "id": "https://w3id.org/mircat/miaca/schema/project_description_schema.json",
+                "description": "Description of biological process that is addressed and description of measured effect. Description (text) of the project (1) within a larger context.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "process": {
+                        "type": "string",
+                        "description": "biological process that is addressed",
+                        "minLength": 1
+                    },
+                    "title": {
+                        "type": "string",
+                        "description": "Application title, e. g. as taken from a publication"
+                    },
+                    "ID": {
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "effect": {
+                        "type": "string",
+                        "description": "description of measured effect and the 'reporter' used for the measurement (e.g. antibody)",
+                        "minLength": 1
+                    },
+                    "controls": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "description": "controls are relevant in data analysis to determine the robustness and the dynamic range of the assay, and to produce the list of significant hits.e.g. measuring the effect of a perturbation on the induction of apoptosis (biological process), by measuring the level of activated caspase 3 (measured effect), with a antibody specific for the activated enzyme (reporter). One project consists of experiments (>=1) which are carried out in arrays (1 to n features). A proposed definition of experiment is given in The experiment concept above.",
+                        "minLength": 1
+                    },
+                    "xref": {
+                        "$ref": "xref_schema.json#",
+                        "description": "Refers to the term of the controlled vocabulary in an external database."
+                    }
+                },
+                "type": "object"
+            },
+            "miaca_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA (Minimum Information about a Cellular Assay) schema",
+                "_provenance": {
+                    "url": "http://w3id.org/mircat/miaca/provenance.json"
+                },
+                "id": "https://w3id.org/mircat/miaca/schema/miaca_schema.json",
+                "description": "JSON-schema representing MIACA reporting guideline.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "type": "string",
+                        "description": "The JSON-LD type",
+                        "enum": [
+                            "Miaca"
+                        ]
+                    },
+                    "project": {
+                        "$ref": "project_schema.json#",
+                        "description": "Conditions that have been established to measure effects which are induced in cells in response to a perturbation, together with data that have been acquired in these measurements in order to address the biological question this project was designed for."
+                    }
+                },
+                "type": "object"
+            },
+            "process_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIACA process",
+                "id": "https://w3id.org/mircat/miaca/schema/process_schema.json",
+                "description": "The experiment workflow.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "successorID": {
+                        "type": "string",
+                        "description": "ID of a successor element of the process step"
+                    },
+                    "currentID": {
+                        "type": "string",
+                        "description": "ID of the referenced step"
+                    },
+                    "ID": {
+                        "type": "string",
+                        "description": "identifier"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "processName": {
+                        "type": "string",
+                        "description": "e.g. cell propagation, siRNA transfection"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "name": "MIACA"
+    },
+    "labels": {
+        "obo:OBA_1000957": "carbon dioxide amount",
+        "bao:BAO_0002014": "preparation method",
+        "obo:OBI_0100026": "organism",
+        "obo:ERO_0001219": "quality control",
+        "obo:NCIT_C142663": "Raw Data",
+        "obo:REX_0000057": "composite reaction",
+        "obo:NCIT_C25492": "Effect",
+        "obo:NCIT_C40976": "Journal",
+        "obo:NCIT_C17357": "Gender",
+        "obo:NCIT_C21270 ": null,
+        "obo:IAO_0000028 ": null,
+        "obo:NCIT_C44175": "Parameter",
+        "obo:NCIT_C17649": "Other",
+        "http://purl.obolibrary.org/obo/": null,
+        "obo:NCIT_C17469": "Taxonomy",
+        "obo:MSIO_0000023": "reference compound",
+        "obo:NCIT_C142469": "Data Acquisition",
+        "obo:STATO_0000258": "variable",
+        "efo:EFO_0000727": "treatment",
+        "obo:ERO_0001309": "data analysis",
+        "obo:PATO_0001309": "duration",
+        "obo:OBI_0400065": "light source",
+        "obo:PATO_0000146": "temperature",
+        "obo:UO_0000052": "mass density unit",
+        "obo:NCIT_C43432": "List",
+        "obo:NCIT_C43582": "Data Transformation",
+        "obo:OBI_0000671": "sample from organism",
+        "obo:EFO_0007061": null,
+        "obo:GENEPIO_0001885": "surface area",
+        "efo:EFO_0003809": "sample treatment protocol",
+        "obo:ERO_0002025": "cell line validation report",
+        "obo:OBI_0000202": "investigation agent role",
+        "obo:CHEBI_46787": "solvent",
+        "obo:CHMO_0002820": "concentration",
+        "obo:PRIDE_0000400": "Reference",
+        "sio:SIO_001171": "database cross-reference",
+        "http://www.ebi.ac.uk/efo/": null,
+        "obo:NCIT_C15959": "Cellular Assay",
+        "obo:IAO_0000578": "centrally registered identifier",
+        "obo:NCIT_C68608": "Vendor",
+        "obo:MSIO_0000085": "quality control",
+        "obo:NCBITaxon_9606": "Homo sapiens",
+        "obo:NCIT_C73619": "Feature",
+        "obo:OBI_0001879": "reagent",
+        "obo:MSIO_0000062": "cell seeding density",
+        "obo:OBI_0001615": "investigation description",
+        "obo:NCIT_C37900": "Provider",
+        "obo:OMIT_0009913": "Microscopy, Polarization",
+        "obo:NCIT_C25634": "Purpose",
+        "obo:NCIT_C25447": "Characteristic",
+        "obo:SO_0001027": "genotype",
+        "obo:CHEBI_33893": "reagent",
+        "obo:MSIO_0000071": "passage number",
+        "obo:NCIT_C25667": "Secondary",
+        "obo:IAO_0000144": "conclusion textual entity",
+        "obo:": null,
+        "obo:PATO_0001029": "efficiency",
+        "obo:OBI_0000968": "device",
+        "obo:OBI_0400043": "flow cell",
+        "http://semanticscience.org/resource/": null,
+        "obo:NCIT_C42761": "Format",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": null,
+        "obo:CHEBI_35209": "label",
+        "obo:NCIT_C25714": "Version",
+        "rdf:type": null,
+        "obo:IAO_0000131": "serial number",
+        "obo:OBI_0000835": "manufacturer",
+        "obo:MS_1000031": "instrument model",
+        "obo:PRIDE_0000163": "Instrument type",
+        "obo:OBI_0000967": "container",
+        "obo:sep_00196": "sample description",
+        "obo:STATO_0000093": "date",
+        "obo:BFO_0000005": null,
+        "obo:NCIT_C120538": "Cell Density",
+        "obo:NCIT_C25402": "Accession Number",
+        "obo:NCIT_C25483": "Dimension",
+        "obo:PATO_0015009": "humidity",
+        "obo:NCIT_C53286": "Next",
+        "obo:UO_0000003": "time unit",
+        "sio:SIO_000686": "academic department",
+        "obo:MS_1000740": "parameter file",
+        "obo:NCIT_C25396": "Access",
+        "obo:NCIT_C25393": "Comment",
+        "obo:UO_0000005": "temperature unit",
+        "obo:UBERON_0000479": "tissue",
+        "obo:NCIT_C25712": "Value",
+        "obo:OBI:0000021": null,
+        "sio:SIO_000664": "country",
+        "obo:BFO_0000015": "process",
+        "obo:UO_0000051": "concentration unit",
+        "obo:NCIT_C25681": "Size",
+        "obo:OBI_0000747": "material sample",
+        "obo:CHMO_0002244": "detector",
+        "obo:NCIT_C25471": "Current",
+        "sio:SIO_000665": "city",
+        "obo:NCIT_C25284": "Type",
+        "obo:NCIT_C25251": "Primary",
+        "obo:NCIT_C43513": "Keyword",
+        "obo:IAO_0000429": "email address",
+        "obo:IAO_0000590": "written name",
+        "obo:NCIT_C112406": "Reagent Lot Number",
+        "obo:NCIT_C93859": "Material Description",
+        "bao:BAO_0000566": "excitation wavelength",
+        "obo:CL_0000000": "cell",
+        "obo:OBI_0000066": "investigation",
+        "obo:NCIT_C61299": "Control",
+        "obo:PATO_0001034": "strain",
+        "obo:NCIT_C25641": "Reference",
+        "obo:NCBITaxon_1617257": "environmental samples <Chiroptera>",
+        "obo:ERO_0001194": "reagent library",
+        "obo:CLO_0000004": "cell line cell modification",
+        "obo:NCIT_C14283": "Virus",
+        "obo:NCIT_C25474": "Data",
+        "obo:EFO_0002698": null,
+        "obo:NCIT_C15426": "Database",
+        "obo:NCIT_C103240": "Chemical Structure",
+        "obo:PATO_0000117": "size",
+        "obo:PATO_0000011": "age",
+        "obo:OBI_0001865": "assay array",
+        "obo:SO_0000151": "clone",
+        "obo:NCIT_C16977": "Phenotype",
+        "obo:OBI_0200000": "data transformation",
+        "obo:OBI_0000275": "analyte role",
+        "obo:UBERON_0000062": "organ",
+        "obo:NCIT_C25341": "Location",
+        "obo:IAO_0000315": "abstract",
+        "obo:NCIT_C25683": "Source",
+        "obo:ERO_0000006": "reagent",
+        "obo:NCIT_C44272": "Annotation",
+        "obo:CLO_0000031": "\u7ec6\u80de\u7cfb",
+        "obo:IAO_0000422": "postal address",
+        "obo:NCIT_C70569": "Beam",
+        "obo:MS_1000900": "minimum information standard",
+        "obo:NCIT_C43680": "DEFINITION",
+        "obo:ERO_0000066": null,
+        "http://www.bioassayontology.org/bao#": null,
+        "obo:OBI_0000245": "organization",
+        "obo:IAO_0000311": "publication",
+        "obo:OBI_0000011": "planned process",
+        "obo:IAO_0000132": "lot number"
+    },
+    "network1": {
+        "contexts": {
+            "biological_sample_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "sourceDescription": "obo:NCIT_C93859",
+                "other": "obo:NCIT_C17649",
+                "@language": "en",
+                "sampleDescription": "obo:sep_00196",
+                "organism": "obo:OBI_0100026",
+                "BiologicalSample": "obo:OBI_0000671"
+            },
+            "environmental_sample_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "EnvironmentalSample": "obo:NCBITaxon_1617257",
+                "@language": "en",
+                "sampleDescription": "obo:sep_00196",
+                "sampleLocation": "obo:NCIT_C25341"
+            },
+            "primary_contact_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "@language": "en",
+                "PrimaryContact": "obo:NCBITaxon_9606",
+                "name": "obo:IAO_0000590",
+                "emailAddress": "obo:IAO_0000429"
+            },
+            "organism_schema.json": {
+                "genotype": "obo:SO_0001027",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "Organism": "obo:OBI_0100026",
+                "phenotype": "obo:NCIT_C16977",
+                "treatment": "efo:EFO_0000727",
+                "age": "obo:PATO_0000011",
+                "other": "obo:NCIT_C17649",
+                "taxonomy": "obo:NCIT_C17469",
+                "@language": "en",
+                "efo": "http://www.ebi.ac.uk/efo/",
+                "gender": "obo:NCIT_C17357"
+            },
+            "miflowcyt_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "instrumentDetails": "obo:OBI_0000968",
+                "flowSampleDetails": "obo:OBI_0000747",
+                "experimentOverview": "obo:OBI_0000066",
+                "Miflowcyt": "obo:MS_1000900",
+                "@language": "en",
+                "dataAnalysis": "obo:ERO_0001309"
+            },
+            "sample_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "@language": "en",
+                "sampleCharacteristics": "obo:BFO_0000005",
+                "Sample": "obo:OBI_0000747",
+                "efo": "http://www.ebi.ac.uk/efo/",
+                "materialDescription": "obo:NCIT_C93859",
+                "sampleTreatmentsDescription": "efo:EFO_0003809",
+                "fluorescentReagentsDescription": "obo:ERO_0000006"
+            },
+            "light_source_instrument_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "LightSourceInstrument": "obo:OBI_0400065",
+                "@language": "en",
+                "bao": "http://www.bioassayontology.org/bao#",
+                "excitatoryWavelength": "bao:BAO_0000566",
+                "other": "obo:NCIT_C17649",
+                "polarization": "obo:OMIT_0009913",
+                "powerAtExcitatoryWavelength": "bao:BAO_0000566",
+                "beam": "obo:NCIT_C70569",
+                "type": "obo:PRIDE_0000163"
+            },
+            "data_analysis_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "DataAnalysis": "obo:ERO_0001309",
+                "@language": "en",
+                "listModeDataFile": "obo:OBI:0000021"
+            },
+            "fluorescence_reagent_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "analyte": "obo:OBI_0000275",
+                "reagentCatalogueNumber": "obo:NCIT_C112406",
+                "cloneNameOrNumber": "obo:SO_0000151",
+                "analyteReporter": "obo:CHEBI_35209",
+                "analyteDetector": "obo:CHMO_0002244",
+                "other": "obo:NCIT_C17649",
+                "@language": "en",
+                "FluorescenceReagent": "obo:OBI_0001879",
+                "characteristicsBeingMeasured": "obo:BFO_0000005",
+                "reagentManufacturerName": "obo:IAO_0000590"
+            },
+            "organization_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "Organization": "obo:OBI_0000245",
+                "@language": "en",
+                "name": "obo:IAO_0000590",
+                "address": "obo:IAO_0000422"
+            },
+            "instrument_schema.json": {
+                "manufacturer": "obo:OBI_0000835",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "configurationAndSettings": "obo:MS_1000740",
+                "Instrument": "obo:OBI_0000968",
+                "other": "obo:NCIT_C17649",
+                "@language": "en",
+                "model": "obo:MS_1000031"
+            },
+            "experiment_schema.json": {
+                "obo": "http://purl.obolibrary.org/obo/",
+                "date": "obo:STATO_0000093",
+                "keywords": "obo:NCIT_C43513",
+                "organization": "obo:OBI_0000245",
+                "Experiment": "obo:OBI_0000066",
+                "experimentVariables": "obo:STATO_0000258",
+                "primaryContact": "obo:OBI_0000202",
+                "other": "obo:NCIT_C17649",
+                "conclusions": "obo:IAO_0000144",
+                "@language": "en",
+                "qualityControlMeasures": "obo:MSIO_0000085",
+                "purpose": "obo:NCIT_C25634"
+            },
+            "flow_cell_schema.json": {
+                "FlowCell": "obo:OBI_0400043",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "@language": "en",
+                "other": "obo:NCIT_C17649",
+                "flowCellType": "obo:CL_0000000"
+            }
+        },
+        "schemas": {
+            "biological_sample_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Biological Sample",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/biological_sample_schema.json",
+                "description": "Biological Sample",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "Additional information about the biological sample should be provided if relevant. This may include relevant information such as in vivo or in vitro treatment, stimulation, preparation / enrichment protocol, culture/growth protocol, collection time/date, whether the sample was frozen/banked/fixed, etc."
+                    },
+                    "sourceDescription": {
+                        "type": "string",
+                        "description": "The source of the biological sample shall be described (e.g., wild- type mouse, C57BL/6 spleen, C57BL/6 splenocytes). If the source is a cell line the description shall include its name, ATCC [17] (or equivalent) number, and cell type."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "sampleDescription": {
+                        "type": "string",
+                        "description": "A description of the biological sample shall be provided, including the sample type, if relevant (e.g., C57BL/6 spleen, purified CD4+ lymphocytes, BALB/c thymocyte DNA, control patient PBMCs, protein lysate from lung cancer biopsy, peripheral blood from patient with Type I diabetes, liver biopsy, etc.)"
+                    },
+                    "organism": {
+                        "$ref": "organism_schema.json#",
+                        "description": "The source organism for this biological sample"
+                    }
+                },
+                "type": "object"
+            },
+            "environmental_sample_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Environmental Sample",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/environmental_sample_schema.json",
+                "description": "Organization performing the experiment",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "sampleDescription": {
+                        "type": "string",
+                        "description": "A description about the environmental sample shall be provided. The description should include relevant details such as collection time/date, collection protocol, type of sample (e.g., seawater), etc."
+                    },
+                    "sampleLocation": {
+                        "type": "string",
+                        "description": "The location of the sample origin shall be specified. This should include longitude and latitude if relevant."
+                    }
+                },
+                "type": "object"
+            },
+            "primary_contact_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Primary Contact",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/primary_contact_schema.json",
+                "description": "The description may include information for additional individuals involved in the experiment, including their contact details and their role.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "emailAddress": {
+                        "type": "string",
+                        "description": "The primary contact's email address"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The primary contact's name"
+                    }
+                },
+                "type": "object"
+            },
+            "organism_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Organism",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/organism_schema.json",
+                "description": "Organism",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "age": {
+                        "type": "string",
+                        "description": "The age shall be provided if applicable for the particular organism (e.g., 6 weeks). It may also include the developmental state (e.g., Theiler stage 23)."
+                    },
+                    "phenotype": {
+                        "type": "string",
+                        "description": "Appropriate phenotype characteristics such as disease state shall be described (e.g., increased tumorigenesis)."
+                    },
+                    "treatment": {
+                        "type": "string",
+                        "description": "All source organism treatments shall be described (e.g., treatment with cyclooxygenase-2 (COX-2) inhibitor)."
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "Additional information about the source organism should be provided if relevant. This may include anatomic location of the source, visit time/date, or additional details and comments."
+                    },
+                    "taxonomy": {
+                        "type": "string",
+                        "description": "The source organism shall be specified by genus and species (e.g., Mus musculus). The terms should come from an appropriate standard such as the NCBI taxonomy database [12]. Taxonomy information should also contain the type of subspecies and organism strain, if applicable. A standard taxonomy may be extended or a proprietary taxonomy may be used, especially if detailed identification is relevant and beyond the scope of standard taxonomies."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "description": "The gender shall be provided if applicable for the particular organism."
+                    },
+                    "genotype": {
+                        "type": "string",
+                        "description": "Appropriate genotype characteristics shall be described (e.g., p53-/-)."
+                    }
+                },
+                "type": "object"
+            },
+            "miflowcyt_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt (Minimum Information about a Flow Cytometry Experiment) main schema",
+                "provenance": {
+                    "url": "http://w3id.org/mircat/miflowcyt/provenance/provenance.json"
+                },
+                "id": "https://w3id.org/mircat/miflowcyt/schema/miflowcyt_schema.json",
+                "description": "The main JSON-schema representing MIFlowCyt reporting guideline.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "flowSampleDetails": {
+                        "$ref": "sample_schema.json#",
+                        "description": "The flow sample details shall include a description of each sample material used in the experiment (2.1), (2.2), how they were treated (2.3) and what reagents were used (2.4) to fluorescently label the material. Relations between samples, aliquots, different treatments, and replicates shall be unambiguously described."
+                    },
+                    "experimentOverview": {
+                        "$ref": "experiment_schema.json#",
+                        "description": "An overview of the experiment"
+                    },
+                    "dataAnalysis": {
+                        "$ref": "data_analysis_schema.json#",
+                        "description": "Information about the data analysis performed."
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "instrumentDetails": {
+                        "$ref": "instrument_schema.json#",
+                        "description": "The following details shall be specified about instruments used to analyze samples. It is expected that this information will be automatically provided by flow cytometry instruments in instrumentation description files along with list-mode data files, such as FCS files [18]. For instrument components that are not user configurable and that are part of a standard model, the instrument manufacturer and model number shall be sufficient if this uniquely specifies the required information. For all other cases where the make and model number is not sufficient to specify the required information, the individual component description shall be specified as described below."
+                    }
+                },
+                "type": "object"
+            },
+            "sample_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Flow Sample schema",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/sample_schema.json",
+                "description": "The flow sample details shall include a description of each sample material used in the experiment (2.1), (2.2), how they were treated (2.3) and what reagents were used (2.4) to fluorescently label the material. Relations between samples, aliquots, different treatments, and replicates shall be unambiguously described.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "sampleCharacteristics": {
+                        "type": "string",
+                        "description": "Key information about the possible and expected sample characteristics should be noted as they provide the rationale for the experimental design, including the choice of appropriate reagents. Sample characteristics description should include the expected and possible types of cells or other particles in the sample material."
+                    },
+                    "materialDescription": {
+                        "oneOf": [
+                            {
+                                "$ref": "biological_sample_schema.json"
+                            },
+                            {
+                                "$ref": "environmental_sample_schema.json"
+                            },
+                            {
+                                "ref": "other_sample_schema.json",
+                                "description": "A description of the sample shall be provided. The description shall include information about the nature of the material in the sample (e.g., dyed plastic beads)."
+                            }
+                        ],
+                        "description": "Sample materials shall be described according to 2.1.1, 2.1.2, or 2.1.3, based on the type of the sample material. Each sample shall be distinguished from other samples within the same experiment."
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "sampleTreatmentsDescription": {
+                        "type": "string",
+                        "description": "The description shall include details about treatment agents, which play the role of experiment variables, or shall specify that samples were untreated. For example, a sample treated with an agent might be compared to an untreated sample; when reproducing and interpreting such an experiment, having access to details on treatment agents and conditions is essential in order to query and retrieve samples for further analysis. The treatment description should also contain other relevant treatment details such as, but not limited to, time, temperature, and concentration."
+                    },
+                    "fluorescentReagentsDescription": {
+                        "$ref": "fluorescence_reagent_schema.json",
+                        "description": "The expected and possible types of cells or other particles in the sample material, and their expected and possible measurable characteristics should be noted as these represent the key information for choosing appropriate reagents with respect to the experimental goal. The following information shall be provided about each fluorescence reagent used. Information about the characteristic(s) being measured, as well as details about what plays the role of analyte, analyte detector, and analyte reporter should be descriptive enough to allow for accurate interpretation of the experiment data. Table 1 lists some examples of reagent descriptions."
+                    }
+                },
+                "type": "object"
+            },
+            "light_source_instrument_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Light Source Instrument",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/light_source_instrument_schema.json",
+                "description": "The following details shall be specified about instruments used to analyze samples. It is expected that this information will be automatically provided by flow cytometry instruments in instrumentation description files along with list-mode data files, such as FCS files [18]. For instrument components that are not user configurable and that are part of a standard model, the instrument manufacturer and model number shall be sufficient if this uniquely specifies the required information. For all other cases where the make and model number is not sufficient to specify the required information, the individual component description shall be specified as described below..",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "type": {
+                        "type": "string",
+                        "description": "The type of the light source shall be provided (e.g., laser, diode laser, xenon lamp)."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "Additional relevant light source details should be provided and may include light source manufacturer name (e.g., MIFlowCyt Lasers, Inc.), light source model name (e.g., 302C Krypton-Ion Laser), light source part number (e.g., I-326), noise (e.g., <1%), pointing and power stability (e.g., <1% over 1 hour), etc."
+                    },
+                    "polarization": {
+                        "type": "string",
+                        "description": "Polarization shall be specified (e.g., linear, >100:1, in the direction of the sample flow). If possible, this should be specified at the intersection of the light source beam and particles; see also 3.3.3."
+                    },
+                    "excitatoryWavelength": {
+                        "type": "string",
+                        "description": "The excitatory wavelength shall be provided (e.g., 488nm, 633 nm)."
+                    },
+                    "powerAtExcitatoryWavelength": {
+                        "type": "string",
+                        "description": "The power of the light source shall be provided (e.g., 180 mW, 50 mW). If possible, this should be measured at the intersection of the light source beam with particles; see also 3.3.3."
+                    },
+                    "beam": {
+                        "type": "string",
+                        "description": "Light source beam dimensions and geometry shall be specified at the flow cell or at the intersection of the beam with particles (e.g., elliptical 22 x 66 \u03bcm)."
+                    }
+                },
+                "type": "object"
+            },
+            "data_analysis_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Data Analysis",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/data_analysis_schema.json",
+                "description": "",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "listModeDataFile": {
+                        "type": "string",
+                        "description": "The list-mode data files (e.g., FCS files [18]) shall be provided directly or details on how they may be requested shall be stated."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "fluorescence_reagent_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Fluorescence Reagent",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/fluorescence_reagent_schema.json",
+                "description": "The expected and possible types of cells or other particles in the sample material, and their expected and possible measurable characteristics should be noted as these represent the key information for choosing appropriate reagents with respect to the experimental goal. The following information shall be provided about each fluorescence reagent used. Information about the characteristic(s) being measured, as well as details about what plays the role of analyte, analyte detector, and analyte reporter should be descriptive enough to allow for accurate interpretation of the experiment data. Table 1 lists some examples of reagent descriptions.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "analyteDetector": {
+                        "type": "string",
+                        "description": "What plays the role of analyte detector? Which component of the fluorescence reagent specifically binds to the analyte to make it detectable (e.g., anti-CD25 antibody)?"
+                    },
+                    "analyte": {
+                        "type": "string",
+                        "description": "What plays the role of the analyte? Which substance or chemical constituent is the subject of interest of the analytical procedure, what target is specifically bound by the analyte detector (e.g., CD25)?"
+                    },
+                    "reagentCatalogueNumber": {
+                        "type": "string",
+                        "description": "The reagent catalogue number shall be specified."
+                    },
+                    "cloneNameOrNumber": {
+                        "type": "string",
+                        "description": "If the probe is a monoclonal antibody, the clone name or number shall be provided."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "When secondary antibodies are used, the primary analyte (the analyte bound by the primary antibody) and the reporter component of the secondary antibody (the reporter that generates the measured signal) shall be clearly specified as described in 2.4.2, 2.4.3, and 2.4.4. If relevant, the primary and secondary antibodies shall be described individually (e.g., in the case that the use of a secondary antibody significantly impacts the interpretation of results because of nonspecific fluorescence, etc.). The description should also contain other relevant details which may include lot number, concentration, label incorporation method, separation technique, antibody staining procedures, and wash steps."
+                    },
+                    "analyteReporter": {
+                        "type": "string",
+                        "description": "(Fluorochrome) What plays the role of analyte reporter? Which component of the fluorescence reagent reports the presents of the analyte to the flow cytometer? What substance (label) is used to generate the measured signal (e.g., FITC)?"
+                    },
+                    "characteristicsBeingMeasured": {
+                        "type": "string",
+                        "description": "The relative amount of molecules, properties, or processes being evaluated (e.g., CD25, apoptosis, membrane permeability, cell viability, oxidative burst). The characteristic(s) being measured shall be provided whenever there is ambiguity about the analyte being measured, such as when sample processing affects detection of the analyte (e.g., propidium iodide example in Table 1). The optical detector (e.g., FL1) or parameter (e.g., FL1-H, see 3.3.6) used primarily for this measurement shall be indicated."
+                    },
+                    "reagentManufacturerName": {
+                        "type": "string",
+                        "description": "The reagent manufacturer shall be specified (e.g., MIFlowCyt Reagent Inc.)."
+                    }
+                },
+                "type": "object"
+            },
+            "organization_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Organzation",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/organization_schema.json",
+                "description": "Organization performing the experiment",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Name of the organization."
+                    },
+                    "address": {
+                        "type": "object",
+                        "description": "Address of the organization.",
+                        "properties": {
+                            "city": {
+                                "type": "string"
+                            },
+                            "street": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "zip": {
+                                "type": [
+                                    "string",
+                                    "number",
+                                    "null"
+                                ]
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "country": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "instrument_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Instrument",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/instrument_schema.json",
+                "description": "The following details shall be specified about instruments used to analyze samples. It is expected that this information will be automatically provided by flow cytometry instruments in instrumentation description files along with list-mode data files, such as FCS files [18]. For instrument components that are not user configurable and that are part of a standard model, the instrument manufacturer and model number shall be sufficient if this uniquely specifies the required information. For all other cases where the make and model number is not sufficient to specify the required information, the individual component description shall be specified as described below.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "manufacturer": {
+                        "type": "string",
+                        "description": "The instrument manufacturer shall be specified by stating its name (e.g., MIFlowCyt Cytometry Systems, Inc.). A URL pointing to manufacturer web pages may also be provided."
+                    },
+                    "configurationAndSettings": {
+                        "description": "The system and its configurations have significant impact on experimental results and as such the following shall be provided",
+                        "properties": {
+                            "lightSources": {
+                                "type": "array",
+                                "description": "Each light source (e.g., laser) shall be described stating the following:",
+                                "items": {
+                                    "$ref": "light_source_instrument_schema.json"
+                                }
+                            },
+                            "flowCellAndFluidics": {
+                                "$ref": "flow_cell_schema.json"
+                            }
+                        }
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "Additional relevant instrument details should be provided and may include machine-specific information such as information about automated agitation, temperature control, controlled volume dispensing, sampling from microtiter plates, auto-boost, auto-flush, etc. Other custom settings shall be provided if relevant and may include setting name, description, and value."
+                    },
+                    "model": {
+                        "type": "string",
+                        "description": "The instrument model shall be specified (e.g., CytMeter Elite-2000). It may include the instrument serial number."
+                    }
+                },
+                "type": "object"
+            },
+            "experiment_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt experiment schema",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/experiment_schema.json",
+                "description": "The overview of the experiment.",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "date": {
+                        "type": "object",
+                        "description": "The date or time period during which the investigation was performed (i.e., from collecting and treating samples to performing data analysis) shall be stated.",
+                        "properties": {
+                            "start-date": {
+                                "type": "string"
+                            },
+                            "end-date": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "keywords": {
+                        "type": "array",
+                        "description": "The keywords should include terms from an appropriate vocabulary (e.g. MeSH) to describe the experiment.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "organization": {
+                        "type": "array",
+                        "description": "The organizations performing the experiment.",
+                        "items": {
+                            "$ref": "organization_schema.json"
+                        }
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "experimentVariables": {
+                        "type": "string",
+                        "description": "Variables are attribute(s) that differ between samples within an experiment due to pre-existing differences in sample states or due to experimental manipulation of the samples. If applicable, a brief description of the conditional and/or manipulated variables in the experiment shall be provided (e.g., smoker vs. nonsmoker, IL-2 treatment vs. no treatment, knockout versus wild-type, varying number of transplanted cells, varying treatment dosage, etc.). The number of instances per experimental group should also be stated."
+                    },
+                    "primaryContact": {
+                        "$ref": "primary_contact_schema.json",
+                        "description": "The individual who is the primary contact for this experiment."
+                    },
+                    "other": {
+                        "description": "Additional information about the experiment should be provided if relevant. This may include funding announcements, related publications (which should be referenced by PMID), URIs, databases, etc.",
+                        "anyOf": [
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "related-publications": {
+                                        "type": "array",
+                                        "items": {
+                                            "pmc-id": {
+                                                "anyOf": [
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "type": "number"
+                                                    }
+                                                ]
+                                            },
+                                            "pubmed-id": {
+                                                "anyOf": [
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "type": "number"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": null
+                            }
+                        ]
+                    },
+                    "conclusions": {
+                        "type": "string",
+                        "description": "A brief summary of the interpretation of the results or outcome of the experiment shall be provided if available."
+                    },
+                    "qualityControlMeasures": {
+                        "type": "string",
+                        "description": "A description of the quality control measures used such as replicates, calibrations, control assays, etc. shall be provided. If another experiment was performed for the purposes of establishing quality control standards, that experiment may be referenced."
+                    },
+                    "purpose": {
+                        "type": "string",
+                        "description": "A brief description of the goal of the experiment. This should include the rationale and hypothesis."
+                    }
+                },
+                "type": "object"
+            },
+            "flow_cell_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "title": "MIFlowCyt Flow Cell",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/flow_cell_schema.json",
+                "description": "The flow cell of the instrument",
+                "properties": {
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@id": {
+                        "format": "uri",
+                        "description": "The JSON-LD identifier",
+                        "type": "string"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "description": "The JSON-LD type",
+                        "type": "string"
+                    },
+                    "flowCellType": {
+                        "type": "string",
+                        "description": "The flow cell type (e.g., stream-in-air, cuvette) including the material shall be provided."
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "Other relevant flow cell details should be provided and may include flow cell manufacturer name (e.g., MIFlowCyt Optics, Inc.) and model number (e.g., PRO-CFC-75), flow cell outside shape (e.g., rectangular with an attached sphere, spherical, square) and dimensions, flow channel shape (e.g., rectangular, circular, triangular) and dimensions, sheath flow velocity (e.g., 10 l/s), sheath flow pump type (e.g., gas pressure, vacuum, gear), sample flow velocity (e.g., 7.5 l/s) and sample flow pump (e.g., gas pressure, syringe)."
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "name": "MyFlowCyt"
+    },
+    "fields_to_merge": {
+        "da_schema.json": {
+            "merge_with": "data_analysis_schema.json",
+            "fields": [
+                "ID",
+                "instrument",
+                "reference",
+                "settings"
+            ]
+        },
+        "instrument_schema.json": {
+            "merge_with": "instrument_schema.json",
+            "fields": [
+                "ID",
+                "instrumentName",
+                "instrumentSpec",
+                "instrumentType",
+                "vendor"
+            ]
+        },
+        "source_schema.json": {
+            "merge_with": "primary_contact_schema.json",
+            "fields": [
+                "city",
+                "country",
+                "ID",
+                "department",
+                "institution",
+                "address"
+            ]
+        },
+        "miaca_schema.json": {
+            "merge_with": "miflowcyt_schema.json",
+            "fields": [
+                "project"
+            ]
+        }
+    },
+    "overlaps": [
+        [
+            [
+                "Miflowcyt",
+                "Miaca"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "0.0",
+                    [
+                        "0",
+                        "4"
+                    ]
+                ],
+                "overlapping fields": []
+            }
+        ],
+        [
+            [
+                "Primary_contact",
+                "Source"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "2",
+                        "2"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "name",
+                        "name"
+                    ],
+                    [
+                        "emailAddress",
+                        "email"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Data_analysis",
+                "Da"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "0.0",
+                    [
+                        "0",
+                        "1"
+                    ]
+                ],
+                "overlapping fields": []
+            }
+        ],
+        [
+            [
+                "Instrument",
+                "Instrument"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "25.0",
+                    [
+                        "1",
+                        "4"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "model",
+                        "instrumentModel"
+                    ]
+                ]
+            }
+        ]
+    ]
+}
