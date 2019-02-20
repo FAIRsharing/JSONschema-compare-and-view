@@ -1,228 +1,156 @@
 {
     "network2": {
-        "name": "MIACME",
+        "name": "MyFlowCyt",
         "contexts": {
-            "person_schema.json": {
-                "Person": "obo:NCBITaxon_9606",
-                "affiliation": "obo:ERO_0000066",
-                "roles": "obo:OBI_0000202",
-                "address": "obo:IAO_0000422",
+            "experiment_schema.json": {
+                "qualityControlMeasures": "obo:MSIO_0000085",
+                "purpose": "obo:NCIT_C25634",
+                "conclusions": "obo:IAO_0000144",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "midInitials": "obo:IAO_0000590",
-                "email": "obo:IAO_0000429",
-                "identifierSource": "obo:OBI_0000245",
+                "Experiment": "obo:OBI_0000066",
+                "primaryContact": "obo:OBI_0000202",
                 "@language": "en",
-                "identifier": "obo:IAO_0000577",
-                "phone": "sio:SIO_001324",
-                "lastName": "obo:IAO_0000590",
-                "firstName": "obo:IAO_0020016",
-                "fax": "sio:SIO_001321",
-                "sio": "http://semanticscience.org/resource/"
+                "date": "obo:STATO_0000093",
+                "organization": "obo:OBI_0000245",
+                "other": "obo:NCIT_C17649",
+                "keywords": "obo:NCIT_C43513",
+                "experimentVariables": "obo:STATO_0000258"
             },
-            "grant_schema.json": {
-                "Grant": "obo:OBI_0001636",
-                "@language": "en",
-                "identifier": "obo:OBI_0001629",
-                "efo": "http://www.ebi.ac.uk/efo/",
-                "identifierSource": "obo:OBI_0000245",
-                "name": "obo:IAO_0000590",
+            "flow_cell_schema.json": {
+                "FlowCell": "obo:OBI_0400043",
+                "flowCellType": "obo:CL_0000000",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "funders": "efo:EFO_0001736"
+                "other": "obo:NCIT_C17649",
+                "@language": "en"
             },
             "organization_schema.json": {
                 "name": "obo:IAO_0000590",
                 "@language": "en",
-                "identifier": "obo:IAO_0000577",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "identifierSource": "obo:OBI_0000245",
-                "Organization": "obo:OBI_0000245"
+                "Organization": "obo:OBI_0000245",
+                "address": "obo:IAO_0000422"
             },
-            "date_schema.json": {
+            "fluorescence_reagent_schema.json": {
                 "@language": "en",
-                "type": "obo:NCIT_C27993",
-                "Date": "obo:STATO_0000093",
-                "date": "obo:STATO_0000093",
-                "obo": "http://purl.obolibrary.org/obo/"
-            },
-            "annotation_schema.json": {
-                "value": "obo:IAO_0000027",
-                "@language": "en",
-                "valueIRI": "obo:NCIT_C42743",
+                "analyteDetector": "obo:CHMO_0002244",
+                "other": "obo:NCIT_C17649",
+                "characteristicsBeingMeasured": "obo:BFO_0000005",
+                "FluorescenceReagent": "obo:OBI_0001879",
+                "analyte": "obo:OBI_0000275",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "Annotation": "obo:NCIT_C44272"
+                "reagentManufacturerName": "obo:IAO_0000590",
+                "cloneNameOrNumber": "obo:SO_0000151",
+                "reagentCatalogueNumber": "obo:NCIT_C112406",
+                "analyteReporter": "obo:CHEBI_35209"
             },
-            "publication_schema.json": {
+            "instrument_schema.json": {
                 "@language": "en",
-                "identifier": "obo:IAO_0000577",
-                "authors": "obo:IAO_0000442",
-                "date": "obo:IAO_0000582",
-                "Publication": "obo:IAO_0000311",
-                "publicationVenue": "obo:NCIT_C40976",
+                "manufacturer": "obo:OBI_0000835",
+                "other": "obo:NCIT_C17649",
+                "model": "obo:MS_1000031",
+                "Instrument": "obo:OBI_0000968",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "identifierSource": "obo:OBI_0000245",
-                "title": "obo:IAO_0000305"
+                "configurationAndSettings": "obo:MS_1000740"
             },
-            "cell_model_schema.json": {
+            "sample_schema.json": {
                 "@language": "en",
-                "cellType": "obo:CL_0000000",
-                "organism": "obo:OBI_0100026",
-                "CellModel": "obo:CL_0000000",
-                "obo": "http://purl.obolibrary.org/obo/",
-                "specificCellDetails": "obo:CL_0000000"
-            },
-            "imaging_condition_schema.json": {
-                "obo": "http://purl.obolibrary.org/obo/",
-                "observationPeriodUnit": "obo:UO_0000003",
-                "timeSeriesInterval": "obo:IAO_0000584",
-                "bao": "http://www.bioassayontology.org/bao#",
-                "imageSequenceType": "obo:NCIT_C69268",
-                "modality": "obo:FBbi_00000222 ",
-                "observationPeriod": "obo:NCIT_C25616",
-                "@language": "en",
-                "pixels": "obo:NCIT_C48367",
-                "numericalAperture": "obo:NCIT_C44175",
-                "channelDefinition": "bao:BAO_0000184",
-                "objectiveLens": "obo:ERO_0000453",
-                "ImagingCondition": "obo:FBbi_00000222",
-                "timeSeriesIntervalUnit": "obo:UO_0000003"
-            },
-            "miacme_schema.json": {
-                "investigation": "obo:OBI_0000011",
-                "@language": "en",
-                "obo": "http://purl.obolibrary.org/obo/",
-                "Miacme": "obo:MS_1000900"
-            },
-            "assay_schema.json": {
-                "cellInput": "obo:CL_0000000",
-                "@language": "en",
-                "type": "obo:FBcv_0003050",
-                "obo": "http://purl.obolibrary.org/obo/",
-                "Assay": "obo:OBI_0000070"
-            },
-            "pixel_schema.json": {
-                "physicalSizeY": "obo:NCIT_C94953",
-                "dimensionsOrder": "obo:NCIT_C42680",
-                "sizeY": "obo:NCIT_C94953",
-                "sizeZ": "obo:NCIT_C94953",
-                "physicalSizeXUnit": "obo:NCIT_C68553",
-                "type": "obo:NCIT_C25284",
-                "obo": "http://purl.obolibrary.org/obo/",
-                "sizeC": "obo:NCIT_C94953",
-                "@language": "en",
-                "identifier": "obo:IAO_0000577",
-                "physicalSizeZ": "obo:NCIT_C94953",
-                "sizeT": "obo:NCIT_C94953",
-                "physicalSizeX": "obo:NCIT_C94953",
-                "sizeX": "obo:NCIT_C94953",
-                "physicalSizeZUnit": "obo:NCIT_C68553",
-                "Pixel": "obo:NCIT_C48367",
-                "physicalSizeYUnit": "obo:NCIT_C68553"
-            },
-            "study_schema.json": {
-                "contacts": "obo:OBI_0000202",
-                "imaging_condition": "obo:NCIT_C17369",
-                "acknowledges": "sdo:funder",
-                "MIACMEcompliance": "obo:OBI_0500023",
-                "@language": "en",
-                "type": "obo:PRIDE_0000457",
-                "obo": "http://purl.obolibrary.org/obo/",
-                "identifierSource": "obo:OBI_0000245",
-                "data": "obo:IAO_0000027",
-                "sdo": "https://schema.org/",
-                "publications": "obo:IAO_0000312",
-                "MIACMEversion": "obo:IAO_0000129",
-                "identifier": "obo:IAO_0000577",
-                "description": "obo:OBI_0001615",
-                "title": "obo:OBI_0001622",
-                "Study": "obo:OBI_0000066",
-                "conclusions": "obo:IAO_0000144",
-                "experimental_setup": "obo:XCO_0000000",
-                "dates": "obo:STATO_0000093"
-            },
-            "data_schema.json": {
-                "@language": "en",
-                "edam": "http://edamontology.org/data_3424",
-                "extractedFeatures": "obo:NCIT_C73619",
-                "processedImages": "obo:IAO_0000101",
-                "obo": "http://purl.obolibrary.org/obo/",
-                "Data": "obo:IAO_0000027",
-                "rawImages": "edam:data_3424"
-            },
-            "experimental_setup_schema.json": {
-                "@language": "en",
-                "microenvironment": "obo:OMIT_0027850",
-                "ExperimentalSetup": "obo:XCO_0000000",
-                "cellType": "obo:CL_0000000",
                 "efo": "http://www.ebi.ac.uk/efo/",
-                "interference": "efo:EFO_0000727",
-                "assayType": "obo:FBcv_0003050",
+                "materialDescription": "obo:NCIT_C93859",
+                "sampleTreatmentsDescription": "efo:EFO_0003809",
+                "sampleCharacteristics": "obo:BFO_0000005",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "medium": "obo:BTO_0000316"
+                "fluorescentReagentsDescription": "obo:ERO_0000006",
+                "Sample": "obo:OBI_0000747"
             },
-            "investigation_schema.json": {
-                "contacts": "obo:OBI_0000202",
-                "acknowledges": "sdo:funder",
-                "MIACMEcompliance": "obo:OBI_0500023",
-                "@language": "en",
-                "studies": "obo:OBI_0000066",
-                "conclusions": "obo:IAO_0000144",
+            "environmental_sample_schema.json": {
+                "EnvironmentalSample": "obo:NCBITaxon_1617257",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "identifierSource": "obo:OBI_0000245",
-                "sdo": "https://schema.org/",
-                "Investigation": "obo:OBI_0000011",
-                "MIACMEversion": "obo:IAO_0000129",
-                "identifier": "obo:IAO_0000577",
-                "description": "obo:OBI_0001615",
-                "title": "obo:OBI_0001622",
-                "dates": "obo:STATO_0000093",
-                "publications": "obo:IAO_0000312"
+                "@language": "en",
+                "sampleLocation": "obo:NCIT_C25341",
+                "sampleDescription": "obo:sep_00196"
+            },
+            "primary_contact_schema.json": {
+                "emailAddress": "obo:IAO_0000429",
+                "@language": "en",
+                "name": "obo:IAO_0000590",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "PrimaryContact": "obo:NCBITaxon_9606"
+            },
+            "light_source_instrument_schema.json": {
+                "@language": "en",
+                "other": "obo:NCIT_C17649",
+                "polarization": "obo:OMIT_0009913",
+                "excitatoryWavelength": "bao:BAO_0000566",
+                "powerAtExcitatoryWavelength": "bao:BAO_0000566",
+                "type": "obo:PRIDE_0000163",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "bao": "http://www.bioassayontology.org/bao#",
+                "beam": "obo:NCIT_C70569",
+                "LightSourceInstrument": "obo:OBI_0400065"
+            },
+            "organism_schema.json": {
+                "@language": "en",
+                "genotype": "obo:SO_0001027",
+                "other": "obo:NCIT_C17649",
+                "efo": "http://www.ebi.ac.uk/efo/",
+                "taxonomy": "obo:NCIT_C17469",
+                "Organism": "obo:OBI_0100026",
+                "age": "obo:PATO_0000011",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "gender": "obo:NCIT_C17357",
+                "treatment": "efo:EFO_0000727",
+                "phenotype": "obo:NCIT_C16977"
+            },
+            "miflowcyt_schema.json": {
+                "Miflowcyt": "obo:MS_1000900",
+                "instrumentDetails": "obo:OBI_0000968",
+                "dataAnalysis": "obo:ERO_0001309",
+                "flowSampleDetails": "obo:OBI_0000747",
+                "@language": "en",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "experimentOverview": "obo:OBI_0000066"
+            },
+            "biological_sample_schema.json": {
+                "@language": "en",
+                "BiologicalSample": "obo:OBI_0000671",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "other": "obo:NCIT_C17649",
+                "organism": "obo:OBI_0100026",
+                "sourceDescription": "obo:NCIT_C93859",
+                "sampleDescription": "obo:sep_00196"
+            },
+            "data_analysis_schema.json": {
+                "@language": "en",
+                "DataAnalysis": "obo:ERO_0001309",
+                "obo": "http://purl.obolibrary.org/obo/",
+                "listModeDataFile": "obo:OBI:0000021"
             }
         },
         "schemas": {
-            "person_schema.json": {
+            "experiment_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing a person in MIACME",
-                "additionalProperties": false,
-                "version": "1.0",
+                "description": "The overview of the experiment.",
                 "properties": {
-                    "email": {
-                        "format": "email",
-                        "type": "string",
-                        "description": "The email address."
-                    },
-                    "roles": {
-                        "type": "string",
-                        "description": "The roles assumed by the person. Ideally from a controlled vocabulary or ontology."
-                    },
-                    "address": {
-                        "type": "string"
-                    },
-                    "identifierSource": {
-                        "type": "string",
-                        "description": "Information about the organisation or namespace responsible for creating and maintaining the identifier."
-                    },
-                    "midInitials": {
-                        "type": "string"
-                    },
-                    "phone": {
-                        "type": "string"
-                    },
                     "@id": {
                         "format": "uri",
                         "type": "string",
                         "description": "The JSON-LD identifier"
                     },
-                    "firstName": {
+                    "qualityControlMeasures": {
                         "type": "string",
-                        "description": "The given name."
+                        "description": "A description of the quality control measures used such as replicates, calibrations, control assays, etc. shall be provided. If another experiment was performed for the purposes of establishing quality control standards, that experiment may be referenced."
                     },
-                    "identifier": {
+                    "purpose": {
                         "type": "string",
-                        "description": "A persistent identifier of the person, it should be an ORCID."
+                        "description": "A brief description of the goal of the experiment. This should include the rationale and hypothesis."
                     },
-                    "lastName": {
+                    "conclusions": {
                         "type": "string",
-                        "description": "The family name."
+                        "description": "A brief summary of the interpretation of the results or outcome of the experiment shall be provided if available."
+                    },
+                    "primaryContact": {
+                        "description": "The individual who is the primary contact for this experiment.",
+                        "$ref": "primary_contact_schema.json"
                     },
                     "@context": {
                         "description": "The JSON-LD context",
@@ -238,96 +166,128 @@
                             }
                         ]
                     },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Person"
-                        ]
+                    "date": {
+                        "properties": {
+                            "start-date": {
+                                "type": "string"
+                            },
+                            "end-date": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object",
+                        "description": "The date or time period during which the investigation was performed (i.e., from collecting and treating samples to performing data analysis) shall be stated."
                     },
-                    "fax": {
-                        "type": "string"
-                    },
-                    "affiliation": {
+                    "organization": {
                         "type": "array",
-                        "description": "The organizations to which the person is associated with.",
+                        "description": "The organizations performing the experiment.",
                         "items": {
-                            "$ref": "organization_schema.json#"
+                            "$ref": "organization_schema.json"
                         }
-                    }
-                },
-                "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/person_schema.json",
-                "title": "MIACME person schema. A human being."
-            },
-            "grant_schema.json": {
-                "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "An allocated sum of funds given by a government or other organization for a particular purpose.",
-                "version": "1.0",
-                "properties": {
-                    "@id": {
-                        "format": "uri",
-                        "type": "string",
-                        "description": "The JSON-LD identifier"
                     },
-                    "@context": {
-                        "description": "The JSON-LD context",
+                    "other": {
+                        "description": "Additional information about the experiment should be provided if relevant. This may include funding announcements, related publications (which should be referenced by PMID), URIs, databases, etc.",
                         "anyOf": [
                             {
-                                "type": "string"
-                            },
-                            {
-                                "type": "object"
-                            },
-                            {
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "identifier": {
-                        "type": "string",
-                        "description": "Primary identifier for the grant."
-                    },
-                    "identifierSource": {
-                        "type": "string",
-                        "description": "Information about the organisation or namespace responsible for creating and maintaining the identifier."
-                    },
-                    "name": {
-                        "type": "string",
-                        "description": "The name of the grant and its funding program."
-                    },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Grant"
-                        ]
-                    },
-                    "funders": {
-                        "type": "array",
-                        "description": "The person(s) or organization(s) which has awarded the funds supporting the project.",
-                        "minItems": 1,
-                        "items": {
-                            "oneOf": [
-                                {
-                                    "$ref": "person_schema.json#"
+                                "properties": {
+                                    "related-publications": {
+                                        "type": "array",
+                                        "items": {
+                                            "pubmed-id": {
+                                                "anyOf": [
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "type": "number"
+                                                    }
+                                                ]
+                                            },
+                                            "pmc-id": {
+                                                "anyOf": [
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "type": "number"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
                                 },
-                                {
-                                    "$ref": "organization_schema.json#"
-                                }
-                            ]
+                                "type": "object"
+                            },
+                            {
+                                "type": null
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "type": "array",
+                        "description": "The keywords should include terms from an appropriate vocabulary (e.g. MeSH) to describe the experiment.",
+                        "items": {
+                            "type": "string"
                         }
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD type"
+                    },
+                    "experimentVariables": {
+                        "type": "string",
+                        "description": "Variables are attribute(s) that differ between samples within an experiment due to pre-existing differences in sample states or due to experimental manipulation of the samples. If applicable, a brief description of the conditional and/or manipulated variables in the experiment shall be provided (e.g., smoker vs. nonsmoker, IL-2 treatment vs. no treatment, knockout versus wild-type, varying number of transplanted cells, varying treatment dosage, etc.). The number of instances per experimental group should also be stated."
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/grant_schema.json",
-                "title": "MIACME grant schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/experiment_schema.json",
+                "title": "MIFlowCyt experiment schema"
+            },
+            "flow_cell_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "description": "The flow cell of the instrument",
+                "properties": {
+                    "@id": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD identifier"
+                    },
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "flowCellType": {
+                        "type": "string",
+                        "description": "The flow cell type (e.g., stream-in-air, cuvette) including the material shall be provided."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD type"
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "Other relevant flow cell details should be provided and may include flow cell manufacturer name (e.g., MIFlowCyt Optics, Inc.) and model number (e.g., PRO-CFC-75), flow cell outside shape (e.g., rectangular with an attached sphere, spherical, square) and dimensions, flow channel shape (e.g., rectangular, circular, triangular) and dimensions, sheath flow velocity (e.g., 10 l/s), sheath flow pump type (e.g., gas pressure, vacuum, gear), sample flow velocity (e.g., 7.5 l/s) and sample flow pump (e.g., gas pressure, syringe)."
+                    }
+                },
+                "type": "object",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/flow_cell_schema.json",
+                "title": "MIFlowCyt Flow Cell"
             },
             "organization_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing an organization in MIACME. Legal or physical entity corresponding to a business or administration",
-                "additionalProperties": false,
-                "version": "1.0",
+                "description": "Organization performing the experiment",
                 "properties": {
                     "@id": {
                         "format": "uri",
@@ -347,35 +307,52 @@
                                 "type": "array"
                             }
                         ]
-                    },
-                    "identifier": {
-                        "type": "string",
-                        "description": "Primary identifier for the organisation."
-                    },
-                    "identifierSource": {
-                        "type": "string",
-                        "description": "Information about the organisation or namespace responsible for minting the identifier."
                     },
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "Name of the organization."
                     },
                     "@type": {
+                        "format": "uri",
                         "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Organization"
-                        ]
+                        "description": "The JSON-LD type"
+                    },
+                    "address": {
+                        "properties": {
+                            "street": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "zip": {
+                                "type": [
+                                    "string",
+                                    "number",
+                                    "null"
+                                ]
+                            },
+                            "country": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object",
+                        "description": "Address of the organization."
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/organization_schema.json",
-                "title": "MIACME organization schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/organization_schema.json",
+                "title": "MIFlowCyt Organzation"
             },
-            "date_schema.json": {
+            "fluorescence_reagent_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "Information about a calendar date or timestamp indicating day, month, year and time of an event.",
-                "additionalProperties": false,
-                "version": "1.0",
+                "description": "The expected and possible types of cells or other particles in the sample material, and their expected and possible measurable characteristics should be noted as these represent the key information for choosing appropriate reagents with respect to the experimental goal. The following information shall be provided about each fluorescence reagent used. Information about the characteristic(s) being measured, as well as details about what plays the role of analyte, analyte detector, and analyte reporter should be descriptive enough to allow for accurate interpretation of the experiment data. Table 1 lists some examples of reagent descriptions.",
                 "properties": {
                     "@id": {
                         "format": "uri",
@@ -396,36 +373,51 @@
                             }
                         ]
                     },
-                    "type": {
-                        "description": "The type of date, used to specify the process which is being timestamped by the date attribute value, ideally comes from a controlled terminology.",
-                        "$ref": "annotation_schema.json#"
+                    "analyteDetector": {
+                        "type": "string",
+                        "description": "What plays the role of analyte detector? Which component of the fluorescence reagent specifically binds to the analyte to make it detectable (e.g., anti-CD25 antibody)?"
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "When secondary antibodies are used, the primary analyte (the analyte bound by the primary antibody) and the reporter component of the secondary antibody (the reporter that generates the measured signal) shall be clearly specified as described in 2.4.2, 2.4.3, and 2.4.4. If relevant, the primary and secondary antibodies shall be described individually (e.g., in the case that the use of a secondary antibody significantly impacts the interpretation of results because of nonspecific fluorescence, etc.). The description should also contain other relevant details which may include lot number, concentration, label incorporation method, separation technique, antibody staining procedures, and wash steps."
+                    },
+                    "characteristicsBeingMeasured": {
+                        "type": "string",
+                        "description": "The relative amount of molecules, properties, or processes being evaluated (e.g., CD25, apoptosis, membrane permeability, cell viability, oxidative burst). The characteristic(s) being measured shall be provided whenever there is ambiguity about the analyte being measured, such as when sample processing affects detection of the analyte (e.g., propidium iodide example in Table 1). The optical detector (e.g., FL1) or parameter (e.g., FL1-H, see 3.3.6) used primarily for this measurement shall be indicated."
                     },
                     "@type": {
+                        "format": "uri",
                         "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Date"
-                        ]
+                        "description": "The JSON-LD type"
                     },
-                    "date": {
-                        "format": "date-time",
+                    "analyte": {
                         "type": "string",
-                        "description": "A date following the ISO8601 standard."
+                        "description": "What plays the role of the analyte? Which substance or chemical constituent is the subject of interest of the analytical procedure, what target is specifically bound by the analyte detector (e.g., CD25)?"
+                    },
+                    "reagentManufacturerName": {
+                        "type": "string",
+                        "description": "The reagent manufacturer shall be specified (e.g., MIFlowCyt Reagent Inc.)."
+                    },
+                    "cloneNameOrNumber": {
+                        "type": "string",
+                        "description": "If the probe is a monoclonal antibody, the clone name or number shall be provided."
+                    },
+                    "reagentCatalogueNumber": {
+                        "type": "string",
+                        "description": "The reagent catalogue number shall be specified."
+                    },
+                    "analyteReporter": {
+                        "type": "string",
+                        "description": "(Fluorochrome) What plays the role of analyte reporter? Which component of the fluorescence reagent reports the presents of the analyte to the flow cytometer? What substance (label) is used to generate the measured signal (e.g., FITC)?"
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/date_schema.json",
-                "required": [
-                    "date",
-                    "type"
-                ],
-                "title": "MIACME date schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/fluorescence_reagent_schema.json",
+                "title": "MIFlowCyt Fluorescence Reagent"
             },
-            "annotation_schema.json": {
+            "instrument_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "A pair of value (string or numeric) with a corresponding ontology term (IRI), if applicable.",
-                "additionalProperties": false,
-                "version": "1.0",
+                "description": "The following details shall be specified about instruments used to analyze samples. It is expected that this information will be automatically provided by flow cytometry instruments in instrumentation description files along with list-mode data files, such as FCS files [18]. For instrument components that are not user configurable and that are part of a standard model, the instrument manufacturer and model number shall be sufficient if this uniquely specifies the required information. For all other cases where the make and model number is not sufficient to specify the required information, the individual component description shall be specified as described below.",
                 "properties": {
                     "@id": {
                         "format": "uri",
@@ -446,253 +438,106 @@
                             }
                         ]
                     },
-                    "valueIRI": {
-                        "description": "The IRI of a concept or ontology term associated with the value. It can also be an empty string",
+                    "other": {
+                        "type": "string",
+                        "description": "Additional relevant instrument details should be provided and may include machine-specific information such as information about automated agitation, temperature control, controlled volume dispensing, sampling from microtiter plates, auto-boost, auto-flush, etc. Other custom settings shall be provided if relevant and may include setting name, description, and value."
+                    },
+                    "manufacturer": {
+                        "type": "string",
+                        "description": "The instrument manufacturer shall be specified by stating its name (e.g., MIFlowCyt Cytometry Systems, Inc.). A URL pointing to manufacturer web pages may also be provided."
+                    },
+                    "model": {
+                        "type": "string",
+                        "description": "The instrument model shall be specified (e.g., CytMeter Elite-2000). It may include the instrument serial number."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD type"
+                    },
+                    "configurationAndSettings": {
+                        "properties": {
+                            "flowCellAndFluidics": {
+                                "$ref": "flow_cell_schema.json"
+                            },
+                            "lightSources": {
+                                "type": "array",
+                                "description": "Each light source (e.g., laser) shall be described stating the following:",
+                                "items": {
+                                    "$ref": "light_source_instrument_schema.json"
+                                }
+                            }
+                        },
+                        "description": "The system and its configurations have significant impact on experimental results and as such the following shall be provided"
+                    }
+                },
+                "type": "object",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/instrument_schema.json",
+                "title": "MIFlowCyt Instrument"
+            },
+            "sample_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "description": "The flow sample details shall include a description of each sample material used in the experiment (2.1), (2.2), how they were treated (2.3) and what reagents were used (2.4) to fluorescently label the material. Relations between samples, aliquots, different treatments, and replicates shall be unambiguously described.",
+                "properties": {
+                    "@id": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD identifier"
+                    },
+                    "@context": {
+                        "description": "The JSON-LD context",
                         "anyOf": [
                             {
-                                "format": "uri",
                                 "type": "string"
                             },
                             {
-                                "type": "string",
-                                "maxLength": 0
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
                             }
                         ]
                     },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Annotation"
-                        ]
-                    },
-                    "value": {
-                        "description": "The value of the annotation - it can be a string or a number (for coded values).",
+                    "materialDescription": {
+                        "description": "Sample materials shall be described according to 2.1.1, 2.1.2, or 2.1.3, based on the type of the sample material. Each sample shall be distinguished from other samples within the same experiment.",
                         "oneOf": [
                             {
-                                "type": "string"
+                                "$ref": "biological_sample_schema.json"
                             },
                             {
-                                "type": "number"
-                            }
-                        ]
-                    }
-                },
-                "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/annotation_schema.json",
-                "title": "MIACME annotation schema"
-            },
-            "publication_schema.json": {
-                "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "A schema describing a publication.",
-                "version": "1.0",
-                "properties": {
-                    "@id": {
-                        "format": "uri",
-                        "type": "string",
-                        "description": "The JSON-LD identifier"
-                    },
-                    "@context": {
-                        "description": "The JSON-LD context",
-                        "anyOf": [
-                            {
-                                "type": "string"
+                                "$ref": "environmental_sample_schema.json"
                             },
                             {
-                                "type": "object"
-                            },
-                            {
-                                "type": "array"
+                                "ref": "other_sample_schema.json",
+                                "description": "A description of the sample shall be provided. The description shall include information about the nature of the material in the sample (e.g., dyed plastic beads)."
                             }
                         ]
                     },
-                    "identifier": {
+                    "sampleTreatmentsDescription": {
                         "type": "string",
-                        "description": "A persistent identifier for the publication, it should be a DOI or pubmed identifier"
+                        "description": "The description shall include details about treatment agents, which play the role of experiment variables, or shall specify that samples were untreated. For example, a sample treated with an agent might be compared to an untreated sample; when reproducing and interpreting such an experiment, having access to details on treatment agents and conditions is essential in order to query and retrieve samples for further analysis. The treatment description should also contain other relevant treatment details such as, but not limited to, time, temperature, and concentration."
                     },
-                    "publicationVenue": {
+                    "sampleCharacteristics": {
                         "type": "string",
-                        "description": "The venue where the publication appears (journal, publishing platform etc)."
-                    },
-                    "date": {
-                        "description": "The publication date.",
-                        "$ref": "date_schema.json#"
-                    },
-                    "identifierSource": {
-                        "type": "string",
-                        "description": "Information about the organisation or namespace responsible for minting the identifier."
+                        "description": "Key information about the possible and expected sample characteristics should be noted as they provide the rationale for the experimental design, including the choice of appropriate reagents. Sample characteristics description should include the expected and possible types of cells or other particles in the sample material."
                     },
                     "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Publication"
-                        ]
-                    },
-                    "authors": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "person_schema.json#"
-                        }
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "The title of the publication."
-                    }
-                },
-                "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/publication_schema.json",
-                "title": "MIACME publication schema"
-            },
-            "cell_model_schema.json": {
-                "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing the cell model in a cell migration experiment.",
-                "version": "1.0",
-                "properties": {
-                    "@id": {
                         "format": "uri",
                         "type": "string",
-                        "description": "The JSON-LD identifier"
+                        "description": "The JSON-LD type"
                     },
-                    "@context": {
-                        "description": "The JSON-LD context",
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "object"
-                            },
-                            {
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "cellType": {
-                        "type": "string",
-                        "description": "The type of cell used in the experiment. For example: cell line, primary cell, endogenous cell."
-                    },
-                    "organism": {
-                        "type": "string",
-                        "description": "The organism of origin of the cell."
-                    },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "CellModel"
-                        ]
-                    },
-                    "specificCellDetails": {
-                        "type": "string",
-                        "description": "The specific details about the cell."
+                    "fluorescentReagentsDescription": {
+                        "description": "The expected and possible types of cells or other particles in the sample material, and their expected and possible measurable characteristics should be noted as these represent the key information for choosing appropriate reagents with respect to the experimental goal. The following information shall be provided about each fluorescence reagent used. Information about the characteristic(s) being measured, as well as details about what plays the role of analyte, analyte detector, and analyte reporter should be descriptive enough to allow for accurate interpretation of the experiment data. Table 1 lists some examples of reagent descriptions.",
+                        "$ref": "fluorescence_reagent_schema.json"
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/cell_model_schema.json",
-                "required": [
-                    "cellType",
-                    "specificCellDetails",
-                    "organism"
-                ],
-                "title": "MIACME cell model schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/sample_schema.json",
+                "title": "MIFlowCyt Flow Sample schema"
             },
-            "imaging_condition_schema.json": {
+            "environmental_sample_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing an investigation in MIACME",
-                "version": "1.0",
-                "properties": {
-                    "imageSequenceType": {
-                        "type": "string",
-                        "description": "Single or multiple imaging timepoints in the experiment. "
-                    },
-                    "pixels": {
-                        "type": "array",
-                        "description": "The physical dimension of one picture element in your image.",
-                        "items": {
-                            "$ref": "pixel_schema.json#"
-                        }
-                    },
-                    "timeSeriesInterval": {
-                        "type": "number",
-                        "description": "The duration between two sequential frames of the time lapse series."
-                    },
-                    "observationPeriodUnit": {
-                        "type": "string",
-                        "description": "The unit of the observation period."
-                    },
-                    "modality": {
-                        "type": "string",
-                        "description": "The type of microscopy used to acquire images. For example: confocal, microscopy, spinning disk, wide-field, multi-phonon, light-sheet, super-resolution, "
-                    },
-                    "observationPeriod": {
-                        "type": "number",
-                        "description": "For time-series, it is the timespan since the imaging process starts until it ends. For endpoint, it is the timespan since the starting point until the image is taken."
-                    },
-                    "@id": {
-                        "format": "uri",
-                        "type": "string",
-                        "description": "The JSON-LD identifier"
-                    },
-                    "@context": {
-                        "description": "The JSON-LD context",
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "object"
-                            },
-                            {
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "numericalAperture": {
-                        "type": "string",
-                        "description": "Value that indicates the light acceptance angle of the objective (\ndetermines the light gathering power, resolving power, and depth of \nfield of the objective)."
-                    },
-                    "timeSeriesIntervalUnit": {
-                        "type": "string",
-                        "description": "The unit of the time series interval."
-                    },
-                    "objectiveLens": {
-                        "type": "string",
-                        "description": "Objective manufacturer and objective acronym specifying optical correction, primary use of microscopy method and magnification (may also include immersion medium and/or working distance or field of view)"
-                    },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "ImagingCondition"
-                        ]
-                    },
-                    "channelDefinition": {
-                        "type": "array",
-                        "description": "Identification of the label or constrasts",
-                        "items": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/imaging_condition_schema.json",
-                "required": [
-                    "modality",
-                    "imageSequenceType",
-                    "observationPeriod",
-                    "observationPeriodUnit",
-                    "timeSeriesInterval",
-                    "timeSeriesIntervalUnit",
-                    "channelDefinition",
-                    "pixels"
-                ],
-                "title": "MIACME imaging condition schema"
-            },
-            "miacme_schema.json": {
-                "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing MIACME reporting guideline.",
-                "version": "1.0",
+                "description": "Organization performing the experiment",
                 "properties": {
                     "@id": {
                         "format": "uri",
@@ -714,24 +559,26 @@
                         ]
                     },
                     "@type": {
+                        "format": "uri",
                         "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Miacme"
-                        ]
+                        "description": "The JSON-LD type"
                     },
-                    "investigation": {
-                        "$ref": "investigation_schema.json#"
+                    "sampleLocation": {
+                        "type": "string",
+                        "description": "The location of the sample origin shall be specified. This should include longitude and latitude if relevant."
+                    },
+                    "sampleDescription": {
+                        "type": "string",
+                        "description": "A description about the environmental sample shall be provided. The description should include relevant details such as collection time/date, collection protocol, type of sample (e.g., seawater), etc."
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/miacme_schema.json",
-                "title": "MIACME schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/environmental_sample_schema.json",
+                "title": "MIFlowCyt Environmental Sample"
             },
-            "assay_schema.json": {
+            "primary_contact_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing the cell model in a cell migration experiment.",
-                "version": "1.0",
+                "description": "The description may include information for additional individuals involved in the experiment, including their contact details and their role.",
                 "properties": {
                     "@id": {
                         "format": "uri",
@@ -751,361 +598,85 @@
                                 "type": "array"
                             }
                         ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The primary contact's name"
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD type"
+                    },
+                    "emailAddress": {
+                        "type": "string",
+                        "description": "The primary contact's email address"
+                    }
+                },
+                "type": "object",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/primary_contact_schema.json",
+                "title": "MIFlowCyt Primary Contact"
+            },
+            "light_source_instrument_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "description": "The following details shall be specified about instruments used to analyze samples. It is expected that this information will be automatically provided by flow cytometry instruments in instrumentation description files along with list-mode data files, such as FCS files [18]. For instrument components that are not user configurable and that are part of a standard model, the instrument manufacturer and model number shall be sufficient if this uniquely specifies the required information. For all other cases where the make and model number is not sufficient to specify the required information, the individual component description shall be specified as described below..",
+                "properties": {
+                    "@id": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD identifier"
+                    },
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "other": {
+                        "type": "string",
+                        "description": "Additional relevant light source details should be provided and may include light source manufacturer name (e.g., MIFlowCyt Lasers, Inc.), light source model name (e.g., 302C Krypton-Ion Laser), light source part number (e.g., I-326), noise (e.g., <1%), pointing and power stability (e.g., <1% over 1 hour), etc."
+                    },
+                    "polarization": {
+                        "type": "string",
+                        "description": "Polarization shall be specified (e.g., linear, >100:1, in the direction of the sample flow). If possible, this should be specified at the intersection of the light source beam and particles; see also 3.3.3."
+                    },
+                    "excitatoryWavelength": {
+                        "type": "string",
+                        "description": "The excitatory wavelength shall be provided (e.g., 488nm, 633 nm)."
+                    },
+                    "powerAtExcitatoryWavelength": {
+                        "type": "string",
+                        "description": "The power of the light source shall be provided (e.g., 180 mW, 50 mW). If possible, this should be measured at the intersection of the light source beam with particles; see also 3.3.3."
                     },
                     "type": {
                         "type": "string",
-                        "description": "The kind of assay."
+                        "description": "The type of the light source shall be provided (e.g., laser, diode laser, xenon lamp)."
                     },
                     "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Assay"
-                        ]
-                    },
-                    "cellInput": {
-                        "type": "string",
-                        "description": "The manner in which the cell population is presented at the start of the assay"
-                    }
-                },
-                "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/assay_schema.json",
-                "required": [
-                    "type",
-                    "cellInput"
-                ],
-                "title": "MIACME assay schema"
-            },
-            "pixel_schema.json": {
-                "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing a pixel in MIACME",
-                "additionalProperties": false,
-                "version": "1.0",
-                "properties": {
-                    "physicalSizeY": {
-                        "type": "number",
-                        "description": "The physical size of the pixel in the height dimension.",
-                        "minimum": 0
-                    },
-                    "dimensionsOrder": {
-                        "type": "string",
-                        "description": "The order of the dimensions.",
-                        "enum": [
-                            "XYZCT",
-                            "XYZTC",
-                            "XYCTZ",
-                            "XYCZT",
-                            "XYTCZ",
-                            "XYTZC"
-                        ]
-                    },
-                    "sizeY": {
-                        "type": "integer",
-                        "description": "The range one picture element in the image spans in the height dimension.",
-                        "minimum": 0
-                    },
-                    "sizeZ": {
-                        "type": "integer",
-                        "description": "The range one picture element in the image spans in the depth dimension.",
-                        "minimum": 0
-                    },
-                    "physicalSizeXUnit": {
-                        "type": "string",
-                        "description": "The unit of the physical size of the pixel in the width dimension.",
-                        "enum": [
-                            "Ym",
-                            "Zm",
-                            "Em",
-                            "Pm",
-                            "Tm",
-                            "Gm",
-                            "Mm",
-                            "km",
-                            "hm",
-                            "dam",
-                            "m",
-                            "dm",
-                            "cm",
-                            "mm",
-                            "\u00b5m",
-                            "nm",
-                            "pm",
-                            "fm",
-                            "am",
-                            "zm",
-                            "ym",
-                            "\u00c5",
-                            "thou",
-                            "li",
-                            "in",
-                            "ft",
-                            "yd",
-                            "mi",
-                            "ua",
-                            "ly",
-                            "pc",
-                            "pt",
-                            "pixel",
-                            "reference frame"
-                        ]
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "The type of picture element.",
-                        "enum": [
-                            "int8",
-                            "int16",
-                            "int32",
-                            "uint8",
-                            "uint16",
-                            "uint32",
-                            "float",
-                            "double",
-                            "complex",
-                            "double-complex",
-                            "bit"
-                        ]
-                    },
-                    "identifier": {
-                        "type": "string",
-                        "description": "An identifier for the picture element."
-                    },
-                    "sizeC": {
-                        "type": "integer",
-                        "description": "The number of channels of the picture element.",
-                        "minimum": 0
-                    },
-                    "physicalSizeZ": {
-                        "type": "number",
-                        "description": "The physical size of the pixel in the depth dimension.",
-                        "minimum": 0
-                    },
-                    "sizeT": {
-                        "type": "integer",
-                        "description": "The number of time points.",
-                        "minimum": 0
-                    },
-                    "physicalSizeX": {
-                        "type": "number",
-                        "description": "The physical size of the pixel in the width dimension.",
-                        "minimum": 0
-                    },
-                    "sizeX": {
-                        "type": "integer",
-                        "description": "The range one picture element in the image spans in the width dimension. ",
-                        "minimum": 0
-                    },
-                    "physicalSizeZUnit": {
-                        "type": "string",
-                        "description": "The unit of the physical size of the pixel in the depth dimension.",
-                        "enum": [
-                            "Ym",
-                            "Zm",
-                            "Em",
-                            "Pm",
-                            "Tm",
-                            "Gm",
-                            "Mm",
-                            "km",
-                            "hm",
-                            "dam",
-                            "m",
-                            "dm",
-                            "cm",
-                            "mm",
-                            "\u00b5m",
-                            "nm",
-                            "pm",
-                            "fm",
-                            "am",
-                            "zm",
-                            "ym",
-                            "\u00c5",
-                            "thou",
-                            "li",
-                            "in",
-                            "ft",
-                            "yd",
-                            "mi",
-                            "ua",
-                            "ly",
-                            "pc",
-                            "pt",
-                            "pixel",
-                            "reference frame"
-                        ]
-                    },
-                    "physicalSizeYUnit": {
-                        "type": "string",
-                        "description": "The unit of the physical size of the pixel in the height dimension.",
-                        "enum": [
-                            "Ym",
-                            "Zm",
-                            "Em",
-                            "Pm",
-                            "Tm",
-                            "Gm",
-                            "Mm",
-                            "km",
-                            "hm",
-                            "dam",
-                            "m",
-                            "dm",
-                            "cm",
-                            "mm",
-                            "\u00b5m",
-                            "nm",
-                            "pm",
-                            "fm",
-                            "am",
-                            "zm",
-                            "ym",
-                            "\u00c5",
-                            "thou",
-                            "li",
-                            "in",
-                            "ft",
-                            "yd",
-                            "mi",
-                            "ua",
-                            "ly",
-                            "pc",
-                            "pt",
-                            "pixel",
-                            "reference frame"
-                        ]
-                    }
-                },
-                "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/pixel_schema.json",
-                "required": [
-                    "identifier",
-                    "dimensionsOrder",
-                    "type",
-                    "sizeX",
-                    "sizeY",
-                    "sizeZ",
-                    "sizeC",
-                    "sizeT"
-                ],
-                "title": "MIACME pixel schema. A picture element. Based on OME Pixel: https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Pixels"
-            },
-            "study_schema.json": {
-                "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing a study in MIACME. A planned activity that consists on study planning, study design execution,  documentation and which produces conclusion(s).",
-                "additionalProperties": false,
-                "version": "1.0",
-                "properties": {
-                    "contacts": {
-                        "type": "array",
-                        "description": "The person(s) which contributed to the study, such as the Principal Investigator/corresponding author in publications or other researchers involved.",
-                        "items": {
-                            "$ref": "person_schema.json#"
-                        }
-                    },
-                    "imaging_condition": {
-                        "description": "The settings used for imaging.",
-                        "$ref": "imaging_condition_schema.json#"
-                    },
-                    "acknowledges": {
-                        "type": "array",
-                        "description": "The grant(s) which funded and supported the investigation.",
-                        "items": {
-                            "$ref": "grant_schema.json#"
-                        }
-                    },
-                    "MIACMEcompliance": {
-                        "type": "string",
-                        "description": "The result of the validation for MIACME compliance."
-                    },
-                    "MIACMEversion": {
-                        "type": "string",
-                        "description": "The version of MIACME this dataset description should be compliant with."
-                    },
-                    "conclusions": {
-                        "type": "array",
-                        "description": "A set of statements summarizing the findings of the study. It could be a URI referring to a nanopublication.",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "identifier": {
-                        "type": "string",
-                        "description": "Primary identifier for the study or experiment."
-                    },
-                    "identifierSource": {
-                        "type": "string",
-                        "description": "Information about the organisation or namespace responsible for creating and maintaining the identifier."
-                    },
-                    "data": {
-                        "description": "The data generated in this study.",
-                        "$ref": "data_schema.json#"
-                    },
-                    "publications": {
-                        "type": "array",
-                        "description": "Scholarly articles associated with the investigation, usually describing the methods applied and conclusions reached by the investigation.",
-                        "items": {
-                            "$ref": "publication_schema.json#"
-                        }
-                    },
-                    "@id": {
                         "format": "uri",
                         "type": "string",
-                        "description": "The JSON-LD identifier"
+                        "description": "The JSON-LD type"
                     },
-                    "@context": {
-                        "description": "The JSON-LD context",
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "object"
-                            },
-                            {
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "experimental_setup": {
-                        "description": "Set of properties that in combination describe the experiment or experiments in the study.",
-                        "$ref": "experimental_setup_schema.json#"
-                    },
-                    "description": {
+                    "beam": {
                         "type": "string",
-                        "description": "A textual narrative comprised of one or more statements about the study."
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "A short sentence naming the study."
-                    },
-                    "dates": {
-                        "type": "array",
-                        "description": "Dates relevant to the study.",
-                        "items": {
-                            "$ref": "date_schema.json#"
-                        }
-                    },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Study"
-                        ]
-                    },
-                    "type": {
-                        "type": "string",
-                        "description": "The type of study"
+                        "description": "Light source beam dimensions and geometry shall be specified at the flow cell or at the intersection of the beam with particles (e.g., elliptical 22 x 66 \u03bcm)."
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/study_schema.json",
-                "title": "MIACME study schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/light_source_instrument_schema.json",
+                "title": "MIFlowCyt Light Source Instrument"
             },
-            "data_schema.json": {
+            "organism_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing an investigation in MIACME",
-                "version": "1.0",
+                "description": "Organism",
                 "properties": {
                     "@id": {
                         "format": "uri",
@@ -1126,117 +697,55 @@
                             }
                         ]
                     },
-                    "extractedFeatures": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
+                    "genotype": {
+                        "type": "string",
+                        "description": "Appropriate genotype characteristics shall be described (e.g., p53-/-)."
                     },
-                    "processedImages": {
-                        "type": "string"
+                    "other": {
+                        "type": "string",
+                        "description": "Additional information about the source organism should be provided if relevant. This may include anatomic location of the source, visit time/date, or additional details and comments."
+                    },
+                    "gender": {
+                        "type": "string",
+                        "description": "The gender shall be provided if applicable for the particular organism."
+                    },
+                    "taxonomy": {
+                        "type": "string",
+                        "description": "The source organism shall be specified by genus and species (e.g., Mus musculus). The terms should come from an appropriate standard such as the NCBI taxonomy database [12]. Taxonomy information should also contain the type of subspecies and organism strain, if applicable. A standard taxonomy may be extended or a proprietary taxonomy may be used, especially if detailed identification is relevant and beyond the scope of standard taxonomies."
+                    },
+                    "age": {
+                        "type": "string",
+                        "description": "The age shall be provided if applicable for the particular organism (e.g., 6 weeks). It may also include the developmental state (e.g., Theiler stage 23)."
                     },
                     "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Data"
-                        ]
-                    },
-                    "rawImages": {
-                        "type": "string"
-                    }
-                },
-                "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/data_schema.json",
-                "title": "MIACME data schema"
-            },
-            "experimental_setup_schema.json": {
-                "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing the experimental setup in a cell migration experiment.",
-                "version": "1.0",
-                "properties": {
-                    "@id": {
                         "format": "uri",
                         "type": "string",
-                        "description": "The JSON-LD identifier"
+                        "description": "The JSON-LD type"
                     },
-                    "@context": {
-                        "description": "The JSON-LD context",
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "object"
-                            },
-                            {
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "microEnvironment": {
+                    "phenotype": {
                         "type": "string",
-                        "description": "The nature or components of the material surrounding/contacting the cells for which migration is tested, including substrate, ECM protein or synthetic counterpart, tissue, other cells or entire organism."
-                    },
-                    "basicApproach": {
-                        "type": "string",
-                        "description": "A description of the study type or approach used, such as in vitro, in vivo, in silico."
-                    },
-                    "organism": {
-                        "type": "string",
-                        "description": "The organism corresponding to the microEnvironment, if it is a tissue."
-                    },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "ExperimentalSetup"
-                        ]
-                    },
-                    "cellModel": {
-                        "description": "A description of the cells used in the experiment.",
-                        "$ref": "cell_model_schema.json#"
-                    },
-                    "medium": {
-                        "type": "string",
-                        "description": "Solution used to provide nutritives and motility-assisting additives to migrating cells"
-                    },
-                    "assay": {
-                        "description": "The migration/invasion assay for this investigation, and its specifications.",
-                        "$ref": "assay_schema.json#"
+                        "description": "Appropriate phenotype characteristics such as disease state shall be described (e.g., increased tumorigenesis)."
                     },
                     "treatment": {
                         "type": "string",
-                        "description": "The manipulation/perturbation of which the (migratory) effect is being tested."
+                        "description": "All source organism treatments shall be described (e.g., treatment with cyclooxygenase-2 (COX-2) inhibitor)."
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/experimental_setup_schema.json",
-                "required": [
-                    "basicApproach",
-                    "cellModel",
-                    "assay",
-                    "treatment",
-                    "microEnvironment"
-                ],
-                "title": "MIACME experimental setup schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/organism_schema.json",
+                "title": "MIFlowCyt Organism"
             },
-            "investigation_schema.json": {
+            "miflowcyt_schema.json": {
                 "$schema": "http://json-schema.org/draft-04/schema",
-                "description": "JSON-schema representing an investigation in MIACME. A planned activity that involves one or more studies.",
-                "additionalProperties": false,
-                "version": "1.0",
+                "description": "The main JSON-schema representing MIFlowCyt reporting guideline.",
+                "provenance": {
+                    "url": "http://w3id.org/mircat/miflowcyt/provenance/provenance.json"
+                },
                 "properties": {
-                    "contacts": {
-                        "type": "array",
-                        "description": "The person(s) who contributed to the investigation, such as the Principal Investigator, corresponding author in related publications or other researchers involved.",
-                        "items": {
-                            "$ref": "person_schema.json#"
-                        }
-                    },
-                    "MIACMEcompliance": {
+                    "@id": {
+                        "format": "uri",
                         "type": "string",
-                        "description": "The result of the validation for MIACME compliance."
+                        "description": "The JSON-LD identifier"
                     },
                     "@context": {
                         "description": "The JSON-LD context",
@@ -1252,217 +761,382 @@
                             }
                         ]
                     },
-                    "studies": {
-                        "type": "array",
-                        "description": "The studies associated with the Investigation.",
-                        "items": {
-                            "$ref": "study_schema.json#"
-                        }
+                    "instrumentDetails": {
+                        "description": "The following details shall be specified about instruments used to analyze samples. It is expected that this information will be automatically provided by flow cytometry instruments in instrumentation description files along with list-mode data files, such as FCS files [18]. For instrument components that are not user configurable and that are part of a standard model, the instrument manufacturer and model number shall be sufficient if this uniquely specifies the required information. For all other cases where the make and model number is not sufficient to specify the required information, the individual component description shall be specified as described below.",
+                        "$ref": "instrument_schema.json#"
                     },
-                    "conclusions": {
-                        "type": "array",
-                        "description": "A set of statements summarizing the findings of the investigation. It could be a URI referring to a nanopublication.",
-                        "items": {
-                            "type": "string"
-                        }
+                    "dataAnalysis": {
+                        "description": "Information about the data analysis performed.",
+                        "$ref": "data_analysis_schema.json#"
                     },
-                    "identifierSource": {
+                    "flowSampleDetails": {
+                        "description": "The flow sample details shall include a description of each sample material used in the experiment (2.1), (2.2), how they were treated (2.3) and what reagents were used (2.4) to fluorescently label the material. Relations between samples, aliquots, different treatments, and replicates shall be unambiguously described.",
+                        "$ref": "sample_schema.json#"
+                    },
+                    "@type": {
+                        "format": "uri",
                         "type": "string",
-                        "description": "Information about the organisation or namespace responsible for creating and maintaining the identifier."
+                        "description": "The JSON-LD type"
                     },
-                    "publications": {
-                        "type": "array",
-                        "description": "Scholarly articles associated with the investigation, usually describing the methods applied and conclusions reached by the investigation.",
-                        "items": {
-                            "$ref": "publication_schema.json#"
-                        }
-                    },
+                    "experimentOverview": {
+                        "description": "An overview of the experiment",
+                        "$ref": "experiment_schema.json#"
+                    }
+                },
+                "type": "object",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/miflowcyt_schema.json",
+                "title": "MIFlowCyt (Minimum Information about a Flow Cytometry Experiment) main schema"
+            },
+            "biological_sample_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "description": "Biological Sample",
+                "properties": {
                     "@id": {
                         "format": "uri",
                         "type": "string",
                         "description": "The JSON-LD identifier"
                     },
-                    "MIACMEversion": {
-                        "type": "string",
-                        "description": "The version of MIACME this dataset description should be compliant with."
-                    },
-                    "identifier": {
-                        "type": "string",
-                        "description": "Primary identifier for the investigation. Ideally, a persistent identifier but an internal user identifier at a minimum."
-                    },
-                    "description": {
-                        "type": "string",
-                        "description": "A textual narrative comprised of one or more statements about the investigation."
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "The title of the investigation."
-                    },
-                    "dates": {
-                        "type": "array",
-                        "description": "Dates relevant to the investigation.",
-                        "items": {
-                            "$ref": "date_schema.json#"
-                        }
-                    },
-                    "@type": {
-                        "type": "string",
-                        "description": "The JSON-LD type",
-                        "enum": [
-                            "Investigation"
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
                         ]
                     },
-                    "acknowledges": {
-                        "type": "array",
-                        "description": "The grant(s) which funded and supported the investigation.",
-                        "items": {
-                            "$ref": "grant_schema.json#"
-                        }
+                    "other": {
+                        "type": "string",
+                        "description": "Additional information about the biological sample should be provided if relevant. This may include relevant information such as in vivo or in vitro treatment, stimulation, preparation / enrichment protocol, culture/growth protocol, collection time/date, whether the sample was frozen/banked/fixed, etc."
+                    },
+                    "organism": {
+                        "description": "The source organism for this biological sample",
+                        "$ref": "organism_schema.json#"
+                    },
+                    "sourceDescription": {
+                        "type": "string",
+                        "description": "The source of the biological sample shall be described (e.g., wild- type mouse, C57BL/6 spleen, C57BL/6 splenocytes). If the source is a cell line the description shall include its name, ATCC [17] (or equivalent) number, and cell type."
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD type"
+                    },
+                    "sampleDescription": {
+                        "type": "string",
+                        "description": "A description of the biological sample shall be provided, including the sample type, if relevant (e.g., C57BL/6 spleen, purified CD4+ lymphocytes, BALB/c thymocyte DNA, control patient PBMCs, protein lysate from lung cancer biopsy, peripheral blood from patient with Type I diabetes, liver biopsy, etc.)"
                     }
                 },
                 "type": "object",
-                "id": "https://w3id.org/mircat/miacme/schema/investigation_schema.json",
-                "title": "MIACME investigation schema"
+                "id": "https://w3id.org/mircat/miflowcyt/schema/biological_sample_schema.json",
+                "title": "MIFlowCyt Biological Sample"
+            },
+            "data_analysis_schema.json": {
+                "$schema": "http://json-schema.org/draft-04/schema",
+                "description": "",
+                "properties": {
+                    "@id": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD identifier"
+                    },
+                    "@context": {
+                        "description": "The JSON-LD context",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "@type": {
+                        "format": "uri",
+                        "type": "string",
+                        "description": "The JSON-LD type"
+                    },
+                    "listModeDataFile": {
+                        "type": "string",
+                        "description": "The list-mode data files (e.g., FCS files [18]) shall be provided directly or details on how they may be requested shall be stated."
+                    }
+                },
+                "type": "object",
+                "id": "https://w3id.org/mircat/miflowcyt/schema/data_analysis_schema.json",
+                "title": "MIFlowCyt Data Analysis"
             }
         }
     },
     "labels": {
-        "obo:FBbi_00000222 ": null,
         "obo:NCIT_C16977": "Phenotype",
+        "obo:NCIT_C25634": "Purpose",
         "obo:OBI_0400065": "light source",
-        "obo:OBI_0100026": "organism",
+        "obo:NCBITaxon_1617257": "environmental samples <Chiroptera>",
         "obo:OBI_0000202": "investigation agent role",
-        "obo:NCIT_C112406": "Reagent Lot Number",
-        "obo:IAO_0000027": "data item",
-        "obo:NCIT_C27993": "General Qualifier",
+        "obo:sep_00196": "sample description",
+        "obo:ERO_0000006": "reagent",
+        "obo:PRIDE_0000163": "Instrument type",
+        "http://purl.obolibrary.org/obo/": null,
         "obo:OBI_0000671": "sample from organism",
-        "obo:NCIT_C48367": "Pixel",
         "obo:OBI_0000968": "device",
-        "obo:NCIT_C40976": "Journal",
         "obo:SO_0000151": "clone",
         "obo:NCIT_C17357": "Gender",
+        "obo:NCIT_C112406": "Reagent Lot Number",
         "obo:NCIT_C17469": "Taxonomy",
+        "obo:OBI_0000835": "manufacturer",
         "http://www.ebi.ac.uk/efo/": null,
         "obo:OBI_0000275": "analyte role",
         "obo:STATO_0000093": "date",
-        "obo:NCIT_C44272": "Annotation",
         "obo:OBI_0001879": "reagent",
         "obo:NCIT_C43513": "Keyword",
-        "obo:OBI_0001629": "grant identifier",
         "obo:ERO_0001309": "data analysis",
         "obo:NCIT_C70569": "Beam",
-        "obo:NCIT_C42743": "Uniform Resource Locator",
-        "obo:NCIT_C17649": "Other",
-        "obo:PRIDE_0000457": "Experiment Type",
-        "obo:NCIT_C44175": "Parameter",
-        "obo:OBI_0001615": "investigation description",
-        "obo:UO_0000003": "time unit",
+        "obo:MS_1000031": "instrument model",
+        "obo:CL_0000000": "cell",
+        "obo:OBI_0100026": "organism",
         "obo:NCIT_C25341": "Location",
-        "obo:XCO_0000000": "experimental condition",
+        "obo:OBI:0000021": null,
+        "obo:BFO_0000005": null,
         "obo:MS_1000900": "minimum information standard",
         "obo:CHMO_0002244": "detector",
         "obo:OBI_0000066": "investigation",
-        "obo:IAO_0000312": "publication about an investigation",
         "obo:IAO_0000144": "conclusion textual entity",
+        "obo:NCBITaxon_9606": "Homo sapiens",
         "obo:IAO_0000429": "email address",
         "obo:PATO_0000011": "age",
-        "obo:IAO_0000584": "time sampled measurement data set",
+        "obo:NCIT_C17649": "Other",
         "bao:BAO_0000566": "excitation wavelength",
         "obo:OBI_0400043": "flow cell",
         "obo:OBI_0000245": "organization",
         "obo:CHEBI_35209": "label",
-        "obo:IAO_0020016": null,
-        "obo:SO_0001027": "genotype",
-        "http://www.bioassayontology.org/bao#": null,
-        "obo:IAO_0000305": "document title",
-        "obo:IAO_0000422": "postal address",
-        "obo:OBI_0000747": "material sample",
-        "obo:FBbi_00000222": "imaging method",
-        "obo:NCIT_C17369": "Imaging Technique",
-        "obo:IAO_0000101": "image",
-        "sio:SIO_001324": "work phone number",
-        "obo:NCIT_C73619": "Feature",
-        "obo:NCIT_C25634": "Purpose",
-        "obo:NCIT_C93859": "Material Description",
-        "obo:ERO_0000006": "reagent",
-        "obo:IAO_0000311": "publication",
-        "obo:NCIT_C69268": "Image Type",
-        "obo:sep_00196": "sample description",
-        "obo:NCIT_C94953": "Pixel Size",
-        "sio:SIO_001321": "fax number",
-        "obo:NCBITaxon_1617257": "environmental samples <Chiroptera>",
-        "https://schema.org/": null,
-        "obo:IAO_0000582": "time stamped measurement datum",
-        "http://purl.obolibrary.org/obo/": null,
-        "obo:OBI_0000011": "planned process",
-        "obo:STATO_0000258": "variable",
-        "efo:EFO_0001736": "funder",
-        "efo:EFO_0003809": "sample treatment protocol",
-        "obo:OBI_0500023": "compliance rule",
-        "obo:OBI_0000835": "manufacturer",
-        "obo:PRIDE_0000163": "Instrument type",
-        "obo:IAO_0000442": "author role",
-        "obo:BTO_0000316": "culture medium",
-        "http://edamontology.org/data_3424": null,
-        "obo:CL_0000000": "cell",
-        "obo:OBI_0001622": "investigation title",
-        "sdo:funder": null,
-        "obo:IAO_0000129": "version number",
-        "obo:OMIT_0027850": "Cellular Microenvironment",
-        "obo:NCIT_C42680": "Order",
-        "obo:OBI:0000021": null,
-        "obo:NCIT_C25284": "Type",
-        "obo:BFO_0000005": null,
-        "obo:NCBITaxon_9606": "Homo sapiens",
-        "obo:FBcv_0003050": "assay type",
-        "obo:NCIT_C25616": "Period",
-        "obo:OBI_0000070": "assay",
-        "obo:OBI_0001636": "grant",
-        "http://semanticscience.org/resource/": null,
-        "obo:IAO_0000577": "centrally registered identifier symbol",
         "obo:MSIO_0000085": "quality control",
-        "obo:MS_1000031": "instrument model",
+        "obo:IAO_0000422": "postal address",
+        "obo:SO_0001027": "genotype",
+        "obo:NCIT_C93859": "Material Description",
+        "http://www.bioassayontology.org/bao#": null,
+        "obo:STATO_0000258": "variable",
         "obo:IAO_0000590": "written name",
-        "obo:ERO_0000453": "objective lens",
-        "obo:ERO_0000066": null,
+        "efo:EFO_0003809": "sample treatment protocol",
         "obo:MS_1000740": "parameter file",
-        "obo:OMIT_0009913": "Microscopy, Polarization",
-        "edam:data_3424": null,
-        "obo:NCIT_C68553": "Unit",
+        "obo:OBI_0000747": "material sample",
         "efo:EFO_0000727": "treatment",
-        "bao:BAO_0000184": "image-based readout"
+        "obo:OMIT_0009913": "Microscopy, Polarization"
     },
     "overlaps": [
         [
             [
-                "Experiment",
-                "Study"
+                "Light_source_instrument",
+                "Light_source_instrument"
             ],
             {
                 "ignored fields": [],
                 "coverage": [
-                    "44.44",
+                    "120.0",
+                    [
+                        "6",
+                        "5"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "type",
+                        "type"
+                    ],
+                    [
+                        "beam",
+                        "beam"
+                    ],
+                    [
+                        "excitatoryWavelength",
+                        "excitatoryWavelength"
+                    ],
+                    [
+                        "excitatoryWavelength",
+                        "powerAtExcitatoryWavelength"
+                    ],
+                    [
+                        "powerAtExcitatoryWavelength",
+                        "excitatoryWavelength"
+                    ],
+                    [
+                        "powerAtExcitatoryWavelength",
+                        "powerAtExcitatoryWavelength"
+                    ],
+                    [
+                        "other",
+                        "other"
+                    ],
+                    [
+                        "polarization",
+                        "polarization"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Environmental_sample",
+                "Environmental_sample"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "2",
+                        "2"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "sampleLocation",
+                        "sampleLocation"
+                    ],
+                    [
+                        "sampleDescription",
+                        "sampleDescription"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Instrument",
+                "Instrument"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
                     [
                         "4",
+                        "4"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "manufacturer",
+                        "manufacturer"
+                    ],
+                    [
+                        "model",
+                        "model"
+                    ],
+                    [
+                        "configurationAndSettings",
+                        "configurationAndSettings"
+                    ],
+                    [
+                        "other",
+                        "other"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Organism",
+                "Organism"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "7",
+                        "7"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "treatment",
+                        "treatment"
+                    ],
+                    [
+                        "phenotype",
+                        "phenotype"
+                    ],
+                    [
+                        "taxonomy",
+                        "taxonomy"
+                    ],
+                    [
+                        "other",
+                        "other"
+                    ],
+                    [
+                        "gender",
+                        "gender"
+                    ],
+                    [
+                        "genotype",
+                        "genotype"
+                    ],
+                    [
+                        "age",
+                        "age"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Experiment",
+                "Experiment"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "9",
                         "9"
                     ]
                 ],
                 "overlapping fields": [
                     [
+                        "qualityControlMeasures",
+                        "qualityControlMeasures"
+                    ],
+                    [
+                        "keywords",
+                        "keywords"
+                    ],
+                    [
                         "conclusions",
                         "conclusions"
                     ],
                     [
+                        "other",
+                        "other"
+                    ],
+                    [
                         "primaryContact",
-                        "contacts"
+                        "primaryContact"
                     ],
                     [
                         "organization",
-                        "identifierSource"
+                        "organization"
+                    ],
+                    [
+                        "experimentVariables",
+                        "experimentVariables"
                     ],
                     [
                         "date",
-                        "dates"
+                        "date"
+                    ],
+                    [
+                        "purpose",
+                        "purpose"
                     ]
                 ]
             }
@@ -1475,13 +1149,17 @@
             {
                 "ignored fields": [],
                 "coverage": [
-                    "50.0",
+                    "100.0",
                     [
-                        "1",
+                        "2",
                         "2"
                     ]
                 ],
                 "overlapping fields": [
+                    [
+                        "address",
+                        "address"
+                    ],
                     [
                         "name",
                         "name"
@@ -1491,25 +1169,158 @@
         ],
         [
             [
-                "Miflowcyt",
-                "Miacme"
+                "Sample",
+                "Sample"
             ],
             {
                 "ignored fields": [],
                 "coverage": [
-                    "0.0",
+                    "100.0",
                     [
-                        "0",
+                        "4",
                         "4"
                     ]
                 ],
-                "overlapping fields": []
+                "overlapping fields": [
+                    [
+                        "sampleTreatmentsDescription",
+                        "sampleTreatmentsDescription"
+                    ],
+                    [
+                        "materialDescription",
+                        "materialDescription"
+                    ],
+                    [
+                        "fluorescentReagentsDescription",
+                        "fluorescentReagentsDescription"
+                    ],
+                    [
+                        "sampleCharacteristics",
+                        "sampleCharacteristics"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Flow_cell",
+                "Flow_cell"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "2",
+                        "2"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "flowCellType",
+                        "flowCellType"
+                    ],
+                    [
+                        "other",
+                        "other"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Miflowcyt",
+                "Miflowcyt"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "4",
+                        "4"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "dataAnalysis",
+                        "dataAnalysis"
+                    ],
+                    [
+                        "flowSampleDetails",
+                        "flowSampleDetails"
+                    ],
+                    [
+                        "experimentOverview",
+                        "experimentOverview"
+                    ],
+                    [
+                        "instrumentDetails",
+                        "instrumentDetails"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Biological_sample",
+                "Biological_sample"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "4",
+                        "4"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "organism",
+                        "organism"
+                    ],
+                    [
+                        "sourceDescription",
+                        "sourceDescription"
+                    ],
+                    [
+                        "sampleDescription",
+                        "sampleDescription"
+                    ],
+                    [
+                        "other",
+                        "other"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Data_analysis",
+                "Data_analysis"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "1",
+                        "1"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "listModeDataFile",
+                        "listModeDataFile"
+                    ]
+                ]
             }
         ],
         [
             [
                 "Primary_contact",
-                "Person"
+                "Primary_contact"
             ],
             {
                 "ignored fields": [],
@@ -1523,15 +1334,61 @@
                 "overlapping fields": [
                     [
                         "name",
-                        "lastName"
-                    ],
-                    [
-                        "name",
-                        "midInitials"
+                        "name"
                     ],
                     [
                         "emailAddress",
-                        "email"
+                        "emailAddress"
+                    ]
+                ]
+            }
+        ],
+        [
+            [
+                "Fluorescence_reagent",
+                "Fluorescence_reagent"
+            ],
+            {
+                "ignored fields": [],
+                "coverage": [
+                    "100.0",
+                    [
+                        "8",
+                        "8"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "analyte",
+                        "analyte"
+                    ],
+                    [
+                        "reagentManufacturerName",
+                        "reagentManufacturerName"
+                    ],
+                    [
+                        "analyteReporter",
+                        "analyteReporter"
+                    ],
+                    [
+                        "other",
+                        "other"
+                    ],
+                    [
+                        "characteristicsBeingMeasured",
+                        "characteristicsBeingMeasured"
+                    ],
+                    [
+                        "reagentCatalogueNumber",
+                        "reagentCatalogueNumber"
+                    ],
+                    [
+                        "analyteDetector",
+                        "analyteDetector"
+                    ],
+                    [
+                        "cloneNameOrNumber",
+                        "cloneNameOrNumber"
                     ]
                 ]
             }
@@ -2411,50 +2268,6 @@
                 "id": "https://w3id.org/mircat/miflowcyt/schema/data_analysis_schema.json",
                 "title": "MIFlowCyt Data Analysis"
             }
-        }
-    },
-    "fields_to_merge": {
-        "study_schema.json": {
-            "fields": [
-                "type",
-                "MIACMEversion",
-                "experimental_setup",
-                "description",
-                "acknowledges",
-                "data",
-                "identifier",
-                "MIACMEcompliance",
-                "title",
-                "imaging_condition",
-                "publications"
-            ],
-            "merge_with": "experiment_schema.json"
-        },
-        "miacme_schema.json": {
-            "fields": [
-                "investigation"
-            ],
-            "merge_with": "miflowcyt_schema.json"
-        },
-        "organization_schema.json": {
-            "fields": [
-                "identifierSource",
-                "identifier"
-            ],
-            "merge_with": "organization_schema.json"
-        },
-        "person_schema.json": {
-            "fields": [
-                "phone",
-                "fax",
-                "address",
-                "roles",
-                "identifierSource",
-                "firstName",
-                "affiliation",
-                "identifier"
-            ],
-            "merge_with": "primary_contact_schema.json"
         }
     }
 }
