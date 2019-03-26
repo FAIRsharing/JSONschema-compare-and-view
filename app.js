@@ -184,7 +184,7 @@
                         for (let it in attribute){
                             attribute[it] = attribute[it].charAt(0).toUpperCase() + attribute[it].slice(1);
                         }
-                        attribute = attribute.join().replace(",", "");
+                        attribute = attribute.join().replace(/,/g, "");
 
                         if (data.network1["contexts"].hasOwnProperty(schemaName)){
 
@@ -223,7 +223,7 @@
                         for (let it in attribute){
                             attribute[it] = attribute[it].charAt(0).toUpperCase() + attribute[it].slice(1);
                         }
-                        attribute = attribute.join().replace(",", "");
+                        attribute = attribute.join().replace(/,/g, "");
 
                         if (data.network2["contexts"].hasOwnProperty(schemaName)){
                             let schema_base_type = data.network2["contexts"][schemaName][attribute];
