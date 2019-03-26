@@ -61,6 +61,11 @@
                         let schema_1_name = overlap[0][0].toLowerCase() + '_schema.json';
                         let schema_2_name = overlap[0][1].toLowerCase() + '_schema.json';
 
+                        console.log(schema_1_name)
+
+                        let schema_1_link = data['network1']['schemas'][schema_1_name]['id'];
+                        let schema_2_link = data['network2']['schemas'][schema_2_name]['id'];
+
                         let schema_1 = data.network1["schemas"][schema_1_name];
                         let schema_2 = data.network2["schemas"][schema_2_name];
                         let title_1 = data.network1["schemas"][schema_1_name].title;
@@ -77,7 +82,8 @@
                         }
                         let local_link = viewer.get_link(name, data.network1['contexts'][schema_1_name]);
                         let base_type = data.network1["contexts"][schema_1_name][name];
-                        let local_output = [base_type, title_1, title_2, local_link];
+
+                        let local_output = [base_type, title_1, title_2, local_link, schema_1_link, schema_2_link];
 
                         processed_schemas["network1"].push(schema_1_name);
                         processed_schemas["network2"].push(schema_2_name);
@@ -224,6 +230,7 @@
 
                 return output;
             };
+
             viewer.process_name = function(field){
                 if (typeof field === 'string') {
                     return field
@@ -235,6 +242,7 @@
                     return false;
                 }
             };
+
             viewer.get_link = function(field, context){
                 let parser = document.createElement('a');
                 parser.href = context[field];
