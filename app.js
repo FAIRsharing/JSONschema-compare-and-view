@@ -99,7 +99,6 @@
                         }
                         let local_link = viewer.get_link(name, data.network1['contexts'][schema_1_name]);
                         let base_type = data.network1["contexts"][schema_1_name][name];
-
                         let local_output = [base_type, title_1, title_2, local_link, schema_1_link, schema_2_link];
 
                         processed_schemas["network1"].push(schema_1_name);
@@ -181,10 +180,18 @@
                     if (data.network1.schemas.hasOwnProperty(schemaName) && processed_schemas.network1.indexOf(schemaName) === -1){
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network1.schemas[schemaName];
-                        let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
+                        let attribute = schemaName.replace("_schema.json", "").split("_");
+                        for (let it in attribute){
+                            attribute[it] = attribute[it].charAt(0).toUpperCase() + attribute[it].slice(1);
+                        }
+                        attribute = attribute.join().replace(",", "");
+
+
 
                         if (data.network1["contexts"].hasOwnProperty(schemaName)){
+
                             let schema_base_type = data.network1["contexts"][schemaName][attribute];
+                            console.log(attribute);
                             output.content.isolated_schemas[iterator] = {};
                             output.content.isolated_schemas[iterator]["schemas"] = [schema_base_type, schemaValue.title, false];
                             output.content.isolated_schemas[iterator]["fields"] = [];
