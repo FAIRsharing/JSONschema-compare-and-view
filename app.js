@@ -28,28 +28,30 @@
                         }
                     }
                 }
-            });
 
+                /* get query params */
+                let query = location.search.substr(1);
 
-            /* get query params */
-            let query = location.search.substr(1);
-
-            if (query!==""){
-                let result = {};
-                query.split("&").forEach(function(part) {
-                    let item = part.split("=");
-                    result[item[0]] = decodeURIComponent(item[1]);
-                });
-                if (result.hasOwnProperty('target')){
-                    $scope.current_comparison = result['target'];
-                    $scope.make_comparison();
+                if (query!==""){
+                    let result = {};
+                    query.split("&").forEach(function(part) {
+                        let item = part.split("=");
+                        result[item[0]] = decodeURIComponent(item[1]);
+                    });
+                    if (result.hasOwnProperty('target')){
+                        $scope.current_comparison = result['target'];
+                        $scope.make_comparison();
+                    }
+                    else {
+                        $scope.current_comparison = $scope.available_comparison[0];
+                        $scope.make_comparison();
+                    }
                 }
                 else {
                     $scope.current_comparison = $scope.available_comparison[0];
                     $scope.make_comparison();
                 }
-            }
-
+            });
 
             viewer.process_data = function(data){
                 let output = {
