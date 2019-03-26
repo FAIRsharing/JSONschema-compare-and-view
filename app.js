@@ -186,8 +186,6 @@
                         }
                         attribute = attribute.join().replace(",", "");
 
-
-
                         if (data.network1["contexts"].hasOwnProperty(schemaName)){
 
                             let schema_base_type = data.network1["contexts"][schemaName][attribute];
@@ -221,7 +219,11 @@
                     if (data.network2.schemas.hasOwnProperty(schemaName) && processed_schemas.network2.indexOf(schemaName) === -1){
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network2.schemas[schemaName];
-                        let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
+                        let attribute = schemaName.replace("_schema.json", "").split("_");
+                        for (let it in attribute){
+                            attribute[it] = attribute[it].charAt(0).toUpperCase() + attribute[it].slice(1);
+                        }
+                        attribute = attribute.join().replace(",", "");
 
                         if (data.network2["contexts"].hasOwnProperty(schemaName)){
                             let schema_base_type = data.network2["contexts"][schemaName][attribute];
