@@ -131,7 +131,7 @@
         "obo:NCIT_C142469": "Data Acquisition",
         "obo:SO_0000151": "clone",
         "obo:NCIT_C17469": "Taxonomy",
-        "obo:CLO_0000031": "\u7ec6\u80de\u7cfb",
+        "obo:CLO_0000031": "cell line",
         "obo:BFO_0000015": "process",
         "obo:ERO_0000006": "reagent",
         "obo:OBI_0000245": "organization",

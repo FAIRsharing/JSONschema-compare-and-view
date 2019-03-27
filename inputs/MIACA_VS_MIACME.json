@@ -134,7 +134,7 @@
         "efo:EFO_0000727": "treatment",
         "obo:NCIT_C142469": "Data Acquisition",
         "obo:IAO_0000101": "image",
-        "obo:CLO_0000031": "\u7ec6\u80de\u7cfb",
+        "obo:CLO_0000031": "cell line",
         "obo:BFO_0000015": "process",
         "obo:ERO_0000453": "objective lens",
         "obo:OBI_0000245": "organization",
