@@ -23,7 +23,7 @@ body.JSONSchemaComp div.card-header {
 }
 
 body.JSONSchemaComp div.card-header {
-    background-color:#2980B9;
+    background-color:#2676AB;
     color:white;
     font-size: 1.4rem;
 }
@@ -35,7 +35,7 @@ body.JSONSchemaComp div.card-body {
 
 /* TABLE */
 body.JSONSchemaComp table tbody {
-    border-top: 2px solid #2980B9;
+    border-top: 2px solid #2676AB;
 }
 
 body.JSONSchemaComp table thead th {
