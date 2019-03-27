@@ -7,22 +7,6 @@
 
             let viewer = this;
 
-            let inputs_URL = "https://api.github.com/repos/FAIRsharing/JSONschema-compare-and-view/contents/inputs";
-            $http.get(inputs_URL).then(function(response){
-                $scope.available_comparison = [];
-                for (let file_iterator in response.data){
-                    if (response.data.hasOwnProperty(file_iterator)){
-                        let inputFile = response.data[file_iterator];
-                        if (inputFile.hasOwnProperty('path')){
-                            let file_URL = "https://raw.githubusercontent.com/FAIRsharing/JSONschema-compare-and-view/master/" + inputFile['path'];
-                            $scope.available_comparison.push(file_URL);
-                        }
-                    }
-                }
-                $scope.current_comparison = $scope.available_comparison[0];
-                $scope.make_comparison();
-            });
-
             $scope.make_comparison = function(){
                 $http.get($scope.current_comparison).then(function(res){
                     $scope.output = viewer.process_data(res.data);
@@ -31,6 +15,43 @@
                     }
                 });
             };
+
+            let inputs_URL = "https://api.github.com/repos/FAIRsharing/JSONschema-compare-and-view/contents/inputs";
+            $http.get(inputs_URL).then(function(response) {
+                $scope.available_comparison = [];
+                for (let file_iterator in response.data) {
+                    if (response.data.hasOwnProperty(file_iterator)) {
+                        let inputFile = response.data[file_iterator];
+                        if (inputFile.hasOwnProperty('path')) {
+                            let file_URL = "https://raw.githubusercontent.com/FAIRsharing/JSONschema-compare-and-view/master/" + inputFile['path'];
+                            $scope.available_comparison.push(file_URL);
+                        }
+                    }
+                }
+
+                /* get query params */
+                let query = location.search.substr(1);
+
+                if (query!==""){
+                    let result = {};
+                    query.split("&").forEach(function(part) {
+                        let item = part.split("=");
+                        result[item[0]] = decodeURIComponent(item[1]);
+                    });
+                    if (result.hasOwnProperty('target')){
+                        $scope.current_comparison = result['target'];
+                        $scope.make_comparison();
+                    }
+                    else {
+                        $scope.current_comparison = $scope.available_comparison[0];
+                        $scope.make_comparison();
+                    }
+                }
+                else {
+                    $scope.current_comparison = $scope.available_comparison[0];
+                    $scope.make_comparison();
+                }
+            });
 
             viewer.process_data = function(data){
                 let output = {
@@ -60,7 +81,8 @@
 
                         let schema_1_name = overlap[0][0].toLowerCase() + '_schema.json';
                         let schema_2_name = overlap[0][1].toLowerCase() + '_schema.json';
-
+                        let schema_1_link = data['network1']['schemas'][schema_1_name]['id'];
+                        let schema_2_link = data['network2']['schemas'][schema_2_name]['id'];
                         let schema_1 = data.network1["schemas"][schema_1_name];
                         let schema_2 = data.network2["schemas"][schema_2_name];
                         let title_1 = data.network1["schemas"][schema_1_name].title;
@@ -77,7 +99,7 @@
                         }
                         let local_link = viewer.get_link(name, data.network1['contexts'][schema_1_name]);
                         let base_type = data.network1["contexts"][schema_1_name][name];
-                        let local_output = [base_type, title_1, title_2, local_link];
+                        let local_output = [base_type, title_1, title_2, local_link, schema_1_link, schema_2_link];
 
                         processed_schemas["network1"].push(schema_1_name);
                         processed_schemas["network2"].push(schema_2_name);
@@ -158,11 +180,16 @@
                     if (data.network1.schemas.hasOwnProperty(schemaName) && processed_schemas.network1.indexOf(schemaName) === -1){
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network1.schemas[schemaName];
-                        let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
-                        console.log(attribute);
+                        let attribute = schemaName.replace("_schema.json", "").split("_");
+                        for (let it in attribute){
+                            attribute[it] = attribute[it].charAt(0).toUpperCase() + attribute[it].slice(1);
+                        }
+                        attribute = attribute.join().replace(/,/g, "");
 
                         if (data.network1["contexts"].hasOwnProperty(schemaName)){
+
                             let schema_base_type = data.network1["contexts"][schemaName][attribute];
+                            console.log(attribute);
                             output.content.isolated_schemas[iterator] = {};
                             output.content.isolated_schemas[iterator]["schemas"] = [schema_base_type, schemaValue.title, false];
                             output.content.isolated_schemas[iterator]["fields"] = [];
@@ -192,7 +219,11 @@
                     if (data.network2.schemas.hasOwnProperty(schemaName) && processed_schemas.network2.indexOf(schemaName) === -1){
                         let iterator = "schema" + it.toString();
                         let schemaValue = data.network2.schemas[schemaName];
-                        let attribute = schemaName.replace(/^\w/, c => c.toUpperCase()).replace("_schema.json", "");
+                        let attribute = schemaName.replace("_schema.json", "").split("_");
+                        for (let it in attribute){
+                            attribute[it] = attribute[it].charAt(0).toUpperCase() + attribute[it].slice(1);
+                        }
+                        attribute = attribute.join().replace(/,/g, "");
 
                         if (data.network2["contexts"].hasOwnProperty(schemaName)){
                             let schema_base_type = data.network2["contexts"][schemaName][attribute];
@@ -224,6 +255,7 @@
 
                 return output;
             };
+
             viewer.process_name = function(field){
                 if (typeof field === 'string') {
                     return field
@@ -235,6 +267,7 @@
                     return false;
                 }
             };
+
             viewer.get_link = function(field, context){
                 let parser = document.createElement('a');
                 parser.href = context[field];

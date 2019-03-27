@@ -2,12 +2,25 @@
     <th scope="row">
         <div field-label="isolatedSchema.schemas" labels="term_labels"></div>
     </th>
+
     <td>
-        <span ng-if="isolatedSchema.schemas[1]!==false">{{isolatedSchema.schemas[1]}}</span>
+        <span ng-if="isolatedSchema.schemas[1]!==false">
+            {{isolatedSchema.schemas[1]}}
+            <a href="{{schemaOverlap.schemas[4]}}" target="_blank">
+                <i class="fas fa-share-square">
+                </i>
+            </a>
+        </span>
         <span ng-if="isolatedSchema.schemas[1]===false" class="fas fa-times"></span>
     </td>
     <td>
-        <span ng-if="isolatedSchema.schemas[2]!==false">{{isolatedSchema.schemas[2]}}</span>
+        <span ng-if="isolatedSchema.schemas[2]!==false">
+            {{isolatedSchema.schemas[2]}}
+            <a href="{{schemaOverlap.schemas[5]}}" target="_blank">
+            <i class="fas fa-share-square">
+            </i>
+        </a>
+        </span>
         <span ng-if="isolatedSchema.schemas[2]===false" class="fas fa-times"></span>
     </td>
 </tr>

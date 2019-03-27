@@ -2,8 +2,13 @@
     <th scope="row">
         <div field-label="schemaOverlap.schemas" labels="term_labels"></div>
     </th>
-    <td>{{schemaOverlap.schemas[1]}}</td>
-    <td>{{schemaOverlap.schemas[2]}}</td>
+    <td>{{schemaOverlap.schemas[1]}}
+        <a href="{{schemaOverlap.schemas[4]}}" target="_blank">
+            <i class="fas fa-share-square">
+            </i>
+        </a>
+    </td>
+    <td>{{schemaOverlap.schemas[2]}} <a href="{{schemaOverlap.schemas[5]}}" target="_blank"> <i class="fas fa-share-square"></i></a></td>
 </tr>
 
 <tr ng-repeat="fields in schemaOverlap.fields">

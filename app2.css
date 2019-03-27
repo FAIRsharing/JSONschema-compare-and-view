@@ -83,3 +83,7 @@ body.JSONSchemaComp form select {
 body.JSONSchemaComp table{
     table-layout: fixed;
 }
+
+i.fa-share-square{
+    margin-left:5px;
+}
