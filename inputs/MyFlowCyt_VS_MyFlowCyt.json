@@ -1,6 +1,6 @@
 {
     "network1": {
-        "name": "MIFlowCyt",
+        "name": "MyFlowCyt",
         "schemas": {
             "miflowcyt_schema.json": {
                 "id": "https://w3id.org/mircat/miflowcyt/schema/miflowcyt_schema.json",
@@ -886,7 +886,7 @@
         }
     },
     "network2": {
-        "name": "MIFlowCyt",
+        "name": "MyFlowCyt",
         "schemas": {
             "miflowcyt_schema.json": {
                 "id": "https://w3id.org/mircat/miflowcyt/schema/miflowcyt_schema.json",
