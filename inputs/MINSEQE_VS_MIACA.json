@@ -1743,12 +1743,12 @@
             },
             "identifier_info_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "Identifier": "obo:IAO_0000577"
+                "IdentifierInfo": "obo:IAO_0000577"
             },
             "alternate_identifier_info_schema.json": {
                 "@language": "en",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "AlternateIdentifier": "obo:IAO_0000578",
+                "AlternateIdentifierInfo": "obo:IAO_0000578",
                 "identifier": {
                     "@id": "obo:IAO_0000577",
                     "@type": "@id"
@@ -1763,7 +1763,7 @@
             "related_identifier_info_schema.json": {
                 "@language": "en",
                 "obo": "http://purl.obolibrary.org/obo/",
-                "RelatedIdentifier": "obo:IAO_0000578",
+                "RelatedIdentifierInfo": "obo:IAO_0000578",
                 "identifier": "obo:IAO_0000577",
                 "name": "obo:IAO_0000590",
                 "description": "obo:IAO_0000300"
