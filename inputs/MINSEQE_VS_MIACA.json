@@ -1709,7 +1709,8 @@
                 "xsd": "http://www.w3.org/2001/XMLSchema#",
                 "identifier": "obo:IAO_0000577",
                 "name": "obo:IAO_0000590",
-                "description": "obo:IAO_0000300"
+                "description": "obo:IAO_0000300",
+                "Annotation": "obo:NCIT_C44272"
             },
             "assay_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
@@ -1801,12 +1802,12 @@
             },
             "date_info_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "Date": "obo:",
+                "DateInfi": "obo:STATO_0000093",
                 "date": {
-                    "@id": "obo:"
+                    "@id": "obo:STATO_0000093"
                 },
                 "type": {
-                    "@id": "obo:"
+                    "@id": "obo:NCIT_C27993"
                 }
             },
             "publication_schema.json": {
@@ -4072,6 +4073,23 @@
         ],
         [
             [
+                "Annotation",
+                "Open_cv"
+            ],
+            {
+                "coverage": [
+                    0,
+                    0
+                ],
+                "overlapping fields": [],
+                "ignored fields": [
+                    "value",
+                    "valueIRI"
+                ]
+            }
+        ],
+        [
+            [
                 "Publication",
                 "Application"
             ],
@@ -4129,6 +4147,7 @@
         "http://www.w3.org/2001/XMLSchema#": null,
         "obo:IAO_0000577": "centrally registered identifier symbol",
         "obo:IAO_0000300": "textual entity",
+        "obo:NCIT_C44272": "Annotation",
         "obo:GENEPIO_0000074": "sequencing assay",
         "obo:OBI_0000747": "material sample",
         "obo:GENEPIO_0001965": "library source",
@@ -4152,6 +4171,7 @@
         "obo:IAO_0000098": "data format specification",
         "obo:MI_1212": "checksum",
         "obo:IAO_0000064": "algorithm",
+        "obo:NCIT_C27993": "General Qualifier",
         "obo:IAO_0000311": "publication",
         "obo:IAO_0000305": "document title",
         "obo:MI_0885": "journal",
@@ -4183,7 +4203,6 @@
         "obo:NCIT_C40976": "Journal",
         "obo:IAO_0000315": "abstract",
         "obo:NCIT_C25474": "Data",
-        "obo:NCIT_C44272": "Annotation",
         "obo:IAO_0000027": "data item",
         "obo:NCIT_C42743": "Uniform Resource Locator",
         "obo:PATO_0000117": "size",
@@ -4266,6 +4285,13 @@
                 "country"
             ],
             "merge_with": "person_schema.json"
+        },
+        "open_cv_schema.json": {
+            "fields": [
+                "name",
+                "xref"
+            ],
+            "merge_with": "annotation_schema.json"
         },
         "application_schema.json": {
             "fields": [
