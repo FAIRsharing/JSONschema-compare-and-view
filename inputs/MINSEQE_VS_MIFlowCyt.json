@@ -1634,7 +1634,7 @@
         "contexts": {
             "study_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "study": "obo:OBI_0000066",
+                "Study": "obo:OBI_0000066",
                 "@language": "en",
                 "identifier": "obo:IAO_0000578",
                 "identifierSource": "obo:OBI_0000245",
@@ -2737,7 +2737,42 @@
             }
         }
     },
-    "overlaps": [],
+    "overlaps": [
+        [
+            [
+                "Study",
+                "Experiment"
+            ],
+            {
+                "coverage": [
+                    "25.0",
+                    [
+                        "4",
+                        "16"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "identifierSource",
+                        "organization"
+                    ],
+                    [
+                        "contacts",
+                        "primaryContact"
+                    ],
+                    [
+                        "dates",
+                        "date"
+                    ],
+                    [
+                        "conclusions",
+                        "conclusions"
+                    ]
+                ],
+                "ignored fields": []
+            }
+        ]
+    ],
     "labels": {
         "http://purl.obolibrary.org/obo/": null,
         "obo:OBI_0000066": "investigation",
@@ -2843,5 +2878,17 @@
         "obo:PRIDE_0000163": "Instrument type",
         "obo:NCIT_C70569": "Beam",
         "obo:OBI:0000021": null
+    },
+    "fields_to_merge": {
+        "experiment_schema.json": {
+            "fields": [
+                "purpose",
+                "keywords",
+                "experimentVariables",
+                "qualityControlMeasures",
+                "other"
+            ],
+            "merge_with": "study_schema.json"
+        }
     }
 }

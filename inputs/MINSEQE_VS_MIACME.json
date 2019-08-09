@@ -1634,7 +1634,7 @@
         "contexts": {
             "study_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "study": "obo:OBI_0000066",
+                "Study": "obo:OBI_0000066",
                 "@language": "en",
                 "identifier": "obo:IAO_0000578",
                 "identifierSource": "obo:OBI_0000245",
@@ -3181,6 +3181,64 @@
     "overlaps": [
         [
             [
+                "Study",
+                "Study"
+            ],
+            {
+                "coverage": [
+                    "62.5",
+                    [
+                        "10",
+                        "16"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "identifier",
+                        "identifier"
+                    ],
+                    [
+                        "identifierSource",
+                        "identifierSource"
+                    ],
+                    [
+                        "title",
+                        "title"
+                    ],
+                    [
+                        "description",
+                        "description"
+                    ],
+                    [
+                        "contacts",
+                        "contacts"
+                    ],
+                    [
+                        "dates",
+                        "dates"
+                    ],
+                    [
+                        "publications",
+                        "publications"
+                    ],
+                    [
+                        "conclusions",
+                        "conclusions"
+                    ],
+                    [
+                        "MINSEQEversion",
+                        "MIACMEversion"
+                    ],
+                    [
+                        "MINSEQEcompliance",
+                        "MIACMEcompliance"
+                    ]
+                ],
+                "ignored fields": []
+            }
+        ],
+        [
+            [
                 "Assay",
                 "Assay"
             ],
@@ -3306,6 +3364,16 @@
         "efo:EFO_0001736": "funder"
     },
     "fields_to_merge": {
+        "study_schema.json": {
+            "fields": [
+                "type",
+                "experimental_setup",
+                "imaging_condition",
+                "data",
+                "acknowledges"
+            ],
+            "merge_with": "study_schema.json"
+        },
         "assay_schema.json": {
             "fields": [
                 "type",
