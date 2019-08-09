@@ -1655,7 +1655,7 @@
             },
             "person_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "person": "obo:NCBITaxon_9606",
+                "Person": "obo:NCBITaxon_9606",
                 "@language": "en",
                 "identifier": "obo:IAO_0000578",
                 "identifierSource": "obo:OBI_0000245",
@@ -1671,7 +1671,7 @@
             },
             "organization_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "organization": "obo:OBI_0000245",
+                "Organization": "obo:OBI_0000245",
                 "@language": "en",
                 "identifier": "obo:IAO_0000578",
                 "identifierSource": "obo:OBI_0000245",
@@ -1679,7 +1679,7 @@
             },
             "protocol_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "protocol": "obo:OBI_0000272",
+                "Protocol": "obo:OBI_0000272",
                 "@language": "en",
                 "name": "obo:IAO_0000590",
                 "protocol_uri": "obo:data_1052",
@@ -1689,7 +1689,7 @@
             },
             "parameter_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "parameter": "obo:EFO_0002658",
+                "Parameter": "obo:EFO_0002658",
                 "@language": "en",
                 "name": "obo:IAO_0000590",
                 "parameter_type": "obo:"
@@ -1697,7 +1697,7 @@
             "factor_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
                 "@language": "en",
-                "factor": "obo:OBI_0000750",
+                "Factor": "obo:OBI_0000750",
                 "identifier": "obo:OBI_0001629",
                 "identifierSource": "obo:OBI_0000245",
                 "name": "obo:IAO_0000590",
@@ -1728,7 +1728,7 @@
             },
             "sample_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "sample": "obo:OBI_0000747",
+                "Sample": "obo:OBI_0000747",
                 "@language": "en",
                 "name": "obo:IAO_0000590",
                 "sample_description": "obo:OBI_0001615",
@@ -1776,7 +1776,7 @@
             },
             "oligo_probe_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "primers": "obo:CHEBI_50406",
+                "OligoProbe": "obo:CHEBI_50406",
                 "@language": "en",
                 "name": "obo:IAO_0000590",
                 "database_xref": "obo:IAO_0000578",
@@ -1785,14 +1785,14 @@
             },
             "sequencing_instrument_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "sequencing_instrument": "obo:OBI_0400103",
+                "SequencingInstrument": "obo:OBI_0400103",
                 "@language": "en",
                 "platform": "obo:GENEPIO_0000071",
                 "model": "obo:IAO_0000017"
             },
             "sequencing_datafile_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "sequencing_datafile": "obo:OBI_0000973",
+                "SequencingDatafile": "obo:OBI_0000973",
                 "@language": "en",
                 "filename": "obo:IAO_0000590",
                 "file_format": "obo:IAO_0000098",
@@ -1811,7 +1811,7 @@
             },
             "publication_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "publication": "obo:IAO_0000311",
+                "Publication": "obo:IAO_0000311",
                 "@language": "en",
                 "identifier": "obo:IAO_0000578",
                 "identifierSource": "obo:OBI_0000245",
@@ -1822,7 +1822,7 @@
             },
             "fund_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "fund": "obo:OBI_0001636",
+                "Fund": "obo:OBI_0001636",
                 "@language": "en",
                 "identifier": "obo:OBI_0001629",
                 "identifierSource": "obo:OBI_0000245",
@@ -1834,7 +1834,7 @@
             },
             "investigation_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "investigation": "obo:",
+                "Investigation": "obo:PRIDE_0000097",
                 "@language": "en",
                 "identifier": "obo:IAO_0000578",
                 "identifierSource": "obo:OBI_0000245",
@@ -3239,6 +3239,86 @@
         ],
         [
             [
+                "Person",
+                "Person"
+            ],
+            {
+                "coverage": [
+                    "72.73",
+                    [
+                        "8",
+                        "11"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "identifier",
+                        "identifier"
+                    ],
+                    [
+                        "identifierSource",
+                        "identifierSource"
+                    ],
+                    [
+                        "lastName",
+                        "lastName"
+                    ],
+                    [
+                        "firstName",
+                        "firstName"
+                    ],
+                    [
+                        "email",
+                        "email"
+                    ],
+                    [
+                        "address",
+                        "address"
+                    ],
+                    [
+                        "affiliation",
+                        "affiliation"
+                    ],
+                    [
+                        "roles",
+                        "roles"
+                    ]
+                ],
+                "ignored fields": []
+            }
+        ],
+        [
+            [
+                "Organization",
+                "Organization"
+            ],
+            {
+                "coverage": [
+                    "100.0",
+                    [
+                        "3",
+                        "3"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "identifier",
+                        "identifier"
+                    ],
+                    [
+                        "identifierSource",
+                        "identifierSource"
+                    ],
+                    [
+                        "name",
+                        "name"
+                    ]
+                ],
+                "ignored fields": []
+            }
+        ],
+        [
+            [
                 "Assay",
                 "Assay"
             ],
@@ -3252,6 +3332,78 @@
                 ],
                 "overlapping fields": [],
                 "ignored fields": []
+            }
+        ],
+        [
+            [
+                "Publication",
+                "Publication"
+            ],
+            {
+                "coverage": [
+                    "83.33",
+                    [
+                        "5",
+                        "6"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "identifier",
+                        "identifier"
+                    ],
+                    [
+                        "identifierSource",
+                        "identifierSource"
+                    ],
+                    [
+                        "title",
+                        "title"
+                    ],
+                    [
+                        "authors",
+                        "authors"
+                    ],
+                    [
+                        "date",
+                        "date"
+                    ]
+                ],
+                "ignored fields": []
+            }
+        ],
+        [
+            [
+                "Fund",
+                "Grant"
+            ],
+            {
+                "coverage": [
+                    "50.0",
+                    [
+                        "3",
+                        "6"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "identifier",
+                        "identifier"
+                    ],
+                    [
+                        "name",
+                        "name"
+                    ],
+                    [
+                        "funders",
+                        "identifierSource"
+                    ]
+                ],
+                "ignored fields": [
+                    "alternateIdentifiers",
+                    "relatedIdentifiers",
+                    "extraProperties"
+                ]
             }
         ]
     ],
@@ -3320,6 +3472,7 @@
         "obo:IAO_0000442": "author role",
         "obo:IAO_0000582": "time stamped measurement datum",
         "obo:EFO_0001736": null,
+        "obo:PRIDE_0000097": "Project",
         "obo:MS_1000900": "minimum information standard",
         "obo:OBI_0000011": "planned process",
         "https://schema.org/": null,
@@ -3374,12 +3527,32 @@
             ],
             "merge_with": "study_schema.json"
         },
+        "person_schema.json": {
+            "fields": [
+                "midInitials",
+                "phone",
+                "fax"
+            ],
+            "merge_with": "person_schema.json"
+        },
         "assay_schema.json": {
             "fields": [
                 "type",
                 "cellInput"
             ],
             "merge_with": "assay_schema.json"
+        },
+        "publication_schema.json": {
+            "fields": [
+                "publicationVenue"
+            ],
+            "merge_with": "publication_schema.json"
+        },
+        "grant_schema.json": {
+            "fields": [
+                "funders"
+            ],
+            "merge_with": "fund_schema.json"
         }
     }
 }
