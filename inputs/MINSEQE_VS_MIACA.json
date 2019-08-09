@@ -1802,7 +1802,7 @@
             },
             "date_info_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "DateInfi": "obo:STATO_0000093",
+                "DateInfo": "obo:STATO_0000093",
                 "date": {
                     "@id": "obo:STATO_0000093"
                 },

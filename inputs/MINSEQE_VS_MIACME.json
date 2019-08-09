@@ -1802,7 +1802,7 @@
             },
             "date_info_schema.json": {
                 "obo": "http://purl.obolibrary.org/obo/",
-                "DateInfi": "obo:STATO_0000093",
+                "DateInfo": "obo:STATO_0000093",
                 "date": {
                     "@id": "obo:STATO_0000093"
                 },
@@ -3349,6 +3349,32 @@
                     ]
                 ],
                 "overlapping fields": [],
+                "ignored fields": []
+            }
+        ],
+        [
+            [
+                "Date_info",
+                "Date"
+            ],
+            {
+                "coverage": [
+                    "100.0",
+                    [
+                        "2",
+                        "2"
+                    ]
+                ],
+                "overlapping fields": [
+                    [
+                        "date",
+                        "date"
+                    ],
+                    [
+                        "type",
+                        "type"
+                    ]
+                ],
                 "ignored fields": []
             }
         ],
