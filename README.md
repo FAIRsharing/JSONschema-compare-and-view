@@ -12,5 +12,5 @@ For example, see the output generated for comparing MIACME and MIACA here: https
 ## Contact
 
 - [Dominique Batista](http://github.com/terazus)
-- [Alejandra Gonzalez-Beltran](http://github.com/agbeltran)
+- [Philippe Rocca-Serra](https://github.com/proccaserra)
 
